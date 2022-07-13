@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../main"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cstdio": "cpp",
+			"iostream": "cpp"
+		}
+	}
+}
