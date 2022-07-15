@@ -60,8 +60,39 @@ void framework::validate() {
     } else {
         process();
     }
-};
+}
 
+void framework::run() {
+
+}
+
+void framework::wait() {
+
+}
+
+void framework::stop() {
+
+}
+
+void framework::input() {
+
+}
+
+void framework::logic() {
+
+}
+
+void framework::update() {
+
+}
+
+void framework::draw() {
+
+}
+
+void framework() {
+    
+}
 
 framework::framework() {
 
