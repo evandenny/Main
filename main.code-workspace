@@ -10,7 +10,16 @@
 	"settings": {
 		"files.associations": {
 			"cstdio": "cpp",
-			"iostream": "cpp"
+			"iostream": "cpp",
+			"fstream": "cpp",
+			"*.tcc": "cpp",
+			"string": "cpp",
+			"istream": "cpp",
+			"thread": "cpp"
 		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
 	}
 }
