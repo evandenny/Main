@@ -5,7 +5,8 @@
 
 enum class MainMenu {
     PLAY_GAME,
-    EXIT
+    EXIT,
+    null
 };
 
 MainMenu menuOption;
@@ -27,11 +28,15 @@ int main() {
                 menuOption = MainMenu::EXIT;
                 break;
             default:
+                menuOption = MainMenu::null;
                 std::cout << "Invalid selection." << std::endl;
                 break;
         }
+        if (typeid(selection) != typeid(int)) {
+            selection = 256;
+        }
         system("clear");
-    } while (menuOption != MainMenu::EXIT || menuOption != MainMenu::PLAY_GAME);
+    } while (menuOption != MainMenu::EXIT && menuOption != MainMenu::PLAY_GAME);
     if (menuOption == MainMenu::PLAY_GAME) {
         std::cout << "Starting Game..." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
