@@ -116,6 +116,14 @@ void Guessing_Game() {
                 } else if (selection == "2") {
                     return;
                 } else if (selection == "3") {
+                    system("clear");
+                    std::cout << "Thanks for playing!" << std::endl;
+                    sleep(1);
+                    std::cout << "Exiting..." << std::endl;
+                    sleepms(500);
+                    std::cout << "Goodbye!" << std::endl;
+                    sleep(1);
+                    system("clear");
                     exit(0);
                 } else if (selection == "" || selection == " ") {
                     continue;
@@ -183,6 +191,13 @@ int main() {
             }
             system("clear");
         } while (gameOption != GameMenu::GUESS && gameOption != GameMenu::EXIT);
+    } else if (menuOption == MainMenu::EXIT) {
+        std::cout << "Exiting..." << std::endl;
+        sleep(1);
+        std::cout << "Goodbye!" << std::endl;
+        sleepms(750);
+        system("clear");
+        exit(0);
     }
     if (gameOption == GameMenu::GUESS) {
         gameOption = GameMenu::null;
@@ -198,13 +213,6 @@ int main() {
     } else if (gameOption == GameMenu::EXIT) {
         gameOption = GameMenu::null;
         goto mainmenu;
-    }
-    if (menuOption == MainMenu::EXIT) {
-        std::cout << "Exiting..." << std::endl;
-        sleep(1);
-        std::cout << "Goodbye!" << std::endl;
-        sleepms(750);
-        system("clear");
     }
     return 0;
 }
