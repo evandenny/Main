@@ -51,6 +51,7 @@ enum class MainMenu {
     null
 };
 
+//class for enumeration of the games menu for the app
 enum class GameMenu {
     GUESS,
     EXIT,
