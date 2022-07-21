@@ -140,16 +140,22 @@ void Guessing_Game() {
         } else if (guess > 100 || guess < 1) { //implement way to quit game if user enters q or quit, e or exit, etc.
             std::cout << "Invalid guess! Try again..." << std::endl;
         } else if (abs(guess-number) >= 50) {
+            tries++;
             std::cout << "You're freezing cold!" << std::endl;
         } else if (abs(guess-number) >= 25) {
+            tries++;
             std::cout << "You're cold!" << std::endl;
         } else if (abs(guess-number) >= 15) {
+            tries++;
             std::cout << "You're warm!" << std::endl;
         } else if (abs(guess-number) >= 10) {
+            tries++;
             std::cout << "You're very warm!" << std::endl;
         } else if (abs(guess-number) >= 5) {
+            tries++;
             std::cout << "You're hot!" << std::endl;
         } else if (abs(guess-number) >= 1) {
+            tries++;
             std::cout << "You're very hot!" << std::endl;
         }
         sleepms(1200); //Increased to 1200
@@ -184,6 +190,8 @@ void gamemenu_select() {
         sleep(1);
     }
 }
+
+
 
 int main() {
     system("clear");
