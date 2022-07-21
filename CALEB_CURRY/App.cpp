@@ -80,13 +80,22 @@ std::string selection;
 //base high score for GUESSING GAME game 
 int high_score_guessgame = 10;
 
+void exiting() {
+    std::cout << "Exiting..." << std::endl;
+    sleepms(500);
+    std::cout << "Goodbye!" << std::endl;
+    sleep(1);
+    system("clear");
+    exit(0);
+}
+
 void Guessing_Game() {
     Random random;
     int number = random(1, 100);
     int guess = 0;
     int tries = 0;
     while (guess != number) {
-        std::cout << underline "      " << "GUESSING GAME" << "      " reset << std::endl;
+        std::cout << underline "      GUESSING GAME      " reset << std::endl;
         sleepms(100);
         std::cout << "|--High Score-> " << high_score_guessgame << " tries." << std::endl; 
         std::cout << "|-Your tries-> " << tries << std::endl << std::endl;
@@ -119,34 +128,62 @@ void Guessing_Game() {
                     system("clear");
                     std::cout << "Thanks for playing!" << std::endl;
                     sleep(1);
-                    std::cout << "Exiting..." << std::endl;
-                    sleepms(500);
-                    std::cout << "Goodbye!" << std::endl;
-                    sleep(1);
-                    system("clear");
-                    exit(0);
+                    exiting();
                 } else if (selection == "" || selection == " ") {
-                    continue;
+                    sleepms(10);
                 } else {
                     std::cout << "Invalid selection" << std::endl;
                 }
                 sleepms(400);
                 continue;
             }
-        } else if (guess > 100 || guess < 1) {
+        } else if (guess > 100 || guess < 1) { //implement way to quit game if user enters q or quit, e or exit, etc.
             std::cout << "Invalid guess! Try again..." << std::endl;
-        } else if (guess > number) {
-            tries++;
-            std::cout << "Too high!" << std::endl;
-        } else if (guess < number) {
-            tries++;
-            std::cout << "Too low!" << std::endl;
-        } 
-        sleepms(800);
+        } else if (abs(guess-number) >= 50) {
+            std::cout << "You're freezing cold!" << std::endl;
+        } else if (abs(guess-number) >= 25) {
+            std::cout << "You're cold!" << std::endl;
+        } else if (abs(guess-number) >= 15) {
+            std::cout << "You're warm!" << std::endl;
+        } else if (abs(guess-number) >= 10) {
+            std::cout << "You're very warm!" << std::endl;
+        } else if (abs(guess-number) >= 5) {
+            std::cout << "You're hot!" << std::endl;
+        } else if (abs(guess-number) >= 1) {
+            std::cout << "You're very hot!" << std::endl;
+        }
+        sleepms(1200); //Increased to 1200
         system("clear");
     }
 }
 
+void mainmenu_select() {
+    std::cout << "-> ";
+    getline(std::cin, selection);
+    if (selection == "1") {
+        menuOption = MainMenu::PLAY_GAMES;
+    } else if (selection == "2") {
+        menuOption = MainMenu::EXIT;
+    } else {
+        menuOption = MainMenu::null;
+        std::cout << "Invalid selection." << std::endl;
+        sleep(1);
+    }
+}
+
+void gamemenu_select() {
+    std::cout << "-> ";
+    getline(std::cin, selection);
+    if (selection == "1") {
+        gameOption = GameMenu::GUESS;
+    } else if (selection == "2") {
+        gameOption = GameMenu::EXIT;
+    } else {
+        gameOption = GameMenu::null;
+        std::cout << "Invalid selection." << std::endl;
+        sleep(1);
+    }
+}
 
 int main() {
     system("clear");
@@ -157,19 +194,9 @@ int main() {
         std::cout << "1. Play Games" << std::endl;
         std::cout << "2. Exit" << std::endl;
         sleepms(50);
-        std::cout << "-> ";
-        getline(std::cin, selection);
-        if (selection == "1") {
-            menuOption = MainMenu::PLAY_GAMES;
-        } else if (selection == "2") {
-            menuOption = MainMenu::EXIT;
-        } else {
-            menuOption = MainMenu::null;
-            std::cout << "Invalid selection." << std::endl;
-            sleep(1);
-        }
+        mainmenu_select();
         system("clear");
-    } while (menuOption != MainMenu::EXIT && menuOption != MainMenu::PLAY_GAMES);
+    } while (menuOption == MainMenu::null);
     if (menuOption == MainMenu::PLAY_GAMES) {
         system("clear");
         do
@@ -178,26 +205,11 @@ int main() {
             std::cout << "1. Guessing Game" << std::endl;
             std::cout << "2. Exit to Main Menu" << std::endl;
             sleepms(50);
-            std::cout << "-> ";
-            getline(std::cin, selection);
-            if (selection == "1") {
-                gameOption = GameMenu::GUESS;
-            } else if (selection == "2") {
-                gameOption = GameMenu::EXIT;
-            } else {
-                gameOption = GameMenu::null;
-                std::cout << "Invalid selection." << std::endl;
-                sleep(1);
-            }
+            gamemenu_select();
             system("clear");
-        } while (gameOption != GameMenu::GUESS && gameOption != GameMenu::EXIT);
+        } while (gameOption == GameMenu::null);
     } else if (menuOption == MainMenu::EXIT) {
-        std::cout << "Exiting..." << std::endl;
-        sleep(1);
-        std::cout << "Goodbye!" << std::endl;
-        sleepms(750);
-        system("clear");
-        exit(0);
+        exiting();
     }
     if (gameOption == GameMenu::GUESS) {
         gameOption = GameMenu::null;
