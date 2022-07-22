@@ -4,6 +4,8 @@
 #include <thread>
 #include <cmath>
 #include <stdio.h>
+#include <cstdlib>
+#include <stdlib.h>
 #include <random>
 
 #define underline "\033[4m"
@@ -80,6 +82,7 @@ std::string selection;
 //base high score for GUESSING GAME game 
 int high_score_guessgame = 10;
 
+//function to exit the app
 void exiting() {
     std::cout << "Exiting..." << std::endl;
     sleepms(500);
@@ -89,6 +92,7 @@ void exiting() {
     exit(0);
 }
 
+//GUESSING GAME function
 void Guessing_Game() {
     Random random;
     int number = random(1, 100);
@@ -157,12 +161,18 @@ void Guessing_Game() {
         } else if (abs(guess-number) >= 1) {
             tries++;
             std::cout << "You're very hot!" << std::endl;
+        } else {
+            //invalid character
+            break;
         }
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         sleepms(1200); //Increased to 1200
         system("clear");
     }
 }
 
+//MAIN MENU function
 void mainmenu_select() {
     std::cout << "-> ";
     getline(std::cin, selection);
@@ -177,6 +187,7 @@ void mainmenu_select() {
     }
 }
 
+//GAME MENU function
 void gamemenu_select() {
     std::cout << "-> ";
     getline(std::cin, selection);
@@ -190,8 +201,6 @@ void gamemenu_select() {
         sleep(1);
     }
 }
-
-
 
 int main() {
     system("clear");
