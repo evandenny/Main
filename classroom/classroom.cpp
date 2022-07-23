@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <cmath>
 
+#define stringify(  x  ) #x
+ 
 using namespace std;
 
 enum lesson_type {
@@ -17,13 +19,13 @@ enum lesson_type {
 
 class Classroom {
 public:
-    Classroom(string lesson, string teacher, string room, string lessonPlan, int numStudents, char averageGrade, char averageGradeModifier, bool distraction = false    [''saxxxxxxxxxxxxxxxxxxxxxxxx=x=axxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]) {
+    Classroom(string lesson, string teacher, string room, string lessonPlan, int numStudents, char averageGrade, char averageGradeModifier, bool distraction = false) {
         this->lesson = lesson;
         this->teacher = teacher;
         this->room = room;
         this->lessonPlan = lessonPlan;
-        this->numStudents = numStudents;
-        this->averageGrade = averageGrade;
+        this->num_students = num_students;
+        this->average_grade = average_grade;
     }
     ~Classroom();
     // getters
@@ -40,7 +42,7 @@ public:
         return lessonPlan;
     }
     int getNumStudents() {
-        return numStudents;
+        return num_students;
     }
     enum lesson_type getLessonType() {
         return _lesson;
@@ -59,39 +61,48 @@ public:
         room = r;
     }
     void setLessonPlan(string lp) {
-        lesson_plan = lp;
+        lessonPlan = lp;
     }
     void setnum_students(int n) {
         num_students = n;
     }
-    void setLessonType(enum lesson_type _lesson) {
-        lesson_type = _lesson;
+    void setLessonTypeEng() {
+        _lesson = english;
+    }
+    void setLessonTypeMath() {
+        _lesson = math;
+    }
+    void setLessonTypeSci() {
+        _lesson = science;
+    }
+    void setLessonTypeHist() {
+        _lesson = history;
     }
     void setDistraction(bool d) {
         distraction = d;
     }
-    void setAverageGrade(char a, b) {
+    void setAverageGrade(char a, char b) {
         average_grade = a;
         average_grade_mod = b;
         average_grade_full = a + b;
     }; // end setAverageGrade/mod/full
     string announceAverageGrade() {
-        string annoucement;
-        announcement = "The Average Grade for the class of room " + room + " is " + setAverageGrade(average_grade, average_grade_mod);
+        string announcement;
+        announcement = "The Average Grade for the class of room " + room + " is " + stringify(setAverageGrade(average_grade, average_grade_mod));
         cout << announcement << endl;
     }; 
     string getLessonPlan(enum lesson_type _lesson) {
-        switch (lesson) {
-            case "math":
+        switch (_lesson) {
+            case 0:
                 lessonPlan = "Addition, Subtraction, Multiplication, Division";
                 break;
-            case "science":
+            case 1:
                 lessonPlan = "Astronomy, Stars, Planets, Galaxies";
                 break;
-            case "history":
+            case 2:
                 lessonPlan = "World War II, Major Events, Drugs, Movie Time!";
                 break;
-            case "english":
+            case 3:
                 lessonPlan = "Vocabulary, Grammar, Spelling, Punctuation";
                 break;
         }; // end switch
@@ -105,7 +116,7 @@ public:
     string teacher;
     string room;
     string lessonPlan;
-    enum lesson_type _lesson;
+    lesson_type _lesson;
     int num_students;
     char average_grade;
     char average_grade_mod;

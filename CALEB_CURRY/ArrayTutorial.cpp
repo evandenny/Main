@@ -6,24 +6,12 @@
 #include <cstdio>
 #include <thread>
 #include <chrono>
-#include <sstream>
+#include "ArrayTutorial.h"
+#include "Sleep.h"
 
-class Sleep {
-public:
-    static void seconds(int seconds) {
-        std::this_thread::sleep_for(std::chrono::seconds(seconds));
-    }
-    static void milliseconds(int milliseconds) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-    }
-    static void microseconds(int microseconds) {
-        std::this_thread::sleep_for(std::chrono::microseconds(microseconds));
-    }
-};
-
-void STOR_intArray() {
+void ArrayTutorial() {
     std::cout << "Evan Denny's Array Tutorial" << std::endl;
-    std::cout << "==========================" << std::endl;
+    std::cout << " ========================= " << std::endl;
     int myarray[10];
     std::string input;
     Sleep::milliseconds(200);
@@ -116,9 +104,4 @@ void STOR_intArray() {
     Sleep::seconds(2);
     std::cout << "Press 'ENTER' to exit...";
     getchar();
-}
-
-int main() {
-    STOR_intArray();
-    return 0;
 }

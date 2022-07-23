@@ -3,10 +3,12 @@
 #include <chrono>
 #include <thread>
 #include <cmath>
+#include <cstdio>
 #include <stdio.h>
 #include <cstdlib>
-#include <stdlib.h>
 #include <random>
+#include "Sleep.h"
+#include "ArrayTutorial.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
@@ -49,6 +51,13 @@ public:
 //class for enumeration of the main menu for the app
 enum class MainMenu {
     PLAY_GAMES,
+    TUTOR,
+    EXIT,
+    null
+};
+
+enum class TutorMenu {
+    ARRAY,
     EXIT,
     null
 };
@@ -74,9 +83,11 @@ void run(void program()) {
 }
 
 //game menu object
-GameMenu gameOption;
+GameMenu gameOption = GameMenu::null;
 //main menu object
-MainMenu menuOption;
+MainMenu menuOption = MainMenu::null;
+//tutorial menu oject
+TutorMenu tutorOption = TutorMenu::null;
 //string to store user input
 std::string selection;
 //base high score for GUESSING GAME game 
@@ -120,7 +131,6 @@ void Guessing_Game() {
                 std::cout << "1. Play" << std::endl;
                 std::cout << "2. Go to Main Menu" << std::endl;
                 std::cout << "3. Exit" << std::endl;
-                sleepms(50);
                 std::cout << "-> ";
                 getline(std::cin, selection);
                 if (selection == "1") {
@@ -179,6 +189,8 @@ void mainmenu_select() {
     if (selection == "1") {
         menuOption = MainMenu::PLAY_GAMES;
     } else if (selection == "2") {
+        menuOption = MainMenu::TUTOR;
+    } else if (selection == "3") {
         menuOption = MainMenu::EXIT;
     } else {
         menuOption = MainMenu::null;
@@ -202,6 +214,37 @@ void gamemenu_select() {
     }
 }
 
+void tutormenu_select() {
+    std::cout << "-> ";
+    getline(std::cin, selection);
+    if (selection == "1") {
+        tutorOption = TutorMenu::ARRAY;
+    } else if (selection == "2") {
+        tutorOption = TutorMenu::EXIT;
+    } else {
+        tutorOption = TutorMenu::null;
+        std::cout << "Invalid selection." << std::endl;
+        Sleep::seconds(1);
+    }
+}
+
+void tutormenu_select2() {
+    std::cout << "-> ";
+    getline(std::cin, selection);
+    if (selection == "1") {
+        tutorOption = TutorMenu::ARRAY;
+    } else if (selection == "2") {
+        tutorOption = TutorMenu::EXIT;
+    } else if (selection == "3") {
+        exiting();
+    } else {
+        tutorOption = TutorMenu::null;
+        std::cout << "Invalid selection." << std::endl;
+        Sleep::seconds(1);
+    }
+        system("clear");
+} 
+
 int main() {
     system("clear");
     mainmenu:
@@ -209,8 +252,8 @@ int main() {
         std::cout << "Welcome to " << underline "Evan" reset << " " << underline "Denny" reset << "'s App!" << std::endl;
         std::cout << "Please select an option:" << std::endl;
         std::cout << "1. Play Games" << std::endl;
-        std::cout << "2. Exit" << std::endl;
-        sleepms(50);
+        std::cout << "2. Tutorials" << std::endl;
+        std::cout << "3. Exit" << std::endl;
         mainmenu_select();
         system("clear");
     } while (menuOption == MainMenu::null);
@@ -221,12 +264,52 @@ int main() {
             std::cout << "Please select a game to play:" << std::endl;
             std::cout << "1. Guessing Game" << std::endl;
             std::cout << "2. Exit to Main Menu" << std::endl;
-            sleepms(50);
             gamemenu_select();
             system("clear");
         } while (gameOption == GameMenu::null);
+    } else if (menuOption == MainMenu::TUTOR) {
+        system("clear");
+        do
+        {
+            std::cout << "Please select a tutorial to use:" << std::endl;
+            std::cout << "1. Arrays" << std::endl;
+            std::cout << "2. Exit to Main Menu" << std::endl;
+            tutormenu_select();
+            system("clear");
+        } while (tutorOption == TutorMenu::null);        
     } else if (menuOption == MainMenu::EXIT) {
         exiting();
+    }
+    if (tutorOption == TutorMenu::ARRAY) {
+    myarrayt:
+        tutorOption = TutorMenu::null;
+        std::cout << "Starting Array Tutorial..." << std::endl;
+        Sleep::milliseconds(300);
+        std::cout << "Ready!" << std::endl;
+        Sleep::milliseconds(400);
+        system("clear");
+        // Tutorial Code
+        run(ArrayTutorial);
+        system("clear");
+        do
+        {
+        std::cout << "Learn about arrays some more?" << std::endl;
+        std::cout << "1. Arrays Tutorial" << std::endl;
+        std::cout << "2. Exit to Main Menu" << std::endl;
+        std::cout << "3. Exit" << std::endl;
+        tutormenu_select2();
+        if (tutorOption == TutorMenu::ARRAY) {
+            tutorOption = TutorMenu::null;
+            goto myarrayt;
+        } else if (tutorOption == TutorMenu::EXIT) {
+            tutorOption = TutorMenu::null;
+            goto mainmenu;
+        } else
+            continue;
+        } while (tutorOption == TutorMenu::null);
+    } else if (tutorOption == TutorMenu::EXIT) {
+        tutorOption = TutorMenu::null;
+        goto mainmenu;
     }
     if (gameOption == GameMenu::GUESS) {
         gameOption = GameMenu::null;
