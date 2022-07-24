@@ -10,7 +10,7 @@
 #include <time.h>
 
 time_t *tm;
-time_t now = time(0);
+time_t now = time(0); .                                                                                                               
 class Ltime {
 private:
 	time_t now = time(0);
@@ -30,10 +30,85 @@ public:
 		std::cout << "Local time and date: ";
 		std::cout << tm_mday << "/" << tm_mon + 1 << "/" << tm_year + 1900 << " ";
 	}
-};
+	void getLocalTime();
+	void getdate();
+	void gettime();
+	void ii pclose
+
+
+
+
+
+
+	j0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	-0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+}
+
+void getLocalTime() {
+
+}                                                                                                        q                                                                                                                                                                    sf//////////////weqwqweqewssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssp'1
 
 int main() {
-	Ltime lt;
+	Lteime lt();
 	lt.local();
 	return 0;
 }
