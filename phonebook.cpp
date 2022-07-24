@@ -65,7 +65,7 @@ public:
 		phoneNumber;
 		input;
 		output;
-		size = 0;
+		size;
 	}
 	void gotomenu() {
 		system("clear");
