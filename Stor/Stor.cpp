@@ -141,7 +141,7 @@ bool nofile() {
 }
 
 int main() {
-	
+	do {
 nofile:
 	nofile();
 	do {
@@ -151,5 +151,6 @@ nofile:
 	toVector();
 	toZip();
 	Zip();
+	} while(true); //infinite loop
 	return 0;
 }
