@@ -9,9 +9,9 @@
       "defines": [],
       "compilerPath": "/usr/bin/g++",
       "cStandard": "${default}",
-      "cppStandard": "c++20",
+      "cppStandard": "${default}",
       "intelliSenseMode": "linux-clang-x64"
     }
   ],
-  "version": 4
+  "version": 1
 }

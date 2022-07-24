@@ -1,77 +1,88 @@
-#ifndef FRAMEWORK_H
-#define FRAMEWORK_H
-
-#pragma once
+#ifndef _FRAMEWORK_H
+#define _FRAMEWORK_H
 
 #include <iostream>
-#include <string>
 #include <vector>
-#include <thread>
+#include <string>
+#include <array>
+#include <queue>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
 #include <chrono>
-#include <fstream>
-#include <sstream>
-#include <algorithm>
-#include <list>
+#include <thread>
 
-using namespace std;
-
-enum process_status {
-    RUNNING,
-    STOPPED,
-    EXIT
-};
-
-enum window_state {
-    active,
-    background,
-    inactive,
-    closed
-};
-
-class framework {
-public:
-    framework();
-    ~framework();
-    void run();
-    void stop();
-    void process();
-    void loop();
-    void validate();
-    void wait();
-    void input();
-    void logic();
-    void update();
-    void draw();
-    void suspend();
-    void handle_events();
-    void handle_input();
-    void close();
-    // getters
-    process_status get_process_status();
-    string get_process_name();
-    list <string> get_processes();
-    string get_active_process();
-    int get_process_id(string process_name);
-    process_status get_process_status_by_id(int process_id);
-
-    pair <int, int> get_mouse_position();
-    pair <int, int> get_mouse_click();
-    // setters
-    void set_process_name(string process);
-    void set_process_id(string process);
-    void set_process_list(vector<string> processes);
-    void set_active_process(string process_id);
-    void set_process_status(int process_id, process_status status);
+class Framework {
 private:
-    // process info
-    list <string> processes;
-    string active_process;
-    string process_name;
-    int process_id;
-    process_status activity;
+    int argc;  // number of arguments
+    char** argv;  // array of arguments
+    std::string currentPath; // cwd
+    std::string appName; // name of the application
+    std::string appVersion; // version of the applicationtring
+    std::string appAuthor; // author of the application
+    std::string appDescription; // description of the application
 
-    pair <int, int> mouse_position;
-    pair <int, int> mouse_click;
+    std::vector<std::string> args;
+    std::vector<std::string> options;
+    std::vector<std::string> flags;
+    std::vector<int> intOptions;
+    std::string help;
+    
+    std::string * args_;
+    std::string * options_;
+    std::string * flags_;
+    int * intOptions_;
+    
+    std::queue<std::string> queue;
+    std::queue<int> queueInt;
+    std::queue<std::string> queuedAction;
+    std::queue<int> queuedActionInt;
+
+    std::pair<int, int> xy;
+    std::array<std::pair<int, int>, 10> xyArray;
+
+public:
+    Framework(std::string appName, std::string appVersion, std::string appAuthor, std::string * args, std::string * options, std::string * flags, int * intOptions) {
+        this->appName = appName;
+        this->appVersion = appVersion;
+        this->appAuthor = appAuthor;
+        std::string help;
+        std::string currentPath;
+        int argc;
+        char** argv = new char*[10];
+        this->args_ = args;
+        this->options_ = options;
+        this->flags_ = flags;
+        this->intOptions_ = intOptions;
+        this->appDescription = "";
+        queue = {};
+        queueInt = {};
+        queuedAction = {};
+        queuedActionInt = {};
+        xy = {};
+        xyArray = {};
+        args = {};
+        options = {};
+        flags = {};
+        intOptions = {};
+        int x = 20, y = 20;
+        this->xy = std::make_pair(20, 20);
+        this->xyArray = std::array<std::pair<int, int>, 10>();
+        this->xyArray[0] = std::make_pair(20, 20);
+        this->xyArray[1] = std::make_pair(0, 0);
+        this->xyArray[2] = std::make_pair(0, 0);
+        this->xyArray[3] = std::make_pair(0, 0);
+        this->xyArray[4] = std::make_pair(0, 0);
+        this->xyArray[5] = std::make_pair(0, 0);
+        this->xyArray[6] = std::make_pair(0, 0);
+        this->xyArray[7] = std::make_pair(0, 0);
+        this->xyArray[8] = std::make_pair(0, 0);
+        this->xyArray[9] = std::make_pair(0, 0);
+    }
+    void init(int argc, char** argv);
+
+    void buildxyArray(int x, int y);
 };
+
 
 #endif

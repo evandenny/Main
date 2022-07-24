@@ -32,8 +32,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/evanjdenny2/github/Main/CALEB_CURRY",
-      "program": "/home/evanjdenny2/github/Main/CALEB_CURRY/build/Debug/outDebug",
+      "cwd": "/home/evanjdenny2/github/Main",
+      "program": "/home/evanjdenny2/github/Main/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
