@@ -33,8 +33,8 @@
     "**/.vscode",
     "**/.vscode/**"
   ],
-  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.cStandard": "gnu17",
   "C_Cpp.default.cppStandard": "gnu++23",
-  "C_Cpp.default.intelliSenseMode": "linux-gcc-x64"
+  "C_Cpp.default.intelliSenseMode": "linux-gcc-x64" 
 }
