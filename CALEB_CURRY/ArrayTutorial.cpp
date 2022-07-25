@@ -78,7 +78,7 @@ void ArrayTutorial() {
     Sleep::seconds(2);
     std::cout << "Unless we initialize an array from the start, we would\nhave to access the elements of the array individually." << std::endl;
     Sleep::seconds(2);
-    std::cout << "Hence why I'm not reusing myarray." << std::endl;
+    std::cout << "I don't want to talk about flow control right now, hence why I'm not reusing myarray." << std::endl;
     Sleep::seconds(1);
     std::cout << "Press 'ENTER' to continue..." << std::endl;
     getchar();
