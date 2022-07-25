@@ -2,7 +2,7 @@
 #include <string>
 #include <bits/stdc++.h>
 #include "Sleep.h"
-#include "menu.h"
+//#include "menu.h"
 #include "udfunc.h"
 #include "Guess.h"
 
@@ -45,14 +45,19 @@ void Guessing_Game() {
                 getline(std::cin, selection);
                 if (selection == "1") {
                     system("clear");
-                    Menu::run(Guessing_Game);
+                    Guessing_Game();
                 } else if (selection == "2") {
                     return;
                 } else if (selection == "3") {
                     system("clear");
                     std::cout << "Thanks for playing!" << std::endl;
                     Sleep::seconds(1);
-                    Menu::exiting();
+                    std::cout << "Exiting..." << std::endl;
+                    Sleep::milliseconds(500);
+                    std::cout << "Goodbye!" << std::endl;
+                    Sleep::milliseconds(500);
+                    system("clear");
+                    exit(0);
                 } else if (selection == "" || selection == " ") {
                     Sleep::milliseconds(10);
                 } else {

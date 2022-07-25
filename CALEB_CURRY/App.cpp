@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <random>
+#include <limits>
 #include "Sleep.h"
 #include "ArrayTutorial.h"
 #include "menu.h"
@@ -15,9 +16,6 @@
 #define reset "\033[0m"
 
 std::string selection;
-MainMenu menuOption = MainMenu::null;
-GameMenu gameOption = GameMenu::null;
-TutorMenu tutorOption = TutorMenu::null;
 
 //MAIN MENU function
 void mainmenu_select() {
@@ -38,7 +36,6 @@ void mainmenu_select() {
 
 //GAME MENU function
 void gamemenu_select() {
-    std::cout << "-> ";
     getline(std::cin, selection);
     if (selection == "1") {
         gameOption = GameMenu::GUESS;
@@ -72,30 +69,13 @@ void tutormenu_select() {
 int main() {
     system("clear");
     mainmenu:
-    do {
-        mainmenu_select();
-        system("clear");
-    } while (menuOption == MainMenu::null);
+    Menu::switchMain();
     if (menuOption == MainMenu::PLAY_GAMES) {
         system("clear");
-        do
-        {
-            std::cout << "Please select a game to play:" << std::endl;
-            std::cout << "1. Guessing Game" << std::endl;
-            std::cout << "2. Exit to Main Menu" << std::endl;
-            gamemenu_select();
-            system("clear");
-        } while (gameOption == GameMenu::null);
+        Menu::switchGame();
     } else if (menuOption == MainMenu::TUTOR) {
         system("clear");
-        do
-        {
-            std::cout << "Please select a tutorial to use:" << std::endl;
-            std::cout << "1. Arrays" << std::endl;
-            std::cout << "2. Exit to Main Menu" << std::endl;
-            tutormenu_select();
-            system("clear");
-        } while (tutorOption == TutorMenu::null);        
+        Menu::switchTutor();        
     } else if (menuOption == MainMenu::EXIT) {
         Menu::exiting();
     }
@@ -110,22 +90,7 @@ int main() {
         // Tutorial Code
         Menu::run(ArrayTutorial);
         system("clear");
-        do
-        {
-        std::cout << "Learn about arrays some more?" << std::endl;
-        std::cout << "1. Arrays Tutorial" << std::endl;
-        std::cout << "2. Exit to Main Menu" << std::endl;
-        std::cout << "3. Exit" << std::endl;
-        tutormenu_select();
-        if (tutorOption == TutorMenu::ARRAY) {
-            tutorOption = TutorMenu::null;
-            goto myarrayt;
-        } else if (tutorOption == TutorMenu::EXIT) {
-            tutorOption = TutorMenu::null;
-            goto mainmenu;
-        } else
-            continue;
-        } while (tutorOption == TutorMenu::null);
+        Menu::switchEndOfTutor();
     } else if (tutorOption == TutorMenu::EXIT) {
         tutorOption = TutorMenu::null;
         goto mainmenu;
