@@ -8,6 +8,7 @@
 #include <cmath>
 #include <cstring>
 #include <vector>
+#include <limits>
 #include "hang.h"
 
 #define underline "\033[4m"
@@ -108,7 +109,7 @@ std::string hint;
 
 void initArray() {
     getline(std::cin, phrase);
-    if (std::any_of(phrase.begin(), phrase.end(), [](char c) { return !isalpha(c); })) {
+    if (std::any_of(phrase.begin(), phrase.end(), [](char c) { return isdigit(c); })) {
         std::cout << "Error: Phrase contains non-letter characters." << std::endl;
         Sleep::seconds(1);
         exit(1);
@@ -117,63 +118,13 @@ void initArray() {
     copyToVector(strtochar, chars);
 }
 
-void printLine() {
-    char rightLetter;
-    for (int i = 0; i < charsLower.size(); i++) {
-        for (int j = 0; i < right.size(); j++) {
-            if (charsLower[i] == right[j]) {
-                rightLetter = right[j];
-                std::cout << underline << right[j] << reset << " ";
-                j = 0;
-                break;
-            }
-        }
-        if (charsLower[i] == rightLetter) {
-            continue;
-        }
-        if (charsLower[i] == ' ') {
-            std::cout << " ";
-        } else if (charsLower[i] == '\'') {
-            std::cout << "\' ";
-        } else if (charsLower[i] == '?') {
-            std::cout << "? ";
-        } else if (charsLower[i] == '!') {
-            std::cout << "! ";
-        } else if (charsLower[i] == '#') {
-            std::cout << "#";
-        } else if (charsLower[i] == '.') {
-            std::cout << ". ";
-        } else if (charsLower[i] == ',') {
-            std::cout << ", ";
-        } else if (charsLower[i] == ';') {
-            std::cout << "; ";
-        } else if (charsLower[i] == ':') {
-            std::cout << ": ";
-        } else if (charsLower[i] == '"') {
-            std::cout << '"' << " ";
-        } else if (charsLower[i] == '&') { 
-            std::cout << "& ";
-        } else if (charsLower[i] == '(') {
-            std::cout << "( ";
-        } else if (charsLower[i] == ')') {
-            std::cout << ") ";
-        } else if (charsLower[i] == '-') {
-            std::cout << "- ";
-        } else if (charsLower[i] == '+') {
-            std::cout << "+ ";
-        } else if (charsLower[i] == '=') {
-            std::cout << "= ";
-        } else {
-            std::cout << "_ ";
-        }
-    }
-    std::cout << std::endl;
-}
 void loss() {
     std::cout << "You lose!" << std::endl;
     std::cout << "The word or phrase was: " << phrase << std::endl;
     std::cout << "Press ENTER to exit...";
-    getchar();
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
     exit(0);
 }
 void printHangman() {
@@ -221,6 +172,7 @@ void check() {
         std::sort(right.begin(), right.end());
     } else if (correct == true && isInVector(right, letter)) {
         std::cout << "You already guessed that letter!" << std::endl;
+        std::sort(right.begin(), right.end());
         Sleep::seconds(1);
     } else if (correct == false) {
         std::cout << "Wrong!" << std::endl;
@@ -234,6 +186,55 @@ void checkWin() {
         win = true;
     }
 }
+void printLines2() {
+    for (int i = 0; i < charsLower.size(); i++) {
+        if (!isInVector(right, charsLower[i])) {
+            if (charsLower[i] == ' ') {
+                std::cout << " ";
+            } else if (charsLower[i] == '\'') {
+                std::cout << "\' ";
+            } else if (charsLower[i] == '?') {
+                std::cout << "? ";
+            } else if (charsLower[i] == '!') {
+                std::cout << "! ";
+            } else if (charsLower[i] == '#') {
+                std::cout << "#";
+            } else if (charsLower[i] == '.') {
+                std::cout << ". ";
+            } else if (charsLower[i] == ',') {
+                std::cout << ", ";
+            } else if (charsLower[i] == ';') {
+                std::cout << "; ";
+            } else if (charsLower[i] == ':') {
+                std::cout << ": ";
+            } else if (charsLower[i] == '"') {
+                std::cout << '"' << " ";
+            } else if (charsLower[i] == '&') {
+                std::cout << "& ";
+            } else if (charsLower[i] == '(') {
+                std::cout << "( ";
+            } else if (charsLower[i] == ')') {
+                std::cout << ") ";
+            } else if (charsLower[i] == '-') {
+                std::cout << "- ";
+            } else if (charsLower[i] == '+') {
+                std::cout << "+ ";
+            } else if (charsLower[i] == '=') {
+                std::cout << "= ";
+            } else {
+                std::cout << "_ ";
+            }
+        } else if (isInVector(right, charsLower[i])) {
+            for (int j = 0; j < right.size(); j++) {
+                if (right[j] == charsLower[i]) {
+                    std::cout << underline << right[j] << reset << " ";
+                }
+            }
+        }
+    }
+    std::cout << std::endl;
+}
+
 void getInput() {
     std::cout << "Guess a letter: ";
     std::cin.clear();
@@ -244,41 +245,41 @@ void getInput() {
         system("clear");
         getInput();
     } else {
-        std::cin.clear();
+        letter = tolower(letter);
         check();
         checkWin();
-        if (win == false) {c
+        if (win == false) {
             win = false;
         } else if (win == true) {
             system("clear");
             printHangman();
             printWrong();
-            printLine();
+            printLines2();
             std::cout << "You win!" << std::endl;
+            Sleep::milliseconds(500);
             std::cout << "You had " << tries << " lives left." << std::endl;
             std::cout << "The word or phrase was: " << phrase << std::endl;
+            Sleep::seconds(2);
             std::cout << "Press ENTER to exit...";
-            getchar();
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.get();
             exit(0);
         }
     }
 }
 
-void printLines2() {
-    for (int i = 0; i < charsLower.size(); i++) {
-        if (!isInVector(right, charsLower[i])) {
-            
-        }
-}
+
 
 void redraw() {
     system("clear");
     printHangman();
     printWrong();
-    printLine();
+    printLines2();
     getInput();
 }
 void play() {
+    system("clear");
     std::cout << "Welcome to Hangman!" << std::endl;
     std::cout << "Write your word or phrase: ";
     initArray();
@@ -294,6 +295,7 @@ void play() {
     } while (!win);
 }
 int main() {
+    system("clear");
 main:
     std::cout << "  HANGMAN  " << std::endl;
     std::cout << "  --------  " << std::endl;
