@@ -1,17 +1,17 @@
 {
-  "configurations": [
-    {
-      "name": "linux-clang-x64",
-      "includePath": [
-        "${workspaceFolder}/**",
-        "${workspaceFolder}/SFML/include"
-      ],
-      "defines": [],
-      "compilerPath": "/usr/bin/g++",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
-      "intelliSenseMode": "linux-clang-x64"
-    }
-  ],
-  "version": 1
+    "configurations": [
+        {
+            "name": "linux-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/SFML/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "${default}",
+            "cppStandard": "${default}",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
 }
