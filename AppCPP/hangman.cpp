@@ -10,88 +10,12 @@
 #include <vector>
 #include <limits>
 #include "hang.h"
+#include "Sleep.h"
+#include "vectors.h"
+#include "hangman.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
-
-class Sleep {
-public:
-    static void seconds(int seconds) {
-        std::this_thread::sleep_for(std::chrono::seconds(seconds));
-    }
-    static void milliseconds(int milliseconds) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-    }
-    static void microseconds(int microseconds) {
-        std::this_thread::sleep_for(std::chrono::microseconds(microseconds));
-    }
-};
-
-void copyToVector(const char * cstr, std::vector<char> &vector) {
-    for (int i = 0; i < strlen(cstr); i++) {
-        vector.push_back(cstr[i]);
-    }
-}
-
-void removeChars(std::vector<char> &vector) {
-    std::remove(vector.begin(), vector.end(), '?');
-    std::remove(vector.begin(), vector.end(), '!');
-    std::remove(vector.begin(), vector.end(), '.');
-    std::remove(vector.begin(), vector.end(), ',');
-    std::remove(vector.begin(), vector.end(), ';');
-    std::remove(vector.begin(), vector.end(), ':');
-    std::remove(vector.begin(), vector.end(), '@');
-    std::remove(vector.begin(), vector.end(), '#');
-    std::remove(vector.begin(), vector.end(), '&');
-    std::remove(vector.begin(), vector.end(), '"');
-    std::remove(vector.begin(), vector.end(), '(');
-    std::remove(vector.begin(), vector.end(), ')');
-} //Removes general characters from the vector that aren't letters.
-
-void removeSpaceChar(std::vector<char> &vector) {
-    std::remove(vector.begin(), vector.end(), ' ');
-} //Removes instances of the space character from the vector.
-
-void removeAposChar(std::vector<char> &vector) {
-    std::remove(vector.begin(), vector.end(), '\'');
-} //Removes any instances of the apostrophe from the vector. Passes vector address to the function.
-
-void vectorToLower(std::vector<char> &vector) {
-    for (int i = 0; i < vector.size(); i++) {
-        vector[i] = tolower(vector[i]);
-    }
-} //Makes all elements of the vector lowercase if able.
-
-void vectorToLowerCopy(std::vector<char> &vector, std::vector<char> &copy) {
-    for (int i = 0; i < vector.size(); i++) {
-        copy.push_back(tolower(vector[i]));
-    }
-} //Adds elements to a new vector but modified to be lowercase.
-
-void sortVector(std::vector<char> &vector) {
-    std::sort(vector.begin(), vector.end());
-} //Sorts vector in ascending order.
-
-void uniqueCopyTo(std::vector<char> &vector, std::vector<char> &copy) {
-    std::unique_copy(vector.begin(), vector.end(), copy.begin());
-} //Eliminates consecutive duplicates and copies the modified vector to a new vector without the extra chars.
-
-void printVector(std::vector<char> &vector) {
-    for (int i = 0; i < vector.size(); i++) {
-        std::cout << vector[i];
-    }
-}
-struct Equalto {
-    char c;
-    Equalto(char d) : c(d) {}
-    bool operator()(char d) {
-        return d == c;
-    }
-}; //Checks if a char is equal to a certain char.
-
-bool isInVector(std::vector<char> &vector, char c) {
-    return std::any_of(vector.begin(), vector.end(), Equalto(c));
-} //Checks if a char is in a vector.
 
 char letter;
 bool win = false;
@@ -106,7 +30,7 @@ std::vector<char> charsLower;
 std::string phrase;
 std::string hint;
 
-void initArray() {
+void HANGMAN::initArray() {
     getline(std::cin, phrase);
     if (std::any_of(phrase.begin(), phrase.end(), [](char c) { return isdigit(c); })) {
         std::cout << "Error: Phrase contains non-letter characters." << std::endl;
@@ -117,7 +41,7 @@ void initArray() {
     copyToVector(strtochar, chars);
 }
 
-void loss() {
+void HANGMAN::loss() {
     std::cout << "You lose!" << std::endl;
     std::cout << "The word or phrase was: " << phrase << std::endl;
     std::cout << "Press ENTER to exit...";
@@ -126,7 +50,7 @@ void loss() {
     std::cin.get();
     exit(0);
 }
-void printHangman() {
+void HANGMAN::printHangman() {
     if (tries == 6) {
         draw6();
     } else if (tries == 5) {
@@ -144,14 +68,13 @@ void printHangman() {
         loss();
     }
 }
-void printWrong() {
+void HANGMAN::printWrong() {
     for (int i = 0; i < wrong.size(); i++) {
         std::cout << wrong[i];
     }
     std::cout << std::endl;
 }
-
-void check() {
+void HANGMAN::check() {
     correct = false;
     for (int i = 0; i < charsLower.size(); i++) {
         if (isInVector(charsLower, letter) && !isInVector(right, letter)) {
@@ -180,12 +103,12 @@ void check() {
         tries--;
     }
 }
-void checkWin() {
+void HANGMAN::checkWin() {
     if (right == answer) {
         win = true;
     }
 }
-void printLines2() {
+void HANGMAN::printLines2() {
     for (int i = 0; i < charsLower.size(); i++) {
         if (!isInVector(right, charsLower[i])) {
             if (charsLower[i] == ' ') {
@@ -233,7 +156,8 @@ void printLines2() {
     }
     std::cout << std::endl;
 }
-void getInput() {
+
+void HANGMAN::getInput() {
     std::cout << "Guess a letter: ";
     std::cin.clear();
     std::cin >> letter;
@@ -262,18 +186,20 @@ void getInput() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cin.get();
-            exit(0);
+            system("clear");
         }
     }
 }
-void redraw() {
+
+void HANGMAN::redraw() {
     system("clear");
     printHangman();
     printWrong();
     printLines2();
     getInput();
 }
-void play() {
+
+void HANGMAN::play() {
     system("clear");
     std::cout << "Welcome to Hangman!" << std::endl;
     std::cout << "Write your word or phrase: ";
@@ -289,10 +215,14 @@ void play() {
         redraw();
     } while (!win);
 }
-int main() {
+
+void HANGMAN::game() {
+    bool gameOVER = false;
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     do {
     system("clear");
-    std::cout << "  HANGMAN  " << std::endl;
+    std::cout << "  HANGMAN   " << std::endl;
     std::cout << "  --------  " << std::endl;
     std::cout << "  1. Play   " << std::endl;
     std::cout << "  2. Exit   " << std::endl;
@@ -306,11 +236,11 @@ int main() {
         std::cout << "Exiting..." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
         system("clear");
-        exit(0);
+        gameOVER = true;
     } else {
         std::cout << "Invalid selection." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
         system("clear");
     }
-    } while (!win);
-};
+    } while (gameOVER = false);
+}

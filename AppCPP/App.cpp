@@ -11,24 +11,24 @@
 #include "ArrayTutorial.h"
 #include "menu.h"
 #include "Guess.h"
+#include "hangman.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
 
 std::string selection;
-
 //MAIN MENU function
 void mainmenu_select() {
     Menu::displayMainMenu();
     getline(std::cin, selection);
     if (selection == "1") {
-        menuOption = MainMenu::PLAY_GAMES;
+        mainPLAY;
     } else if (selection == "2") {
-        menuOption = MainMenu::TUTOR;
+        mainTUTOR;
     } else if (selection == "3") {
-        menuOption = MainMenu::EXIT;
+        mainEXIT;
     } else {
-        menuOption = MainMenu::null;
+        mainNull;
         std::cout << "Invalid selection." << std::endl;
         Sleep::seconds(1);
     }
@@ -38,11 +38,13 @@ void mainmenu_select() {
 void gamemenu_select() {
     getline(std::cin, selection);
     if (selection == "1") {
-        gameOption = GameMenu::GUESS;
+        gameGUESS;
     } else if (selection == "2") {
-        gameOption = GameMenu::EXIT;
+        gameHANGMAN;
+    } else if (selection == "3") {
+        gameEXIT;
     } else {
-        gameOption = GameMenu::null;
+        gameNull;
         std::cout << "Invalid selection." << std::endl;
         Sleep::seconds(1);
     }
@@ -53,13 +55,13 @@ void tutormenu_select() {
     std::cout << "-> ";
     getline(std::cin, selection);
     if (selection == "1") {
-        tutorOption = TutorMenu::ARRAY;
+        tutorARRAY;
     } else if (selection == "2") {
-        tutorOption = TutorMenu::EXIT;
+        tutorEXIT;
     } else if (selection == "3") {
         Menu::exiting();
     } else {
-        tutorOption = TutorMenu::null;
+        tutorNull;
         std::cout << "Invalid selection." << std::endl;
         Sleep::seconds(1);
     }
@@ -67,8 +69,8 @@ void tutormenu_select() {
 }
 
 int main() {
+    do {
     system("clear");
-    mainmenu:
     Menu::switchMain();
     if (menuOption == MainMenu::PLAY_GAMES) {
         system("clear");
@@ -80,8 +82,7 @@ int main() {
         Menu::exiting();
     }
     if (tutorOption == TutorMenu::ARRAY) {
-    myarrayt:
-        tutorOption = TutorMenu::null;
+        tutorNull;
         std::cout << "Starting Array Tutorial..." << std::endl;
         Sleep::milliseconds(300);
         std::cout << "Ready!" << std::endl;
@@ -92,11 +93,10 @@ int main() {
         system("clear");
         Menu::switchEndOfTutor();
     } else if (tutorOption == TutorMenu::EXIT) {
-        tutorOption = TutorMenu::null;
-        goto mainmenu;
+        tutorNull;
     }
     if (gameOption == GameMenu::GUESS) {
-        gameOption = GameMenu::null;
+        gameNull;
         std::cout << "Starting Game... " << std::endl;
         Sleep::seconds(1);
         std::cout << "Ready!" << std::endl;
@@ -105,10 +105,28 @@ int main() {
         // Game Code
         Menu::run(Guessing_Game);
         system("clear");
-        goto mainmenu;
-    } else if (gameOption == GameMenu::EXIT) {
-        gameOption = GameMenu::null;
-        goto mainmenu;
+        Menu::switchEndOfGame();
+    } else if (gameOption == GameMenu::HANGMAN) {
+        gameNull;
+        system("clear");
+        Sleep::milliseconds(200);
+        std::cout << "Starting Game... " << std::endl;
+        Sleep::milliseconds(500);
+        std::cout << "Ready!" << std::endl;
+        Sleep::milliseconds(500);
+        system("clear");
+        // Game Code
+        Menu::run(HANGMAN::game);
+        Menu::switchEndOfGame();
+    } 
+    else if (gameOption == GameMenu::EXIT) {
+        gameNull;
     }
+    } while (menuOption != MainMenu::EXIT || gameOption != GameMenu::EXIT || tutorOption != TutorMenu::EXIT);
+    system("clear");
+    Sleep::milliseconds(500);
+    std::cout << "Exiting..." << std::endl;
+    Sleep::milliseconds(800);
+    system("clear");
     return 0;
 } //CURRENT VERSION IS IN FILE 'APP'

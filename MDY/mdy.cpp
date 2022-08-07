@@ -7,7 +7,8 @@
 #include <cmath>
 #include <cstdio>
 #include "SLP.h"
-                                                                                                         
+
+#define stringify(x) #x                                                                       
 class Ltime {
 private:
 	
@@ -29,12 +30,44 @@ public:
 		std::cout << "Local time and date: ";
 		std::cout << tm_local->tm_mon + 1 << "/" << tm_local->tm_mday << "/" << tm_local->tm_year + 1900 << std::endl;
 	}
-	void getLocalTime() {
+	std::string getLocalTime() {
 		time_t now;
 		now = time(NULL);
 		tm *tm_local = localtime(&now);
-
+		std::cout << "Today is " << Ltime::getDay() << ", " << tm_local->tm_mon+1 << "/" << tm_local->tm_mday << "/" << tm_local->tm_year + 1900 << std::endl;
+		return std::to_string(tm_local->tm_mon+1) + "/" + std::to_string(tm_local->tm_mday) + "/" + std::to_string(tm_local->tm_year + 1900);
 	}
+	enum wday getDay() {
+		time_t now;
+		now = time(NULL);
+		tm *tm = localtime(&now);
+		int day = tm->tm_wday;
+		wday d = wday(day);
+		return d;
+	}
+	enum wday {
+		Sunday,
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday
+	};
+	enum month {
+		January,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	};
 	void getdate();
 	void gettime();
 };
@@ -46,5 +79,6 @@ void getLocalTime() {
 int main() {
 	Ltime lt;
 	lt.local();
+	std::cout << lt.getDay() << std::endl;
 	return 0;
 }

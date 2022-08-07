@@ -1,6 +1,28 @@
 #ifndef _menu_h
 #define _menu_h
 
+#ifndef __MENU_OPTIONS__
+#define gameEXIT gameOption = GameMenu::EXIT
+#define gameNull gameOption = GameMenu::null
+#define gameGUESS gameOption = GameMenu::GUESS
+#define gameHANGMAN gameOption = GameMenu::HANGMAN
+#define mainNull menuOption = MainMenu::null
+#define mainPLAY menuOption = MainMenu::PLAY_GAMES
+#define mainTUTOR menuOption = MainMenu::TUTOR
+#define mainEXIT menuOption = MainMenu::EXIT
+#define tutorNull tutorOption = TutorMenu::null
+#define tutorARRAY tutorOption = TutorMenu::ARRAY
+#define tutorEXIT tutorOption = TutorMenu::EXIT
+#define endOfGameNull endOfGameOption = endOfGameMenu::null
+#define endOfGamePLAYAGAIN endOfGameOption = endOfGameMenu::PLAY_AGAIN
+#define endOfGameEXIT endOfGameOption = endOfGameMenu::EXIT_TO_MAIN
+#define endOfGameABORT endOfGameOption = endOfGameMenu::EXIT
+#define endOfTutorNull endOfTutorOption = endOfTutorMenu::null
+#define endOfTutorAGAIN endOfTutorOption = endOfTutorMenu::TUTOR_AGAIN
+#define endOfTutorEXIT endOfTutorOption = endOfTutorMenu::EXIT_TO_MAIN
+#define endOfTutorABORT endOfTutorOption = endOfTutorMenu::EXIT
+#endif // __MENU_OPTIONS__
+
 #pragma once
 
 #define underline "\033[4m"
@@ -16,6 +38,7 @@ enum class MainMenu {
 enum class GameMenu {
     null,
     GUESS,
+    HANGMAN,
     EXIT
 };
 
@@ -32,7 +55,6 @@ enum class TutorMenu {
     EXIT
 };
 
-
 enum class endOfTutorMenu {
     null,
     TUTOR_AGAIN,
@@ -45,6 +67,9 @@ GameMenu gameOption = GameMenu::null;
 TutorMenu tutorOption = TutorMenu::null;
 endOfGameMenu endOfGameOption = endOfGameMenu::null;
 endOfTutorMenu endOfTutorOption = endOfTutorMenu::null;
+
+#include <iostream>
+#include "Sleep.h"
 
 class Menu {
 public:
@@ -62,7 +87,8 @@ public:
     static void displayGameMenu() {
         std::cout << "Please select a game to play:" << std::endl;
         std::cout << "1. Guessing Game" << std::endl;
-        std::cout << "2. Exit to Main Menu" << std::endl;
+        std::cout << "2. Hangman" << std::endl;
+        std::cout << "3. Exit to Main Menu" << std::endl;
         std::cout << "-> ";
     }
     static void displayTutorMenu() {
@@ -122,6 +148,9 @@ public:
                 gameOption = GameMenu::GUESS;
                 break;
             case 2:
+                gameOption = GameMenu::HANGMAN;
+                break;
+            case 3:
                 gameOption = GameMenu::EXIT;
                 break;
             default:
