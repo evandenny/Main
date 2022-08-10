@@ -14,6 +14,7 @@ public:
 	static void getInput();
 	static void redraw();
 	static void play();
+	static void printHint();
 };
 
 #endif

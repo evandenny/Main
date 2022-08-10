@@ -30,6 +30,10 @@ std::vector<char> charsLower;
 std::string phrase;
 std::string hint;
 
+void HANGMAN::printHint() {
+    std::cout << "Hint: " << hint << std::endl;
+}
+
 void HANGMAN::initArray() {
     getline(std::cin, phrase);
     if (std::any_of(phrase.begin(), phrase.end(), [](char c) { return isdigit(c); })) {
@@ -196,6 +200,7 @@ void HANGMAN::redraw() {
     printHangman();
     printWrong();
     printLines2();
+    printHint();
     getInput();
 }
 
@@ -204,6 +209,9 @@ void HANGMAN::play() {
     std::cout << "Welcome to Hangman!" << std::endl;
     std::cout << "Write your word or phrase: ";
     initArray();
+    std::cin.clear();
+    std::cout << "Write a hint for the word or phrase: ";
+    getline(std::cin, hint);
     vectorToLower(chars);
     std::copy(chars.begin(), chars.end(), std::back_inserter(charsLower));
     removeChars(chars);
