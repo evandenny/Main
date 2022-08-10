@@ -3,9 +3,6 @@
 #include <bits/stdc++.h>
 #include <random>
 
-#include "Sleep.h"
-#include "Guess.h"
-
 #define underline "\033[4m"
 #define reset "\033[0m"
 

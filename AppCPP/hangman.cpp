@@ -24,7 +24,6 @@ int tries = 6;
 std::vector<char> answer;
 std::vector<char> right;
 std::vector<char> wrong;
-const char * strtochar;
 std::vector<char> chars;
 std::vector<char> charsLower;
 std::string phrase;
@@ -195,11 +194,23 @@ void HANGMAN::getInput() {
     }
 }
 
+void HANGMAN::printAns() {
+    for (int i = 0; i < answer.size(); i++) {
+        std::cout << answer[i];
+    }
+    std::cout << "|";
+    for (int i = 0; i < right.size(); i++) {
+        std::cout << right[i];
+    }
+    std::cout << std::endl;
+}
+
 void HANGMAN::redraw() {
     system("clear");
     printHangman();
     printWrong();
     printLines2();
+    //printAns();//For Debugging
     printHint();
     getInput();
 }
@@ -218,7 +229,13 @@ void HANGMAN::play() {
     removeAposChar(chars);
     removeSpaceChar(chars);
     sortVector(chars);
-    std::unique_copy(chars.begin(), chars.end(), std::back_inserter(answer));
+    std::vector<char> transfer;
+    std::unique_copy(chars.begin(), chars.end(), std::back_inserter(transfer));
+    removeSpaceChar(transfer);
+    removeAposChar(transfer);
+    removeChars(transfer);
+    std::sort(transfer.begin(), transfer.end());
+    std::unique_copy(transfer.begin(), transfer.end(), std::back_inserter(answer));
     do {
         redraw();
     } while (!win);
@@ -251,4 +268,15 @@ void HANGMAN::game() {
         system("clear");
     }
     } while (gameOVER = false);
+    answer.clear();
+    right.clear();
+    wrong.clear();
+    chars.clear();
+    charsLower.clear();
+    hint.clear();
+    phrase.clear();
+    win = false;
+    tries = 6;
+    correct = false;
+    std::cin.clear();
 }

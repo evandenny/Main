@@ -202,7 +202,8 @@ public:
                 endOfGameOption = endOfGameMenu::EXIT_TO_MAIN;
                 break;
             case 3:
-                endOfGameOption = endOfGameMenu::EXIT;
+                system("clear");
+                Menu::exiting();
                 break;
             default:
                 endOfGameOption = endOfGameMenu::null;

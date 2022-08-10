@@ -1,6 +1,7 @@
 #ifndef _hangman_h_
 #define _hangman_h_
 
+#include <algorithm>
 class HANGMAN {
 public:
 	static void game();
@@ -15,6 +16,7 @@ public:
 	static void redraw();
 	static void play();
 	static void printHint();
+	static void printAns();
 };
 
 #endif

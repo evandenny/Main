@@ -101,11 +101,14 @@ int main() {
         Sleep::seconds(1);
         std::cout << "Ready!" << std::endl;
         Sleep::milliseconds(500);
+        do {
         system("clear"); 
         // Game Code
         Menu::run(Guessing_Game);
+        std::cin.clear();
         system("clear");
         Menu::switchEndOfGame();
+        } while (endOfGameOption == endOfGameMenu::PLAY_AGAIN);
     } else if (gameOption == GameMenu::HANGMAN) {
         gameNull;
         system("clear");
@@ -114,13 +117,15 @@ int main() {
         Sleep::milliseconds(500);
         std::cout << "Ready!" << std::endl;
         Sleep::milliseconds(500);
+        do {
         system("clear");
         // Game Code
         Menu::run(HANGMAN::game);
+        std::cin.clear();
         Menu::switchEndOfGame();
-    } 
-    else if (gameOption == GameMenu::EXIT) {
-        gameNull;
+        } while (endOfGameOption == endOfGameMenu::PLAY_AGAIN); 
+    } else if (gameOption == GameMenu::EXIT) {
+        gameEXIT;
     }
     } while (menuOption != MainMenu::EXIT || gameOption != GameMenu::EXIT || tutorOption != TutorMenu::EXIT);
     system("clear");
