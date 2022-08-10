@@ -1,13 +1,29 @@
 #include <iostream>
 #include <string>
 #include <bits/stdc++.h>
+#include <random>
+
 #include "Sleep.h"
-//#include "menu.h"
-#include "udfunc.h"
 #include "Guess.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
+
+std::mt19937 seeded_eng() {
+    std::random_device rd;
+    std::seed_seq seed{rd(), rd(), rd(), rd(), rd(), rd(), rd(), rd()};
+    return std::mt19937(seed);
+}
+
+class Random {
+private:
+    std::mt19937 eng = seeded_eng();
+public:
+auto operator()(int a, int b) {
+        std::uniform_int_distribution<int> dist(a, b);
+        return dist(eng);
+    }
+};
 
 //base high score for GUESSING GAME game 
 int high_score_guessgame = 10;

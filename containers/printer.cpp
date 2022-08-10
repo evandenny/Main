@@ -2,14 +2,18 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <cstdio>
+#include <fstream>
 using namespace std;
 
 //-- interface --
 class Printer {
 protected:
+	int _queue_size;
 	std::queue<std::string> Queue;
 public:
 	Printer() : Queue() {};
+	~Printer() {};
 	virtual void inQueue() = 0;
 	virtual void print() = 0;
 	virtual void add(std::string str) = 0;
@@ -20,6 +24,7 @@ protected:
 	std::queue<std::string> Queue;
 public:
 	printStr() : Printer() {};
+	~printStr() {};
 	void print() {
 		while (!Queue.empty()) {
 			cout << "PRINT> " << Queue.front() << endl;
@@ -43,11 +48,6 @@ public:
 };
 
 int main() {
-	printStr printer;
-	printer.add("Hello");
-	printer.add("World");
-	printer.inQueue();
-	printer.print();
-	printer.inQueue();
+	
 	return 0;
 }
