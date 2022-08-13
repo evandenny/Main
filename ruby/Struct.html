@@ -1,0 +1,2863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.42.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta name='description' content='  Class : Struct  -   Ruby 3.1.2 ' />
+  <meta content="2022-06-09 20:39:37 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+  <title>Class: Struct (Ruby 3.1.2) </title>
+  <link rel="stylesheet" href="css/associated.css" type="text/css" >
+  <!-- link rel="stylesheet" href=".css/obf.css"  -->
+  <link rel="stylesheet" href="css/inuit.css" >
+  <link rel="stylesheet" href="css/grid.inuit.css" >
+  <link rel="stylesheet" href="css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="css/carbon17.css" type="text/css" >
+
+
+  <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+
+   
+<script src="/js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+   <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body id="top" class="class rdocstar">
+
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  
+   <!-- carbon17 added here 2017-09-09 -->
+ 
+
+   <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>struct.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-keyword_init-3F">::keyword_init?</a></li>
+          
+          <li><a href="#method-c-members">::members</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
+          
+          <li><a href="#method-i-deconstruct">#deconstruct</a></li>
+          
+          <li><a href="#method-i-deconstruct_keys">#deconstruct_keys</a></li>
+          
+          <li><a href="#method-i-dig">#dig</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-each_pair">#each_pair</a></li>
+          
+          <li><a href="#method-i-eql-3F">#eql?</a></li>
+          
+          <li><a href="#method-i-filter">#filter</a></li>
+          
+          <li><a href="#method-i-hash">#hash</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-length">#length</a></li>
+          
+          <li><a href="#method-i-members">#members</a></li>
+          
+          <li><a href="#method-i-select">#select</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-to_a">#to_a</a></li>
+          
+          <li><a href="#method-i-to_h">#to_h</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-values">#values</a></li>
+          
+          <li><a href="#method-i-values_at">#values_at</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Enumerable.html">Enumerable</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul id='files'>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./COPYING_ja.html">COPYING.ja</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT.html">README.EXT</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT_ja.html">README.EXT.ja</a></li>
+        
+          
+          <li class="file"><a href="./aclocal_m4.html">aclocal.m4</a></li>
+        
+          
+          <li class="file"><a href="./autogen_sh.html">autogen.sh</a></li>
+        
+          
+          <li class="file"><a href="./configure_ac.html">configure.ac</a></li>
+        
+          
+          <li class="file"><a href="./doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/contributing_rdoc.html">contributing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_rdoc.html">extension.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/globals_rdoc.html">globals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/keywords_rdoc.html">keywords.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/marshal_rdoc.html">marshal.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/regexp_rdoc.html">regexp.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/security_rdoc.html">security.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/signals_rdoc.html">signals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax_rdoc.html">syntax.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/in_rdoc.html">in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/msec_rdoc.html">msec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_rdoc.html">sec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/usec_rdoc.html">usec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/year_rdoc.html">year.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./lex_c_blt.html">lex.c.blt</a></li>
+        
+          
+          <li class="file"><a href="./node_name_inc.html">node_name.inc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="./ARGF.html">ARGF</a></li>
+        
+          
+          
+          <li><a href="./ArgumentError.html">ArgumentError</a></li>
+        
+          
+          
+          <li><a href="./Array.html">Array</a></li>
+        
+          
+          
+          <li><a href="./BasicObject.html">BasicObject</a></li>
+        
+          
+          
+          <li><a href="./Binding.html">Binding</a></li>
+        
+          
+          
+          <li><a href="./Class.html">Class</a></li>
+        
+          
+          
+          <li><a href="./ClosedQueueError.html">ClosedQueueError</a></li>
+        
+          
+          
+          <li><a href="./Comparable.html">Comparable</a></li>
+        
+          
+          
+          <li><a href="./Complex.html">Complex</a></li>
+        
+          
+          
+          <li><a href="./Continuation.html">Continuation</a></li>
+        
+          
+          
+          <li><a href="./Dir.html">Dir</a></li>
+        
+          
+          
+          <li><a href="./ENV.html">ENV</a></li>
+        
+          
+          
+          <li><a href="./EOFError.html">EOFError</a></li>
+        
+          
+          
+          <li><a href="./Encoding.html">Encoding</a></li>
+        
+          
+          
+          <li><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/Converter.html">Encoding::Converter</a></li>
+        
+          
+          
+          <li><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+        
+          
+          
+          <li><a href="./EncodingError.html">EncodingError</a></li>
+        
+          
+          
+          <li><a href="./Enumerable.html">Enumerable</a></li>
+        
+          
+          
+          <li><a href="./Enumerator.html">Enumerator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Chain.html">Enumerator::Chain</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Generator.html">Enumerator::Generator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Producer.html">Enumerator::Producer</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+        
+          
+          
+          <li><a href="./Errno.html">Errno</a></li>
+        
+          
+          
+          <li><a href="./Exception.html">Exception</a></li>
+        
+          
+          
+          <li><a href="./FalseClass.html">FalseClass</a></li>
+        
+          
+          
+          <li><a href="./Fiber.html">Fiber</a></li>
+        
+          
+          
+          <li><a href="./Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+        
+          
+          
+          <li><a href="./FiberError.html">FiberError</a></li>
+        
+          
+          
+          <li><a href="./File.html">File</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/Stat.html">File::Stat</a></li>
+        
+          
+          
+          <li><a href="./FileTest.html">FileTest</a></li>
+        
+          
+          
+          <li><a href="./Float.html">Float</a></li>
+        
+          
+          
+          <li><a href="./FloatDomainError.html">FloatDomainError</a></li>
+        
+          
+          
+          <li><a href="./FrozenError.html">FrozenError</a></li>
+        
+          
+          
+          <li><a href="./GC.html">GC</a></li>
+        
+          
+          
+          <li><a href="./GC/Profiler.html">GC::Profiler</a></li>
+        
+          
+          
+          <li><a href="./Hash.html">Hash</a></li>
+        
+          
+          
+          <li><a href="./IO.html">IO</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer.html">IO::Buffer</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitReadable.html">IO::WaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitWritable.html">IO::WaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IOError.html">IOError</a></li>
+        
+          
+          
+          <li><a href="./IndexError.html">IndexError</a></li>
+        
+          
+          
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          
+          
+          <li><a href="./Interrupt.html">Interrupt</a></li>
+        
+          
+          
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="./KeyError.html">KeyError</a></li>
+        
+          
+          
+          <li><a href="./LoadError.html">LoadError</a></li>
+        
+          
+          
+          <li><a href="./LocalJumpError.html">LocalJumpError</a></li>
+        
+          
+          
+          <li><a href="./Marshal.html">Marshal</a></li>
+        
+          
+          
+          <li><a href="./MatchData.html">MatchData</a></li>
+        
+          
+          
+          <li><a href="./Math.html">Math</a></li>
+        
+          
+          
+          <li><a href="./Math/DomainError.html">Math::DomainError</a></li>
+        
+          
+          
+          <li><a href="./Method.html">Method</a></li>
+        
+          
+          
+          <li><a href="./Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="./NameError.html">NameError</a></li>
+        
+          
+          
+          <li><a href="./NilClass.html">NilClass</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+        
+          
+          
+          <li><a href="./NoMemoryError.html">NoMemoryError</a></li>
+        
+          
+          
+          <li><a href="./NoMethodError.html">NoMethodError</a></li>
+        
+          
+          
+          <li><a href="./NotImplementedError.html">NotImplementedError</a></li>
+        
+          
+          
+          <li><a href="./Numeric.html">Numeric</a></li>
+        
+          
+          
+          <li><a href="./Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+        
+          
+          
+          <li><a href="./Pool.html">Pool</a></li>
+        
+          
+          
+          <li><a href="./Proc.html">Proc</a></li>
+        
+          
+          
+          <li><a href="./Process.html">Process</a></li>
+        
+          
+          
+          <li><a href="./Process/GID.html">Process::GID</a></li>
+        
+          
+          
+          <li><a href="./Process/Status.html">Process::Status</a></li>
+        
+          
+          
+          <li><a href="./Process/Sys.html">Process::Sys</a></li>
+        
+          
+          
+          <li><a href="./Process/UID.html">Process::UID</a></li>
+        
+          
+          
+          <li><a href="./Ractor.html">Ractor</a></li>
+        
+          
+          
+          <li><a href="./Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/Error.html">Ractor::Error</a></li>
+        
+          
+          
+          <li><a href="./Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedError.html">Ractor::MovedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+        
+          
+          
+          <li><a href="./Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+        
+          
+          
+          <li><a href="./Random.html">Random</a></li>
+        
+          
+          
+          <li><a href="./Random/Formatter.html">Random::Formatter</a></li>
+        
+          
+          
+          <li><a href="./Range.html">Range</a></li>
+        
+          
+          
+          <li><a href="./RangeError.html">RangeError</a></li>
+        
+          
+          
+          <li><a href="./Rational.html">Rational</a></li>
+        
+          
+          
+          <li><a href="./Refinement.html">Refinement</a></li>
+        
+          
+          
+          <li><a href="./Regexp.html">Regexp</a></li>
+        
+          
+          
+          <li><a href="./RegexpError.html">RegexpError</a></li>
+        
+          
+          
+          <li><a href="./Ripper.html">Ripper</a></li>
+        
+          
+          
+          <li><a href="./RubyVM.html">RubyVM</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+        
+          
+          
+          <li><a href="./RuntimeError.html">RuntimeError</a></li>
+        
+          
+          
+          <li><a href="./ScriptError.html">ScriptError</a></li>
+        
+          
+          
+          <li><a href="./SecurityError.html">SecurityError</a></li>
+        
+          
+          
+          <li><a href="./Signal.html">Signal</a></li>
+        
+          
+          
+          <li><a href="./SignalException.html">SignalException</a></li>
+        
+          
+          
+          <li><a href="./StandardError.html">StandardError</a></li>
+        
+          
+          
+          <li><a href="./StopIteration.html">StopIteration</a></li>
+        
+          
+          
+          <li><a href="./String.html">String</a></li>
+        
+          
+          
+          <li><a href="./Struct.html">Struct</a></li>
+        
+          
+          
+          <li><a href="./Symbol.html">Symbol</a></li>
+        
+          
+          
+          <li><a href="./SyntaxError.html">SyntaxError</a></li>
+        
+          
+          
+          <li><a href="./SystemCallError.html">SystemCallError</a></li>
+        
+          
+          
+          <li><a href="./SystemExit.html">SystemExit</a></li>
+        
+          
+          
+          <li><a href="./SystemStackError.html">SystemStackError</a></li>
+        
+          
+          
+          <li><a href="./Thread.html">Thread</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace.html">Thread::Backtrace</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+        
+          
+          
+          <li><a href="./Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+        
+          
+          
+          <li><a href="./Thread/Mutex.html">Thread::Mutex</a></li>
+        
+          
+          
+          <li><a href="./Thread/Queue.html">Thread::Queue</a></li>
+        
+          
+          
+          <li><a href="./Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+        
+          
+          
+          <li><a href="./ThreadError.html">ThreadError</a></li>
+        
+          
+          
+          <li><a href="./ThreadGroup.html">ThreadGroup</a></li>
+        
+          
+          
+          <li><a href="./Time.html">Time</a></li>
+        
+          
+          
+          <li><a href="./TracePoint.html">TracePoint</a></li>
+        
+          
+          
+          <li><a href="./TrueClass.html">TrueClass</a></li>
+        
+          
+          
+          <li><a href="./TypeError.html">TypeError</a></li>
+        
+          
+          
+          <li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+        
+          
+          
+          <li><a href="./UncaughtThrowError.html">UncaughtThrowError</a></li>
+        
+          
+          
+          <li><a href="./UnicodeNormalize.html">UnicodeNormalize</a></li>
+        
+          
+          
+          <li><a href="./Warning.html">Warning</a></li>
+        
+          
+          
+          <li><a href="./ZeroDivisionError.html">ZeroDivisionError</a></li>
+        
+          
+          
+          <li><a href="./fatal.html">fatal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="class">Struct</h1>
+
+    <div id="description" class="description">
+      
+<p>Class Struct provides a convenient way to create a simple class that can store and fetch values.</p>
+
+<p>This example creates a subclass of <code>Struct</code>, <code>Struct::Customer</code>; the first argument, a string, is the name of the subclass; the other arguments, symbols, determine the <em>members</em> of the new subclass.</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Customer&#39;</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-constant">Customer</span>.<span class="ruby-identifier">name</span>       <span class="ruby-comment"># =&gt; &quot;Struct::Customer&quot;</span>
+<span class="ruby-constant">Customer</span>.<span class="ruby-identifier">class</span>      <span class="ruby-comment"># =&gt; Class</span>
+<span class="ruby-constant">Customer</span>.<span class="ruby-identifier">superclass</span> <span class="ruby-comment"># =&gt; Struct</span>
+</pre>
+
+<p>Corresponding to each member are two methods, a writer and a reader, that store and fetch values:</p>
+
+<pre class="ruby"><span class="ruby-identifier">methods</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">instance_methods</span> <span class="ruby-keyword">false</span>
+<span class="ruby-identifier">methods</span> <span class="ruby-comment"># =&gt; [:zip, :address=, :zip=, :address, :name, :name=]</span>
+</pre>
+
+<p>An instance of the subclass may be created, and its members assigned values, via method <code>::new</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span> <span class="ruby-comment"># =&gt; #&lt;struct Struct::Customer name=&quot;Joe Smith&quot;, address=&quot;123 Maple, Anytown NC&quot;, zip=12345&gt;</span>
+</pre>
+
+<p>The member values may be managed thus:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span>.<span class="ruby-identifier">name</span>    <span class="ruby-comment"># =&gt; &quot;Joe Smith&quot;</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&#39;Joseph Smith&#39;</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">name</span>    <span class="ruby-comment"># =&gt; &quot;Joseph Smith&quot;</span>
+</pre>
+
+<p>And thus; note that member name may be expressed as either a string or a symbol:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span>[<span class="ruby-value">:name</span>]  <span class="ruby-comment"># =&gt; &quot;Joseph Smith&quot;</span>
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">:name</span>] = <span class="ruby-string">&#39;Joseph Smith, Jr.&#39;</span>
+<span class="ruby-identifier">joe</span>[<span class="ruby-string">&#39;name&#39;</span>] <span class="ruby-comment"># =&gt; &quot;Joseph Smith, Jr.&quot;</span>
+</pre>
+
+<p>See <a href="Struct.html#method-c-new"><code>Struct::new</code></a>.</p>
+
+<h2 id="class-Struct-label-What-27s+Here">What&#39;s Here<span><a href="#class-Struct-label-What-27s+Here">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>First, what&#39;s elsewhere. Class Struct:</p>
+<ul><li>
+<p>Inherits from <a href="Object.html#class-Object-label-What-27s+Here">class Object</a>.</p>
+</li><li>
+<p>Includes <a href="Enumerable.html#module-Enumerable-label-What-27s+Here">module Enumerable</a>, which provides dozens of additional methods.</p>
+</li></ul>
+
+<p>Here, class Struct provides methods that are useful for:</p>
+<ul><li>
+<p><a href="#class-Struct-label-Methods+for+Creating+a+Struct+Subclass">Creating a Struct Subclass</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Querying">Querying</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Comparing">Comparing</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Fetching">Fetching</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Assigning">Assigning</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Iterating">Iterating</a></p>
+</li><li>
+<p><a href="#class-Struct-label-Methods+for+Converting">Converting</a></p>
+</li></ul>
+
+<h3 id="class-Struct-label-Methods+for+Creating+a+Struct+Subclass">Methods for Creating a <a href="Struct.html"><code>Struct</code></a> Subclass<span><a href="#class-Struct-label-Methods+for+Creating+a+Struct+Subclass">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-c-new"><code>::new</code></a>
+<dd>
+<p>Returns a new subclass of Struct.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Querying">Methods for Querying<span><a href="#class-Struct-label-Methods+for+Querying">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-i-hash"><code>hash</code></a>
+<dd>
+<p>Returns the integer hash code.</p>
+</dd><dt><a href="Struct.html#method-i-length"><code>length</code></a>, <a href="Struct.html#method-i-size"><code>size</code></a>
+<dd>
+<p>Returns the number of members.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Comparing">Methods for Comparing<span><a href="#class-Struct-label-Methods+for+Comparing">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="#method-i-3D-3D">#==</a>
+<dd>
+<p>Returns whether a given object is equal to <code>self</code>, using <code>==</code> to compare member values.</p>
+</dd><dt><a href="Struct.html#method-i-eql-3F"><code>eql?</code></a>
+<dd>
+<p>Returns whether a given object is equal to <code>self</code>, using <code>eql?</code> to compare member values.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Fetching">Methods for Fetching<span><a href="#class-Struct-label-Methods+for+Fetching">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-i-5B-5D"><code>[]</code></a>
+<dd>
+<p>Returns the value associated with a given member name.</p>
+</dd><dt><a href="Struct.html#method-i-to_a"><code>to_a</code></a>, <a href="Struct.html#method-i-values"><code>values</code></a>, <a href="Struct.html#method-i-deconstruct"><code>deconstruct</code></a>
+<dd>
+<p>Returns the member values in <code>self</code> as an array.</p>
+</dd><dt><a href="Struct.html#method-i-deconstruct_keys"><code>deconstruct_keys</code></a>
+<dd>
+<p>Returns a hash of the name/value pairs for given member names.</p>
+</dd><dt><a href="Struct.html#method-i-dig"><code>dig</code></a>
+<dd>
+<p>Returns the object in nested objects that is specified by a given member name and additional arguments.</p>
+</dd><dt><a href="Struct.html#method-i-members"><code>members</code></a>
+<dd>
+<p>Returns an array of the member names.</p>
+</dd><dt><a href="Struct.html#method-i-select"><code>select</code></a>, <a href="Struct.html#method-i-filter"><code>filter</code></a>
+<dd>
+<p>Returns an array of member values from <code>self</code>, as selected by the given block.</p>
+</dd><dt><a href="Struct.html#method-i-values_at"><code>values_at</code></a>
+<dd>
+<p>Returns an array containing values for given member names.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Assigning">Methods for Assigning<span><a href="#class-Struct-label-Methods+for+Assigning">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-i-5B-5D-3D"><code>[]=</code></a>
+<dd>
+<p>Assigns a given value to a given member name.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Iterating">Methods for Iterating<span><a href="#class-Struct-label-Methods+for+Iterating">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-i-each"><code>each</code></a>
+<dd>
+<p>Calls a given block with each member name.</p>
+</dd><dt><a href="Struct.html#method-i-each_pair"><code>each_pair</code></a>
+<dd>
+<p>Calls a given block with each member name/value pair.</p>
+</dd></dl>
+
+<h3 id="class-Struct-label-Methods+for+Converting">Methods for Converting<span><a href="#class-Struct-label-Methods+for+Converting">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<dl class="rdoc-list note-list"><dt><a href="Struct.html#method-i-inspect"><code>inspect</code></a>, <a href="Struct.html#method-i-to_s"><code>to_s</code></a>
+<dd>
+<p>Returns a string representation of <code>self</code>.</p>
+</dd><dt><a href="Struct.html#method-i-to_h"><code>to_h</code></a>
+<dd>
+<p>Returns a hash of the member name/value pairs in <code>self</code>.</p>
+</dd></dl>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="keyword_init-3F-method" class="method-detail ">
+          <a name="method-c-keyword_init-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">StructClass::keyword_init? &rarr; true or falsy value</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if the class was initialized with <code>keyword_init: true</code>. Otherwise returns <code>nil</code> or <code>false</code>.</p>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:a</span>)
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">keyword_init?</span> <span class="ruby-comment"># =&gt; nil</span>
+<span class="ruby-constant">Bar</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">keyword_init:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-constant">Bar</span>.<span class="ruby-identifier">keyword_init?</span> <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-constant">Baz</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">keyword_init:</span> <span class="ruby-keyword">false</span>)
+<span class="ruby-constant">Baz</span>.<span class="ruby-identifier">keyword_init?</span> <span class="ruby-comment"># =&gt; false</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="keyword_init-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_s_keyword_init_p(VALUE obj)
+{
+}
+            </pre> 
+            </div><!-- keyword_init-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- keyword_init-3F-method -->
+      
+        <div id="members-method" class="method-detail ">
+          <a name="method-c-members"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">StructClass::members &rarr; array_of_symbols</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the member names of the <a href="Struct.html"><code>Struct</code></a> descendant as an array:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-constant">Customer</span>.<span class="ruby-identifier">members</span> <span class="ruby-comment"># =&gt; [:name, :address, :zip]</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="members-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_s_members_m(VALUE klass)
+{
+    VALUE members = rb_struct_s_members(klass);
+
+    return rb_ary_dup(members);
+}
+            </pre> 
+            </div><!-- members-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- members-method -->
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(*member_names, keyword_init: false){|Struct_subclass| ... } &rarr; Struct_subclass</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(class_name, *member_names, keyword_init: false){|Struct_subclass| ... } &rarr; Struct_subclass</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(*member_names) &rarr; Struct_subclass_instance</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(**member_names) &rarr; Struct_subclass_instance</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p><code>Struct.new</code> returns a new subclass of <code>Struct</code>.  The new subclass:</p>
+<ul><li>
+<p>May be anonymous, or may have the name given by <code>class_name</code>.</p>
+</li><li>
+<p>May have members as given by <code>member_names</code>.</p>
+</li><li>
+<p>May have initialization via ordinary arguments (the default) or via keyword arguments (if <code>keyword_init: true</code> is given).</p>
+</li></ul>
+
+<p>The new subclass has its own method <code>::new</code>; thus:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>) <span class="ruby-comment"># =&gt; Struct::Foo</span>
+<span class="ruby-identifier">f</span> = <span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)                   <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=0, bar=1&gt;</span>
+</pre>
+
+<p><strong>Class Name</strong></p>
+
+<p>With string argument <code>class_name</code>, returns a new subclass of <code>Struct</code> named <code>Struct::<em>class_name</em></code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>) <span class="ruby-comment"># =&gt; Struct::Foo</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">name</span>                            <span class="ruby-comment"># =&gt; &quot;Struct::Foo&quot;</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">superclass</span>                      <span class="ruby-comment"># =&gt; Struct</span>
+</pre>
+
+<p>Without string argument <code>class_name</code>, returns a new anonymous subclass of <code>Struct</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>).<span class="ruby-identifier">name</span> <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+
+<p><strong>Block</strong></p>
+
+<p>With a block given, the created subclass is yielded to the block:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Customer&#39;</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">new_class</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">p</span> <span class="ruby-node">&quot;The new subclass is #{new_class}&quot;</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">greeting</span>
+    <span class="ruby-node">&quot;Hello #{name} at #{address}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>           <span class="ruby-comment"># =&gt; Struct::Customer</span>
+<span class="ruby-identifier">dave</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Dave&#39;</span>, <span class="ruby-string">&#39;123 Main&#39;</span>)
+<span class="ruby-identifier">dave</span> <span class="ruby-comment"># =&gt;     #&lt;struct Struct::Customer name=&quot;Dave&quot;, address=&quot;123 Main&quot;&gt;</span>
+<span class="ruby-identifier">dave</span>.<span class="ruby-identifier">greeting</span> <span class="ruby-comment"># =&gt; &quot;Hello Dave at 123 Main&quot;</span>
+</pre>
+
+<p>Output, from <code>Struct.new</code>:</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;The new subclass is Struct::Customer&quot;</span>
+</pre>
+
+<p><strong>Member Names</strong></p>
+
+<p>Symbol arguments <code>member_names</code> determines the members of the new subclass:</p>
+
+<pre class="ruby"><span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>).<span class="ruby-identifier">members</span>        <span class="ruby-comment"># =&gt; [:foo, :bar]</span>
+<span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>).<span class="ruby-identifier">members</span> <span class="ruby-comment"># =&gt; [:foo, :bar]</span>
+</pre>
+
+<p>The new subclass has instance methods corresponding to <code>member_names</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>)
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">instance_methods</span>(<span class="ruby-keyword">false</span>) <span class="ruby-comment"># =&gt; [:foo, :bar, :foo=, :bar=]</span>
+<span class="ruby-identifier">f</span> = <span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>                 <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=nil, bar=nil&gt;</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">foo</span>                       <span class="ruby-comment"># =&gt; nil</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">foo</span> = <span class="ruby-value">0</span>                   <span class="ruby-comment"># =&gt; 0</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">bar</span>                       <span class="ruby-comment"># =&gt; nil</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">bar</span> = <span class="ruby-value">1</span>                   <span class="ruby-comment"># =&gt; 1</span>
+<span class="ruby-identifier">f</span>                           <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=0, bar=1&gt;</span>
+</pre>
+
+<p><strong>Singleton Methods</strong></p>
+
+<p>A subclass returned by <a href="Struct.html#method-c-new"><code>Struct.new</code></a> has these singleton methods:</p>
+<ul><li>
+<p>Method <code>::new </code> creates an instance of the subclass:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>          <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=nil, bar=nil&gt;</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>)       <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=0, bar=nil&gt;</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)    <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=0, bar=1&gt;</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>, <span class="ruby-value">2</span>) <span class="ruby-comment"># Raises ArgumentError: struct size differs</span>
+</pre>
+
+<p>Method <code>::[]</code> is an alias for method <code>::new</code>.</p>
+</li><li>
+<p>Method <code>:inspect</code> returns a string representation of the subclass:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span>.<span class="ruby-identifier">inspect</span>
+<span class="ruby-comment"># =&gt; &quot;Struct::Foo&quot;</span>
+</pre>
+</li><li>
+<p>Method <code>::members</code> returns an array of the member names:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span>.<span class="ruby-identifier">members</span> <span class="ruby-comment"># =&gt; [:foo, :bar]</span>
+</pre>
+</li></ul>
+
+<p><strong>Keyword Argument</strong></p>
+
+<p>By default, the arguments for initializing an instance of the new subclass are ordinary arguments (not keyword arguments). With optional keyword argument <code>keyword_init: true</code>, the new subclass is initialized with keyword arguments:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Without keyword_init: true.</span>
+<span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Foo&#39;</span>, <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>)
+<span class="ruby-constant">Foo</span>                     <span class="ruby-comment"># =&gt; Struct::Foo</span>
+<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)           <span class="ruby-comment"># =&gt; #&lt;struct Struct::Foo foo=0, bar=1&gt;</span>
+<span class="ruby-comment"># With keyword_init: true.</span>
+<span class="ruby-constant">Bar</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>, <span class="ruby-value">keyword_init:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-constant">Bar</span> <span class="ruby-comment"># =&gt;                # =&gt; Bar(keyword_init: true)</span>
+<span class="ruby-constant">Bar</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">bar:</span> <span class="ruby-value">1</span>, <span class="ruby-value">foo:</span> <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; #&lt;struct Bar foo=0, bar=1&gt;</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_s_def(int argc, VALUE *argv, VALUE klass)
+{
+    VALUE name, rest, keyword_init = Qnil;
+    long i;
+    VALUE st;
+    st_table *tbl;
+
+    rb_check_arity(argc, 1, UNLIMITED_ARGUMENTS);
+    name = argv[0];
+    if (SYMBOL_P(name)) {
+        name = Qnil;
+    }
+    else {
+        --argc;
+        ++argv;
+    }
+
+    if (RB_TYPE_P(argv[argc-1], T_HASH)) {
+        static ID keyword_ids[1];
+
+        if (!keyword_ids[0]) {
+            keyword_ids[0] = rb_intern(&quot;keyword_init&quot;);
+        }
+        rb_get_kwargs(argv[argc-1], keyword_ids, 0, 1, &amp;keyword_init);
+        if (keyword_init == Qundef) {
+            keyword_init = Qnil;
+        }
+        else if (RTEST(keyword_init)) {
+            keyword_init = Qtrue;
+        }
+        --argc;
+    }
+
+    rest = rb_ident_hash_new();
+    RBASIC_CLEAR_CLASS(rest);
+    OBJ_WB_UNPROTECT(rest);
+    tbl = RHASH_TBL_RAW(rest);
+    for (i=0; i&lt;argc; i++) {
+        VALUE mem = rb_to_symbol(argv[i]);
+        if (rb_is_attrset_sym(mem)) {
+            rb_raise(rb_eArgError, &quot;invalid struct member: %&quot;PRIsVALUE, mem);
+        }
+        if (st_insert(tbl, mem, Qtrue)) {
+            rb_raise(rb_eArgError, &quot;duplicate member: %&quot;PRIsVALUE, mem);
+        }
+    }
+    rest = rb_hash_keys(rest);
+    st_clear(tbl);
+    RBASIC_CLEAR_CLASS(rest);
+    OBJ_FREEZE_RAW(rest);
+    if (NIL_P(name)) {
+        st = anonymous_struct(klass);
+    }
+    else {
+        st = new_struct(name, klass);
+    }
+    setup_struct(st, rest);
+    rb_ivar_set(st, id_keyword_init, keyword_init);
+    if (rb_block_given_p()) {
+        rb_mod_module_eval(0, 0, st);
+    }
+
+    return st;
+}
+            </pre> 
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">self == other &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns  <code>true</code> if and only if the following are true; otherwise returns <code>false</code>:</p>
+<ul><li>
+<p><code>other.class == self.class</code>.</p>
+</li><li>
+<p>For each member name <code>name</code>, <code>other.name == self.name</code>.</p>
+</li></ul>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span>    = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe_jr</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe_jr</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">joe</span> <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">joe_jr</span>[<span class="ruby-value">:name</span>] = <span class="ruby-string">&#39;Joe Smith, Jr.&#39;</span>
+<span class="ruby-comment"># =&gt; &quot;Joe Smith, Jr.&quot;</span>
+<span class="ruby-identifier">joe_jr</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">joe</span> <span class="ruby-comment"># =&gt; false</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_equal(VALUE s, VALUE s2)
+{
+    if (s == s2) return Qtrue;
+    if (!RB_TYPE_P(s2, T_STRUCT)) return Qfalse;
+    if (rb_obj_class(s) != rb_obj_class(s2)) return Qfalse;
+    if (RSTRUCT_LEN(s) != RSTRUCT_LEN(s2)) {
+        rb_bug(&quot;inconsistent struct&quot;); /* should never happen */
+    }
+
+    return rb_exec_recursive_paired(recursive_equal, s, s2, s2);
+}
+            </pre> 
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">struct[name] &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">struct[n] &rarr; object</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a value from <code>self</code>.</p>
+
+<p>With symbol or string argument <code>name</code> given, returns the value for the named member:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">:zip</span>] <span class="ruby-comment"># =&gt; 12345</span>
+</pre>
+
+<p>Raises <a href="NameError.html"><code>NameError</code></a> if <code>name</code> is not the name of a member.</p>
+
+<p>With integer argument <code>n</code> given, returns <code>self.values[n]</code> if <code>n</code> is in range; see <a href="Array.html#class-Array-label-Array+Indexes">Array Indexes</a>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span>[<span class="ruby-value">2</span>]  <span class="ruby-comment"># =&gt; 12345</span>
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">-2</span>] <span class="ruby-comment"># =&gt; &quot;123 Maple, Anytown NC&quot;</span>
+</pre>
+
+<p>Raises <a href="IndexError.html"><code>IndexError</code></a> if <code>n</code> is out of range.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_struct_aref(VALUE s, VALUE idx)
+{
+    int i = rb_struct_pos(s, &amp;idx);
+    if (i &lt; 0) invalid_struct_pos(s, idx);
+    return RSTRUCT_GET(s, i);
+}
+            </pre> 
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+      
+        <div id="5B-5D-3D-method" class="method-detail ">
+          <a name="method-i-5B-5D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">struct[name] = value &rarr; value</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">struct[n] = value &rarr; value</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Assigns a value to a member.</p>
+
+<p>With symbol or string argument <code>name</code> given, assigns the given <code>value</code> to the named member; returns <code>value</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">:zip</span>] = <span class="ruby-value">54321</span> <span class="ruby-comment"># =&gt; 54321</span>
+<span class="ruby-identifier">joe</span> <span class="ruby-comment"># =&gt; #&lt;struct Customer name=&quot;Joe Smith&quot;, address=&quot;123 Maple, Anytown NC&quot;, zip=54321&gt;</span>
+</pre>
+
+<p>Raises <a href="NameError.html"><code>NameError</code></a> if <code>name</code> is not the name of a member.</p>
+
+<p>With integer argument <code>n</code> given, assigns the given <code>value</code> to the <code>n</code>-th member if <code>n</code> is in range; see <a href="Array.html#class-Array-label-Array+Indexes">Array Indexes</a>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">2</span>] = <span class="ruby-value">54321</span>           <span class="ruby-comment"># =&gt; 54321</span>
+<span class="ruby-identifier">joe</span>[<span class="ruby-value">-3</span>] = <span class="ruby-string">&#39;Joseph Smith&#39;</span> <span class="ruby-comment"># =&gt; &quot;Joseph Smith&quot;</span>
+<span class="ruby-identifier">joe</span> <span class="ruby-comment"># =&gt; #&lt;struct Customer name=&quot;Joseph Smith&quot;, address=&quot;123 Maple, Anytown NC&quot;, zip=54321&gt;</span>
+</pre>
+
+<p>Raises <a href="IndexError.html"><code>IndexError</code></a> if <code>n</code> is out of range.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-3D-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_struct_aset(VALUE s, VALUE idx, VALUE val)
+{
+    int i = rb_struct_pos(s, &amp;idx);
+    if (i &lt; 0) invalid_struct_pos(s, idx);
+    rb_struct_modify(s);
+    RSTRUCT_SET(s, i, val);
+    return val;
+}
+            </pre> 
+            </div><!-- 5B-5D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-3D-method -->
+      
+        <div id="deconstruct-method" class="method-detail ">
+          <a name="method-i-deconstruct"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a     &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the values in <code>self</code> as an array:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;, 12345]</span>
+</pre>
+
+<p><a href="Struct.html#method-i-values"><code>Struct#values</code></a> and <a href="Struct.html#method-i-deconstruct"><code>Struct#deconstruct</code></a> are aliases for <a href="Struct.html#method-i-to_a"><code>Struct#to_a</code></a>.</p>
+
+<p>Related: <a href="Struct.html#method-i-members"><code>members</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="deconstruct-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_to_a(VALUE s)
+{
+    return rb_ary_new4(RSTRUCT_LEN(s), RSTRUCT_CONST_PTR(s));
+}
+            </pre> 
+            </div><!-- deconstruct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- deconstruct-method -->
+      
+        <div id="deconstruct_keys-method" class="method-detail ">
+          <a name="method-i-deconstruct_keys"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">deconstruct_keys(array_of_names) &rarr; hash</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a hash of the name/value pairs for the given member names.</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">h</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">deconstruct_keys</span>([<span class="ruby-value">:zip</span>, <span class="ruby-value">:address</span>])
+<span class="ruby-identifier">h</span> <span class="ruby-comment"># =&gt; {:zip=&gt;12345, :address=&gt;&quot;123 Maple, Anytown NC&quot;}</span>
+</pre>
+
+<p>Returns all names and values if <code>array_of_names</code> is <code>nil</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">h</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">deconstruct_keys</span>(<span class="ruby-keyword">nil</span>)
+<span class="ruby-identifier">h</span> <span class="ruby-comment"># =&gt; {:name=&gt;&quot;Joseph Smith, Jr.&quot;, :address=&gt;&quot;123 Maple, Anytown NC&quot;, :zip=&gt;12345}</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="deconstruct_keys-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_deconstruct_keys(VALUE s, VALUE keys)
+{
+    VALUE h;
+    long i;
+
+    if (NIL_P(keys)) {
+        return rb_struct_to_h(s);
+    }
+    if (UNLIKELY(!RB_TYPE_P(keys, T_ARRAY))) {
+        rb_raise(rb_eTypeError,
+                 &quot;wrong argument type %&quot;PRIsVALUE&quot; (expected Array or nil)&quot;,
+                 rb_obj_class(keys));
+
+    }
+    if (RSTRUCT_LEN(s) &lt; RARRAY_LEN(keys)) {
+        return rb_hash_new_with_size(0);
+    }
+    h = rb_hash_new_with_size(RARRAY_LEN(keys));
+    for (i=0; i&lt;RARRAY_LEN(keys); i++) {
+        VALUE key = RARRAY_AREF(keys, i);
+        int i = rb_struct_pos(s, &amp;key);
+        if (i &lt; 0) {
+            return h;
+        }
+        rb_hash_aset(h, key, RSTRUCT_GET(s, i));
+    }
+    return h;
+}
+            </pre> 
+            </div><!-- deconstruct_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- deconstruct_keys-method -->
+      
+        <div id="dig-method" class="method-detail ">
+          <a name="method-i-dig"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">dig(name, *identifiers) &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">dig(n, *identifiers) &rarr; object</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Finds and returns an object among nested objects. The nested objects may be instances of various classes. See Dig Methods.</p>
+
+<p>Given symbol or string argument <code>name</code>, returns the object that is specified by <code>name</code> and <code>identifiers</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Foo</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:a</span>)
+<span class="ruby-identifier">f</span> = <span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Foo</span>.<span class="ruby-identifier">new</span>({<span class="ruby-value">b:</span> [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>]}))
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:a</span>) <span class="ruby-comment"># =&gt; #&lt;struct Foo a={:b=&gt;[1, 2, 3]}&gt;</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">:a</span>) <span class="ruby-comment"># =&gt; {:b=&gt;[1, 2, 3]}</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">:a</span>, <span class="ruby-value">:b</span>) <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:a</span>, <span class="ruby-value">:a</span>, <span class="ruby-value">:b</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; 1</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:b</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+
+<p>Given integer argument <code>n</code>, returns the object that is specified by <code>n</code> and <code>identifiers</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; #&lt;struct Foo a={:b=&gt;[1, 2, 3]}&gt;</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; {:b=&gt;[1, 2, 3]}</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">:b</span>) <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">:b</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; 1</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">:b</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="dig-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_dig(int argc, VALUE *argv, VALUE self)
+{
+    rb_check_arity(argc, 1, UNLIMITED_ARGUMENTS);
+    self = rb_struct_lookup(self, *argv);
+    if (!--argc) return self;
+    ++argv;
+    return rb_obj_dig(argc, argv, self, Qnil);
+}
+            </pre> 
+            </div><!-- dig-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dig-method -->
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">each {|value| ... } &rarr; self</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">each &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Calls the given block with the value of each member; returns <code>self</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> <span class="ruby-identifier">value</span> }
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;Joe Smith&quot;</span>
+<span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>
+<span class="ruby-value">12345</span>
+</pre>
+
+<p>Returns an <a href="Enumerator.html"><code>Enumerator</code></a> if no block is given.</p>
+
+<p>Related: <a href="Struct.html#method-i-each_pair"><code>each_pair</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_each(VALUE s)
+{
+    long i;
+
+    RETURN_SIZED_ENUMERATOR(s, 0, 0, struct_enum_size);
+    for (i=0; i&lt;RSTRUCT_LEN(s); i++) {
+        rb_yield(RSTRUCT_GET(s, i));
+    }
+    return s;
+}
+            </pre> 
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+      
+        <div id="each_pair-method" class="method-detail ">
+          <a name="method-i-each_pair"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">each_pair {|(name, value)| ... } &rarr; self</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">each_pair &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Calls the given block with each member name/value pair; returns <code>self</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>) <span class="ruby-comment"># =&gt; Customer</span>
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> <span class="ruby-node">&quot;#{name} =&gt; #{value}&quot;</span> }
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;name =&gt; Joe Smith&quot;</span>
+<span class="ruby-string">&quot;address =&gt; 123 Maple, Anytown NC&quot;</span>
+<span class="ruby-string">&quot;zip =&gt; 12345&quot;</span>
+</pre>
+
+<p>Returns an <a href="Enumerator.html"><code>Enumerator</code></a> if no block is given.</p>
+
+<p>Related: <a href="Struct.html#method-i-each"><code>each</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="each_pair-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_each_pair(VALUE s)
+{
+    VALUE members;
+    long i;
+
+    RETURN_SIZED_ENUMERATOR(s, 0, 0, struct_enum_size);
+    members = rb_struct_members(s);
+    if (rb_block_pair_yield_optimizable()) {
+        for (i=0; i&lt;RSTRUCT_LEN(s); i++) {
+            VALUE key = rb_ary_entry(members, i);
+            VALUE value = RSTRUCT_GET(s, i);
+            rb_yield_values(2, key, value);
+        }
+    }
+    else {
+        for (i=0; i&lt;RSTRUCT_LEN(s); i++) {
+            VALUE key = rb_ary_entry(members, i);
+            VALUE value = RSTRUCT_GET(s, i);
+            rb_yield(rb_assoc_new(key, value));
+        }
+    }
+    return s;
+}
+            </pre> 
+            </div><!-- each_pair-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each_pair-method -->
+      
+        <div id="eql-3F-method" class="method-detail ">
+          <a name="method-i-eql-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">eql?(other) &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if and only if the following are true; otherwise returns <code>false</code>:</p>
+<ul><li>
+<p><code>other.class == self.class</code>.</p>
+</li><li>
+<p>For each member name <code>name</code>, <code>other.name.eql?(self.name)</code>.</p>
+
+<p>Customer = <a href="Struct.html#method-c-new"><code>Struct.new</code></a>(:name, :address, :zip) joe    = Customer.new(“Joe Smith”, “123 Maple, Anytown NC”, 12345) joe_jr = Customer.new(“Joe Smith”, “123 Maple, Anytown NC”, 12345) joe_jr.eql?(joe) # =&gt; true <a href=":name">joe_jr</a> = &#39;Joe Smith, Jr.&#39; joe_jr.eql?(joe) # =&gt; false</p>
+</li></ul>
+
+<p>Related: Object#==.</p>
+            
+
+            
+            <div class="method-source-code" id="eql-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_eql(VALUE s, VALUE s2)
+{
+    if (s == s2) return Qtrue;
+    if (!RB_TYPE_P(s2, T_STRUCT)) return Qfalse;
+    if (rb_obj_class(s) != rb_obj_class(s2)) return Qfalse;
+    if (RSTRUCT_LEN(s) != RSTRUCT_LEN(s2)) {
+        rb_bug(&quot;inconsistent struct&quot;); /* should never happen */
+    }
+
+    return rb_exec_recursive_paired(recursive_eql, s, s2, s2);
+}
+            </pre> 
+            </div><!-- eql-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- eql-3F-method -->
+      
+        <div id="filter-method" class="method-detail ">
+          <a name="method-i-filter"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">select {|value| ... } &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">select &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>With a block given, returns an array of values from <code>self</code> for which the block returns a truthy value:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">a</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) }
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;]</span>
+<span class="ruby-identifier">a</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>) }
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [12345]</span>
+</pre>
+
+<p>With no block given, returns an <a href="Enumerator.html"><code>Enumerator</code></a>.</p>
+
+<p><a href="Struct.html#method-i-filter"><code>Struct#filter</code></a> is an alias for <a href="Struct.html#method-i-select"><code>Struct#select</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="filter-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_select(int argc, VALUE *argv, VALUE s)
+{
+    VALUE result;
+    long i;
+
+    rb_check_arity(argc, 0, 0);
+    RETURN_SIZED_ENUMERATOR(s, 0, 0, struct_enum_size);
+    result = rb_ary_new();
+    for (i = 0; i &lt; RSTRUCT_LEN(s); i++) {
+        if (RTEST(rb_yield(RSTRUCT_GET(s, i)))) {
+            rb_ary_push(result, RSTRUCT_GET(s, i));
+        }
+    }
+
+    return result;
+}
+            </pre> 
+            </div><!-- filter-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- filter-method -->
+      
+        <div id="hash-method" class="method-detail ">
+          <a name="method-i-hash"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">hash &rarr; integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the integer hash value for <code>self</code>.</p>
+
+<p>Two structs of the same class and with the same content will have the same hash code (and will compare using <a href="Struct.html#method-i-eql-3F"><code>Struct#eql?</code></a>):</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span>    = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe_jr</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">hash</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">joe_jr</span>.<span class="ruby-identifier">hash</span> <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">joe_jr</span>[<span class="ruby-value">:name</span>] = <span class="ruby-string">&#39;Joe Smith, Jr.&#39;</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">hash</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">joe_jr</span>.<span class="ruby-identifier">hash</span> <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Related: <a href="Object.html#method-i-hash"><code>Object#hash</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="hash-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_hash(VALUE s)
+{
+    long i, len;
+    st_index_t h;
+    VALUE n;
+
+    h = rb_hash_start(rb_hash(rb_obj_class(s)));
+    len = RSTRUCT_LEN(s);
+    for (i = 0; i &lt; len; i++) {
+        n = rb_hash(RSTRUCT_GET(s, i));
+        h = rb_hash_uint(h, NUM2LONG(n));
+    }
+    h = rb_hash_end(h);
+    return ST2FIX(h);
+}
+            </pre> 
+            </div><!-- hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hash-method -->
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">inspect &rarr; string</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a string representation of <code>self</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>) <span class="ruby-comment"># =&gt; Customer</span>
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-comment"># =&gt; &quot;#&lt;struct Customer name=\&quot;Joe Smith\&quot;, address=\&quot;123 Maple, Anytown NC\&quot;, zip=12345&gt;&quot;</span>
+</pre>
+
+<p><a href="Struct.html#method-i-to_s"><code>Struct#to_s</code></a> is an alias for <a href="Struct.html#method-i-inspect"><code>Struct#inspect</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_inspect(VALUE s)
+{
+    return rb_exec_recursive(inspect_struct, s, 0);
+}
+            </pre> 
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Struct.html#method-i-to_s">to_s</a>
+          </div>
+          
+
+          
+        </div><!-- inspect-method -->
+      
+        <div id="length-method" class="method-detail ">
+          <a name="method-i-length"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size &rarr; integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the number of members.</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">size</span> <span class="ruby-comment">#=&gt; 3</span>
+</pre>
+
+<p><a href="Struct.html#method-i-length"><code>Struct#length</code></a> is an alias for <a href="Struct.html#method-i-size"><code>Struct#size</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="length-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_struct_size(VALUE s)
+{
+    return LONG2FIX(RSTRUCT_LEN(s));
+}
+            </pre> 
+            </div><!-- length-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- length-method -->
+      
+        <div id="members-method" class="method-detail ">
+          <a name="method-i-members"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">members &rarr; array_of_symbols</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the member names from <code>self</code> as an array:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">members</span> <span class="ruby-comment"># =&gt; [:name, :address, :zip]</span>
+</pre>
+
+<p>Related: <a href="Struct.html#method-i-to_a"><code>to_a</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="members-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_members_m(VALUE obj)
+{
+    return rb_struct_s_members_m(rb_obj_class(obj));
+}
+            </pre> 
+            </div><!-- members-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- members-method -->
+      
+        <div id="select-method" class="method-detail ">
+          <a name="method-i-select"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">select {|value| ... } &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">select &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>With a block given, returns an array of values from <code>self</code> for which the block returns a truthy value:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">a</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) }
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;]</span>
+<span class="ruby-identifier">a</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>) }
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [12345]</span>
+</pre>
+
+<p>With no block given, returns an <a href="Enumerator.html"><code>Enumerator</code></a>.</p>
+
+<p><a href="Struct.html#method-i-filter"><code>Struct#filter</code></a> is an alias for <a href="Struct.html#method-i-select"><code>Struct#select</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="select-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_select(int argc, VALUE *argv, VALUE s)
+{
+    VALUE result;
+    long i;
+
+    rb_check_arity(argc, 0, 0);
+    RETURN_SIZED_ENUMERATOR(s, 0, 0, struct_enum_size);
+    result = rb_ary_new();
+    for (i = 0; i &lt; RSTRUCT_LEN(s); i++) {
+        if (RTEST(rb_yield(RSTRUCT_GET(s, i)))) {
+            rb_ary_push(result, RSTRUCT_GET(s, i));
+        }
+    }
+
+    return result;
+}
+            </pre> 
+            </div><!-- select-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- select-method -->
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-i-size"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size &rarr; integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the number of members.</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">size</span> <span class="ruby-comment">#=&gt; 3</span>
+</pre>
+
+<p><a href="Struct.html#method-i-length"><code>Struct#length</code></a> is an alias for <a href="Struct.html#method-i-size"><code>Struct#size</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_struct_size(VALUE s)
+{
+    return LONG2FIX(RSTRUCT_LEN(s));
+}
+            </pre> 
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+      
+        <div id="to_a-method" class="method-detail ">
+          <a name="method-i-to_a"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a     &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the values in <code>self</code> as an array:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;, 12345]</span>
+</pre>
+
+<p><a href="Struct.html#method-i-values"><code>Struct#values</code></a> and <a href="Struct.html#method-i-deconstruct"><code>Struct#deconstruct</code></a> are aliases for <a href="Struct.html#method-i-to_a"><code>Struct#to_a</code></a>.</p>
+
+<p>Related: <a href="Struct.html#method-i-members"><code>members</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="to_a-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_to_a(VALUE s)
+{
+    return rb_ary_new4(RSTRUCT_LEN(s), RSTRUCT_CONST_PTR(s));
+}
+            </pre> 
+            </div><!-- to_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_a-method -->
+      
+        <div id="to_h-method" class="method-detail ">
+          <a name="method-i-to_h"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_h &rarr; hash</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_h {|name, value| ... } &rarr; hash</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a hash containing the name and value for each member:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">h</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">to_h</span>
+<span class="ruby-identifier">h</span> <span class="ruby-comment"># =&gt; {:name=&gt;&quot;Joe Smith&quot;, :address=&gt;&quot;123 Maple, Anytown NC&quot;, :zip=&gt;12345}</span>
+</pre>
+
+<p>If a block is given, it is called with each name/value pair; the block should return a 2-element array whose elements will become a key/value pair in the returned hash:</p>
+
+<pre class="ruby"><span class="ruby-identifier">h</span> = <span class="ruby-identifier">joe</span>.<span class="ruby-identifier">to_h</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">name</span>.<span class="ruby-identifier">upcase</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>]}
+<span class="ruby-identifier">h</span> <span class="ruby-comment"># =&gt; {:NAME=&gt;&quot;JOE SMITH&quot;, :ADDRESS=&gt;&quot;123 MAPLE, ANYTOWN NC&quot;, :ZIP=&gt;&quot;12345&quot;}</span>
+</pre>
+
+<p>Raises <a href="ArgumentError.html"><code>ArgumentError</code></a> if the block returns an inappropriate value.</p>
+            
+
+            
+            <div class="method-source-code" id="to_h-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_to_h(VALUE s)
+{
+    VALUE h = rb_hash_new_with_size(RSTRUCT_LEN(s));
+    VALUE members = rb_struct_members(s);
+    long i;
+    int block_given = rb_block_given_p();
+
+    for (i=0; i&lt;RSTRUCT_LEN(s); i++) {
+        VALUE k = rb_ary_entry(members, i), v = RSTRUCT_GET(s, i);
+        if (block_given)
+            rb_hash_set_pair(h, rb_yield_values(2, k, v));
+        else
+            rb_hash_aset(h, k, v);
+    }
+    return h;
+}
+            </pre> 
+            </div><!-- to_h-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_h-method -->
+      
+        <div id="to_s-method" class="method-detail method-alias">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Struct.html#method-i-inspect">inspect</a>
+          </div>
+          
+        </div><!-- to_s-method -->
+      
+        <div id="values-method" class="method-detail ">
+          <a name="method-i-values"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a     &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the values in <code>self</code> as an array:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;, 12345]</span>
+</pre>
+
+<p><a href="Struct.html#method-i-values"><code>Struct#values</code></a> and <a href="Struct.html#method-i-deconstruct"><code>Struct#deconstruct</code></a> are aliases for <a href="Struct.html#method-i-to_a"><code>Struct#to_a</code></a>.</p>
+
+<p>Related: <a href="Struct.html#method-i-members"><code>members</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="values-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_to_a(VALUE s)
+{
+    return rb_ary_new4(RSTRUCT_LEN(s), RSTRUCT_CONST_PTR(s));
+}
+            </pre> 
+            </div><!-- values-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- values-method -->
+      
+        <div id="values_at-method" class="method-detail ">
+          <a name="method-i-values_at"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">values_at(*integers) &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">values_at(integer_range) &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns an array of values from <code>self</code>.</p>
+
+<p>With integer arguments <code>integers</code> given, returns an array containing each value given by one of <code>integers</code>:</p>
+
+<pre class="ruby"><span class="ruby-constant">Customer</span> = <span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:address</span>, <span class="ruby-value">:zip</span>)
+<span class="ruby-identifier">joe</span> = <span class="ruby-constant">Customer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Joe Smith&quot;</span>, <span class="ruby-string">&quot;123 Maple, Anytown NC&quot;</span>, <span class="ruby-value">12345</span>)
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">0</span>, <span class="ruby-value">2</span>)    <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, 12345]</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">2</span>, <span class="ruby-value">0</span>)    <span class="ruby-comment"># =&gt; [12345, &quot;Joe Smith&quot;]</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">2</span>, <span class="ruby-value">1</span>, <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; [12345, &quot;123 Maple, Anytown NC&quot;, &quot;Joe Smith&quot;]</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">0</span>, <span class="ruby-value">-3</span>)   <span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;Joe Smith&quot;]</span>
+</pre>
+
+<p>Raises <a href="IndexError.html"><code>IndexError</code></a> if any of <code>integers</code> is out of range; see <a href="Array.html#class-Array-label-Array+Indexes">Array Indexes</a>.</p>
+
+<p>With integer range argument <code>integer_range</code> given, returns an array containing each value given by the elements of the range; fills with <code>nil</code> values for range elements larger than the structure:</p>
+
+<pre class="ruby"><span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>)
+<span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;, 12345]</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">-3</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>)
+<span class="ruby-comment"># =&gt; [&quot;Joe Smith&quot;, &quot;123 Maple, Anytown NC&quot;, 12345]</span>
+<span class="ruby-identifier">joe</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-comment"># =&gt; [&quot;123 Maple, Anytown NC&quot;, 12345, nil, nil]</span>
+</pre>
+
+<p>Raises <a href="RangeError.html"><code>RangeError</code></a> if any element of the range is negative and out of range; see <a href="Array.html#class-Array-label-Array+Indexes">Array Indexes</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="values_at-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_struct_values_at(int argc, VALUE *argv, VALUE s)
+{
+    return rb_get_values_at(s, RSTRUCT_LEN(s), argc, argv, struct_entry);
+}
+            </pre> 
+            </div><!-- values_at-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- values_at-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_Struct_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Struct_versioned").load("/associated/3.1.2/Struct.ihtml");</script> <div id='tx_Struct' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Struct").load("/associated/Struct.ihtml");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 3.1.2</small></p> 
+  
+   <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, purveyors of fine dance noise.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+ 
+       <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.ihtml");
+    });
+
+    </script>
+
+
+ 
+		<script type='text/javascript'>
+
+	function loadPlus(plusdocs){
+			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
+					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
+					});
+	} 
+
+   //function loadInline(json){
+   // for (var lookFor in json) {
+    //  $(lookFor).after(json[lookFor]);
+    // }
+  // } // end loadInline
+
+
+$(document).ready(function() {
+		$.ajaxSetup({ cache: false });
+			$.get('/associated/3.1.2/plus_Struct.ihtml', 
+			function(plusdocs) {
+			setTimeout(function() {
+				loadPlus(plusdocs);
+				}, 2000);
+			}
+			);
+
+
+//     $.ajax({
+//     dataType: "json",
+//      url: '/associated/3.1.2/inline_Struct.js',
+//      success: function(json) {
+// 			setTimeout(function() {
+// 				loadInline(json);
+// 				}, 2000);
+// 			}
+//    });
+
+		});
+</script>
+		
+</body>
+</html>
+
+

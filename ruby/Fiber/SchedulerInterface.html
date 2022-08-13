@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.42.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta name='description' content='  Class : Fiber::SchedulerInterface  -   Ruby 3.1.2 ' />
+  <meta content="2022-06-09 20:39:26 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = '..'  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+  <!-- rel_prefix = '..'   asset_rel_prefix = '..'  --> 
+  <title>Class: Fiber::SchedulerInterface (Ruby 3.1.2) </title>
+  <link rel="stylesheet" href="../css/associated.css" type="text/css" >
+  <!-- link rel="stylesheet" href="..css/obf.css"  -->
+  <link rel="stylesheet" href="../css/inuit.css" >
+  <link rel="stylesheet" href="../css/grid.inuit.css" >
+  <link rel="stylesheet" href="../css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="../css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="../css/carbon17.css" type="text/css" >
+
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+
+   
+<script src="../js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+   <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body id="top" class="class rdocstar">
+
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  
+   <!-- carbon17 added here 2017-09-09 -->
+ 
+
+   <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>cont.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-address_resolve">#address_resolve</a></li>
+          
+          <li><a href="#method-i-block">#block</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-fiber">#fiber</a></li>
+          
+          <li><a href="#method-i-io_read">#io_read</a></li>
+          
+          <li><a href="#method-i-io_wait">#io_wait</a></li>
+          
+          <li><a href="#method-i-io_write">#io_write</a></li>
+          
+          <li><a href="#method-i-kernel_sleep">#kernel_sleep</a></li>
+          
+          <li><a href="#method-i-process_wait">#process_wait</a></li>
+          
+          <li><a href="#method-i-timeout_after">#timeout_after</a></li>
+          
+          <li><a href="#method-i-unblock">#unblock</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul id='files'>
+        
+          
+          <li class="file"><a href="../_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../COPYING_ja.html">COPYING.ja</a></li>
+        
+          
+          <li class="file"><a href="../README_EXT.html">README.EXT</a></li>
+        
+          
+          <li class="file"><a href="../README_EXT_ja.html">README.EXT.ja</a></li>
+        
+          
+          <li class="file"><a href="../aclocal_m4.html">aclocal.m4</a></li>
+        
+          
+          <li class="file"><a href="../autogen_sh.html">autogen.sh</a></li>
+        
+          
+          <li class="file"><a href="../configure_ac.html">configure.ac</a></li>
+        
+          
+          <li class="file"><a href="../doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/contributing_rdoc.html">contributing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/extension_rdoc.html">extension.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/globals_rdoc.html">globals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/keywords_rdoc.html">keywords.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/marshal_rdoc.html">marshal.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/regexp_rdoc.html">regexp.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/security_rdoc.html">security.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/signals_rdoc.html">signals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax_rdoc.html">syntax.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/in_rdoc.html">in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/msec_rdoc.html">msec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/sec_rdoc.html">sec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/usec_rdoc.html">usec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/year_rdoc.html">year.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../lex_c_blt.html">lex.c.blt</a></li>
+        
+          
+          <li class="file"><a href="../node_name_inc.html">node_name.inc</a></li>
+        
+          
+          <li class="file"><a href="../sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../sample/drb/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="../ARGF.html">ARGF</a></li>
+        
+          
+          
+          <li><a href="../ArgumentError.html">ArgumentError</a></li>
+        
+          
+          
+          <li><a href="../Array.html">Array</a></li>
+        
+          
+          
+          <li><a href="../BasicObject.html">BasicObject</a></li>
+        
+          
+          
+          <li><a href="../Binding.html">Binding</a></li>
+        
+          
+          
+          <li><a href="../Class.html">Class</a></li>
+        
+          
+          
+          <li><a href="../ClosedQueueError.html">ClosedQueueError</a></li>
+        
+          
+          
+          <li><a href="../Comparable.html">Comparable</a></li>
+        
+          
+          
+          <li><a href="../Complex.html">Complex</a></li>
+        
+          
+          
+          <li><a href="../Continuation.html">Continuation</a></li>
+        
+          
+          
+          <li><a href="../Dir.html">Dir</a></li>
+        
+          
+          
+          <li><a href="../ENV.html">ENV</a></li>
+        
+          
+          
+          <li><a href="../EOFError.html">EOFError</a></li>
+        
+          
+          
+          <li><a href="../Encoding.html">Encoding</a></li>
+        
+          
+          
+          <li><a href="../Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/Converter.html">Encoding::Converter</a></li>
+        
+          
+          
+          <li><a href="../Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+        
+          
+          
+          <li><a href="../EncodingError.html">EncodingError</a></li>
+        
+          
+          
+          <li><a href="../Enumerable.html">Enumerable</a></li>
+        
+          
+          
+          <li><a href="../Enumerator.html">Enumerator</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Chain.html">Enumerator::Chain</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Generator.html">Enumerator::Generator</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Producer.html">Enumerator::Producer</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+        
+          
+          
+          <li><a href="../Errno.html">Errno</a></li>
+        
+          
+          
+          <li><a href="../Exception.html">Exception</a></li>
+        
+          
+          
+          <li><a href="../FalseClass.html">FalseClass</a></li>
+        
+          
+          
+          <li><a href="../Fiber.html">Fiber</a></li>
+        
+          
+          
+          <li><a href="../Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+        
+          
+          
+          <li><a href="../FiberError.html">FiberError</a></li>
+        
+          
+          
+          <li><a href="../File.html">File</a></li>
+        
+          
+          
+          <li><a href="../File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="../File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="../File/Stat.html">File::Stat</a></li>
+        
+          
+          
+          <li><a href="../FileTest.html">FileTest</a></li>
+        
+          
+          
+          <li><a href="../Float.html">Float</a></li>
+        
+          
+          
+          <li><a href="../FloatDomainError.html">FloatDomainError</a></li>
+        
+          
+          
+          <li><a href="../FrozenError.html">FrozenError</a></li>
+        
+          
+          
+          <li><a href="../GC.html">GC</a></li>
+        
+          
+          
+          <li><a href="../GC/Profiler.html">GC::Profiler</a></li>
+        
+          
+          
+          <li><a href="../Hash.html">Hash</a></li>
+        
+          
+          
+          <li><a href="../IO.html">IO</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer.html">IO::Buffer</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+        
+          
+          
+          <li><a href="../IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/WaitReadable.html">IO::WaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/WaitWritable.html">IO::WaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IOError.html">IOError</a></li>
+        
+          
+          
+          <li><a href="../IndexError.html">IndexError</a></li>
+        
+          
+          
+          <li><a href="../Integer.html">Integer</a></li>
+        
+          
+          
+          <li><a href="../Interrupt.html">Interrupt</a></li>
+        
+          
+          
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="../KeyError.html">KeyError</a></li>
+        
+          
+          
+          <li><a href="../LoadError.html">LoadError</a></li>
+        
+          
+          
+          <li><a href="../LocalJumpError.html">LocalJumpError</a></li>
+        
+          
+          
+          <li><a href="../Marshal.html">Marshal</a></li>
+        
+          
+          
+          <li><a href="../MatchData.html">MatchData</a></li>
+        
+          
+          
+          <li><a href="../Math.html">Math</a></li>
+        
+          
+          
+          <li><a href="../Math/DomainError.html">Math::DomainError</a></li>
+        
+          
+          
+          <li><a href="../Method.html">Method</a></li>
+        
+          
+          
+          <li><a href="../Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="../NameError.html">NameError</a></li>
+        
+          
+          
+          <li><a href="../NilClass.html">NilClass</a></li>
+        
+          
+          
+          <li><a href="../NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+        
+          
+          
+          <li><a href="../NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+        
+          
+          
+          <li><a href="../NoMemoryError.html">NoMemoryError</a></li>
+        
+          
+          
+          <li><a href="../NoMethodError.html">NoMethodError</a></li>
+        
+          
+          
+          <li><a href="../NotImplementedError.html">NotImplementedError</a></li>
+        
+          
+          
+          <li><a href="../Numeric.html">Numeric</a></li>
+        
+          
+          
+          <li><a href="../Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="../ObjectSpace.html">ObjectSpace</a></li>
+        
+          
+          
+          <li><a href="../ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+        
+          
+          
+          <li><a href="../Pool.html">Pool</a></li>
+        
+          
+          
+          <li><a href="../Proc.html">Proc</a></li>
+        
+          
+          
+          <li><a href="../Process.html">Process</a></li>
+        
+          
+          
+          <li><a href="../Process/GID.html">Process::GID</a></li>
+        
+          
+          
+          <li><a href="../Process/Status.html">Process::Status</a></li>
+        
+          
+          
+          <li><a href="../Process/Sys.html">Process::Sys</a></li>
+        
+          
+          
+          <li><a href="../Process/UID.html">Process::UID</a></li>
+        
+          
+          
+          <li><a href="../Ractor.html">Ractor</a></li>
+        
+          
+          
+          <li><a href="../Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/Error.html">Ractor::Error</a></li>
+        
+          
+          
+          <li><a href="../Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/MovedError.html">Ractor::MovedError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+        
+          
+          
+          <li><a href="../Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+        
+          
+          
+          <li><a href="../Random.html">Random</a></li>
+        
+          
+          
+          <li><a href="../Random/Formatter.html">Random::Formatter</a></li>
+        
+          
+          
+          <li><a href="../Range.html">Range</a></li>
+        
+          
+          
+          <li><a href="../RangeError.html">RangeError</a></li>
+        
+          
+          
+          <li><a href="../Rational.html">Rational</a></li>
+        
+          
+          
+          <li><a href="../Refinement.html">Refinement</a></li>
+        
+          
+          
+          <li><a href="../Regexp.html">Regexp</a></li>
+        
+          
+          
+          <li><a href="../RegexpError.html">RegexpError</a></li>
+        
+          
+          
+          <li><a href="../Ripper.html">Ripper</a></li>
+        
+          
+          
+          <li><a href="../RubyVM.html">RubyVM</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+        
+          
+          
+          <li><a href="../RuntimeError.html">RuntimeError</a></li>
+        
+          
+          
+          <li><a href="../ScriptError.html">ScriptError</a></li>
+        
+          
+          
+          <li><a href="../SecurityError.html">SecurityError</a></li>
+        
+          
+          
+          <li><a href="../Signal.html">Signal</a></li>
+        
+          
+          
+          <li><a href="../SignalException.html">SignalException</a></li>
+        
+          
+          
+          <li><a href="../StandardError.html">StandardError</a></li>
+        
+          
+          
+          <li><a href="../StopIteration.html">StopIteration</a></li>
+        
+          
+          
+          <li><a href="../String.html">String</a></li>
+        
+          
+          
+          <li><a href="../Struct.html">Struct</a></li>
+        
+          
+          
+          <li><a href="../Symbol.html">Symbol</a></li>
+        
+          
+          
+          <li><a href="../SyntaxError.html">SyntaxError</a></li>
+        
+          
+          
+          <li><a href="../SystemCallError.html">SystemCallError</a></li>
+        
+          
+          
+          <li><a href="../SystemExit.html">SystemExit</a></li>
+        
+          
+          
+          <li><a href="../SystemStackError.html">SystemStackError</a></li>
+        
+          
+          
+          <li><a href="../Thread.html">Thread</a></li>
+        
+          
+          
+          <li><a href="../Thread/Backtrace.html">Thread::Backtrace</a></li>
+        
+          
+          
+          <li><a href="../Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+        
+          
+          
+          <li><a href="../Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+        
+          
+          
+          <li><a href="../Thread/Mutex.html">Thread::Mutex</a></li>
+        
+          
+          
+          <li><a href="../Thread/Queue.html">Thread::Queue</a></li>
+        
+          
+          
+          <li><a href="../Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+        
+          
+          
+          <li><a href="../ThreadError.html">ThreadError</a></li>
+        
+          
+          
+          <li><a href="../ThreadGroup.html">ThreadGroup</a></li>
+        
+          
+          
+          <li><a href="../Time.html">Time</a></li>
+        
+          
+          
+          <li><a href="../TracePoint.html">TracePoint</a></li>
+        
+          
+          
+          <li><a href="../TrueClass.html">TrueClass</a></li>
+        
+          
+          
+          <li><a href="../TypeError.html">TypeError</a></li>
+        
+          
+          
+          <li><a href="../UnboundMethod.html">UnboundMethod</a></li>
+        
+          
+          
+          <li><a href="../UncaughtThrowError.html">UncaughtThrowError</a></li>
+        
+          
+          
+          <li><a href="../UnicodeNormalize.html">UnicodeNormalize</a></li>
+        
+          
+          
+          <li><a href="../Warning.html">Warning</a></li>
+        
+          
+          
+          <li><a href="../ZeroDivisionError.html">ZeroDivisionError</a></li>
+        
+          
+          
+          <li><a href="../fatal.html">fatal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="class">Fiber::SchedulerInterface</h1>
+
+    <div id="description" class="description">
+      
+<p>This is not an existing class, but documentation of the interface that Scheduler object should comply to in order to be used as argument to <a href="../Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> and handle non-blocking fibers. See also the “Non-blocking fibers” section in <a href="../Fiber.html"><code>Fiber</code></a> class docs for explanations of some concepts.</p>
+
+<p>Scheduler&#39;s behavior and usage are expected to be as follows:</p>
+<ul><li>
+<p>When the execution in the non-blocking <a href="../Fiber.html"><code>Fiber</code></a> reaches some blocking operation (like sleep, wait for a process, or a non-ready I/O), it calls some of the scheduler&#39;s hook methods, listed below.</p>
+</li><li>
+<p>Scheduler somehow registers what the current fiber is waiting on, and yields control to other fibers with <a href="../Fiber.html#method-c-yield"><code>Fiber.yield</code></a> (so the fiber would be suspended while expecting its wait to end, and other fibers in the same thread can perform)</p>
+</li><li>
+<p>At the end of the current thread execution, the scheduler&#39;s method <a href="SchedulerInterface.html#method-i-close"><code>close</code></a> is called</p>
+</li><li>
+<p>The scheduler runs into a wait loop, checking all the blocked fibers (which it has registered on hook calls) and resuming them when the awaited resource is ready (e.g. I/O ready or sleep time elapsed).</p>
+</li></ul>
+
+<p>A typical implementation would probably rely for this closing loop on a gem like <a href="https://github.com/eventmachine/eventmachine">EventMachine</a> or <a href="https://github.com/socketry/async">Async</a>.</p>
+
+<p>This way concurrent execution will be achieved transparently for every individual Fiber&#39;s code.</p>
+
+<p>Hook methods are:</p>
+<ul><li>
+<p><a href="SchedulerInterface.html#method-i-io_wait"><code>io_wait</code></a>, <a href="SchedulerInterface.html#method-i-io_read"><code>io_read</code></a>, and <a href="SchedulerInterface.html#method-i-io_write"><code>io_write</code></a></p>
+</li><li>
+<p><a href="SchedulerInterface.html#method-i-process_wait"><code>process_wait</code></a></p>
+</li><li>
+<p><a href="SchedulerInterface.html#method-i-kernel_sleep"><code>kernel_sleep</code></a></p>
+</li><li>
+<p><a href="SchedulerInterface.html#method-i-timeout_after"><code>timeout_after</code></a></p>
+</li><li>
+<p><a href="SchedulerInterface.html#method-i-address_resolve"><code>address_resolve</code></a></p>
+</li><li>
+<p><a href="SchedulerInterface.html#method-i-block"><code>block</code></a> and <a href="SchedulerInterface.html#method-i-unblock"><code>unblock</code></a></p>
+</li><li>
+<p>(the list is expanded as Ruby developers make more methods having non-blocking calls)</p>
+</li></ul>
+
+<p>When not specified otherwise, the hook implementations are mandatory: if they are not implemented, the methods trying to call hook will fail. To provide backward compatibility, in the future hooks will be optional (if they are not implemented, due to the scheduler being created for the older Ruby version, the code which needs this hook will not fail, and will just behave in a blocking fashion).</p>
+
+<p>It is also strongly recommended that the scheduler implements the <a href="SchedulerInterface.html#method-i-fiber"><code>fiber</code></a> method, which is delegated to by <a href="../Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a>.</p>
+
+<p>Sample <em>toy</em> implementation of the scheduler can be found in Ruby&#39;s code, in <code>test/fiber/scheduler.rb</code></p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="address_resolve-method" class="method-detail ">
+          <a name="method-i-address_resolve"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">address_resolve(hostname) &rarr; array_of_strings or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by any method that performs a non-reverse DNS lookup. The most notable method is Addrinfo.getaddrinfo, but there are many other.</p>
+
+<p>The method is expected to return an array of strings corresponding to ip addresses the <code>hostname</code> is resolved to, or <code>nil</code> if it can not be resolved.</p>
+
+<p>Fairly exhaustive list of all possible call-sites:</p>
+<ul><li>
+<p>Addrinfo.getaddrinfo</p>
+</li><li>
+<p>Addrinfo.tcp</p>
+</li><li>
+<p>Addrinfo.udp</p>
+</li><li>
+<p>Addrinfo.ip</p>
+</li><li>
+<p>Addrinfo.new</p>
+</li><li>
+<p>Addrinfo.marshal_load</p>
+</li><li>
+<p>SOCKSSocket.new</p>
+</li><li>
+<p>TCPServer.new</p>
+</li><li>
+<p>TCPSocket.new</p>
+</li><li>
+<p>IPSocket.getaddress</p>
+</li><li>
+<p>TCPSocket.gethostbyname</p>
+</li><li>
+<p>UDPSocket#connect</p>
+</li><li>
+<p>UDPSocket#bind</p>
+</li><li>
+<p>UDPSocket#send</p>
+</li><li>
+<p>Socket.getaddrinfo</p>
+</li><li>
+<p>Socket.gethostbyname</p>
+</li><li>
+<p>Socket.pack_sockaddr_in</p>
+</li><li>
+<p>Socket.sockaddr_in</p>
+</li><li>
+<p>Socket.unpack_sockaddr_in</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="address_resolve-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_address_resolve(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- address_resolve-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- address_resolve-method -->
+      
+        <div id="block-method" class="method-detail ">
+          <a name="method-i-block"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">block(blocker, timeout = nil)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by methods like <a href="../Thread.html#method-i-join"><code>Thread.join</code></a>, and by Mutex, to signify that current <a href="../Fiber.html"><code>Fiber</code></a> is blocked until further notice (e.g. <a href="SchedulerInterface.html#method-i-unblock"><code>unblock</code></a>) or until <code>timeout</code> has elapsed.</p>
+
+<p><code>blocker</code> is what we are waiting on, informational only (for debugging and logging). There are no guarantee about its value.</p>
+
+<p>Expected to return boolean, specifying whether the blocking operation was successful or not.</p>
+            
+
+            
+            <div class="method-source-code" id="block-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_block(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- block-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- block-method -->
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Called when the current thread exits. The scheduler is expected to implement this method in order to allow all waiting fibers to finalize their execution.</p>
+
+<p>The suggested pattern is to implement the main event loop in the <a href="SchedulerInterface.html#method-i-close"><code>close</code></a> method.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_close(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+      
+        <div id="fiber-method" class="method-detail ">
+          <a name="method-i-fiber"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">fiber(&block)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Implementation of the <a href="../Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a>. The method is <em>expected</em> to immediately run the given block of code in a separate non-blocking fiber, and to return that <a href="../Fiber.html"><code>Fiber</code></a>.</p>
+
+<p>Minimal suggested implementation is:</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fiber</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">fiber</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">blocking:</span> <span class="ruby-keyword">false</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span>
+  <span class="ruby-identifier">fiber</span>
+<span class="ruby-keyword">end</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="fiber-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_fiber(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- fiber-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fiber-method -->
+      
+        <div id="io_read-method" class="method-detail ">
+          <a name="method-i-io_read"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">io_read(io, buffer, length) &rarr; read length or -errno</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by <a href="../IO.html#method-i-read"><code>IO#read</code></a> to read <code>length</code> bytes from <code>io</code> into a specified <code>buffer</code> (see <a href="../IO/Buffer.html"><code>IO::Buffer</code></a>).</p>
+
+<p>The <code>length</code> argument is the “minimum length to be read”. If the <a href="../IO.html"><code>IO</code></a> buffer size is 8KiB, but the <code>length</code> is <code>1024</code> (1KiB), up to 8KiB might be read, but at least 1KiB will be. Generally, the only case where less data than <code>length</code> will be read is if there is an error reading the data.</p>
+
+<p>Specifying a <code>length</code> of 0 is valid and means try reading at least once and return any available data.</p>
+
+<p>Suggested implementation should try to read from <code>io</code> in a non-blocking manner and call <a href="SchedulerInterface.html#method-i-io_wait"><code>io_wait</code></a> if the <code>io</code> is not ready (which will yield control to other fibers).</p>
+
+<p>See <a href="../IO/Buffer.html"><code>IO::Buffer</code></a> for an interface available to return data.</p>
+
+<p>Expected to return number of bytes read, or, in case of an error, <code>-errno</code> (negated number corresponding to system&#39;s error code).</p>
+
+<p>The method should be considered <em>experimental</em>.</p>
+            
+
+            
+            <div class="method-source-code" id="io_read-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_io_read(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- io_read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- io_read-method -->
+      
+        <div id="io_wait-method" class="method-detail ">
+          <a name="method-i-io_wait"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">io_wait(io, events, timeout)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by IO#wait, IO#wait_readable, IO#wait_writable to ask whether the specified descriptor is ready for specified events within the specified <code>timeout</code>.</p>
+
+<p><code>events</code> is a bit mask of <code>IO::READABLE</code>, <code>IO::WRITABLE</code>, and <code>IO::PRIORITY</code>.</p>
+
+<p>Suggested implementation should register which <a href="../Fiber.html"><code>Fiber</code></a> is waiting for which resources and immediately calling <a href="../Fiber.html#method-c-yield"><code>Fiber.yield</code></a> to pass control to other fibers. Then, in the <a href="SchedulerInterface.html#method-i-close"><code>close</code></a> method, the scheduler might dispatch all the I/O resources to fibers waiting for it.</p>
+
+<p>Expected to return the subset of events that are ready immediately.</p>
+            
+
+            
+            <div class="method-source-code" id="io_wait-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_io_wait(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- io_wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- io_wait-method -->
+      
+        <div id="io_write-method" class="method-detail ">
+          <a name="method-i-io_write"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">io_write(io, buffer, length) &rarr; written length or -errno</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by <a href="../IO.html#method-i-write"><code>IO#write</code></a> to write <code>length</code> bytes to <code>io</code> from from a specified <code>buffer</code> (see <a href="../IO/Buffer.html"><code>IO::Buffer</code></a>).</p>
+
+<p>The <code>length</code> argument is the “(minimum) length to be written”. If the <a href="../IO.html"><code>IO</code></a> buffer size is 8KiB, but the <code>length</code> specified is 1024 (1KiB), at most 8KiB will be written, but at least 1KiB will be. Generally, the only case where less data than <code>length</code> will be written is if there is an error writing the data.</p>
+
+<p>Specifying a <code>length</code> of 0 is valid and means try writing at least once, as much data as possible.</p>
+
+<p>Suggested implementation should try to write to <code>io</code> in a non-blocking manner and call <a href="SchedulerInterface.html#method-i-io_wait"><code>io_wait</code></a> if the <code>io</code> is not ready (which will yield control to other fibers).</p>
+
+<p>See <a href="../IO/Buffer.html"><code>IO::Buffer</code></a> for an interface available to get data from buffer efficiently.</p>
+
+<p>Expected to return number of bytes written, or, in case of an error, <code>-errno</code> (negated number corresponding to system&#39;s error code).</p>
+
+<p>The method should be considered <em>experimental</em>.</p>
+            
+
+            
+            <div class="method-source-code" id="io_write-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_io_write(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- io_write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- io_write-method -->
+      
+        <div id="kernel_sleep-method" class="method-detail ">
+          <a name="method-i-kernel_sleep"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">kernel_sleep(duration = nil)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by <a href="../Kernel.html#method-i-sleep"><code>Kernel#sleep</code></a> and Mutex#sleep and is expected to provide an implementation of sleeping in a non-blocking way. Implementation might register the current fiber in some list of “which fiber wait until what moment”, call <a href="../Fiber.html#method-c-yield"><code>Fiber.yield</code></a> to pass control, and then in <a href="SchedulerInterface.html#method-i-close"><code>close</code></a> resume the fibers whose wait period has elapsed.</p>
+            
+
+            
+            <div class="method-source-code" id="kernel_sleep-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_kernel_sleep(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- kernel_sleep-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kernel_sleep-method -->
+      
+        <div id="process_wait-method" class="method-detail ">
+          <a name="method-i-process_wait"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">process_wait(pid, flags)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by <a href="../Process/Status.html#method-c-wait"><code>Process::Status.wait</code></a> in order to wait for a specified process. See that method description for arguments description.</p>
+
+<p>Suggested minimal implementation:</p>
+
+<pre class="ruby"><span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-constant">Process</span><span class="ruby-operator">::</span><span class="ruby-constant">Status</span>.<span class="ruby-identifier">wait</span>(<span class="ruby-identifier">pid</span>, <span class="ruby-identifier">flags</span>)
+<span class="ruby-keyword">end</span>.<span class="ruby-identifier">value</span>
+</pre>
+
+<p>This hook is optional: if it is not present in the current scheduler, <a href="../Process/Status.html#method-c-wait"><code>Process::Status.wait</code></a> will behave as a blocking method.</p>
+
+<p>Expected to return a <a href="../Process/Status.html"><code>Process::Status</code></a> instance.</p>
+            
+
+            
+            <div class="method-source-code" id="process_wait-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_process_wait(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- process_wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_wait-method -->
+      
+        <div id="timeout_after-method" class="method-detail ">
+          <a name="method-i-timeout_after"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">timeout_after(duration, exception_class, *exception_arguments, &block) &rarr; result of block</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked by Timeout.timeout to execute the given <code>block</code> within the given <code>duration</code>. It can also be invoked directly by the scheduler or user code.</p>
+
+<p>Attempt to limit the execution time of a given <code>block</code> to the given <code>duration</code> if possible. When a non-blocking operation causes the <code>block</code>&#39;s execution time to exceed the specified <code>duration</code>, that non-blocking operation should be interrupted by raising the specified <code>exception_class</code> constructed with the given <code>exception_arguments</code>.</p>
+
+<p>General execution timeouts are often considered risky. This implementation will only interrupt non-blocking operations. This is by design because it&#39;s expected that non-blocking operations can fail for a variety of unpredictable reasons, so applications should already be robust in handling these conditions and by implication timeouts.</p>
+
+<p>However, as a result of this design, if the <code>block</code> does not invoke any non-blocking operations, it will be impossible to interrupt it. If you desire to provide predictable points for timeouts, consider adding +sleep(0)+.</p>
+
+<p>If the block is executed successfully, its result will be returned.</p>
+
+<p>The exception will typically be raised using <a href="../Fiber.html#method-i-raise"><code>Fiber#raise</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="timeout_after-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_timeout_after(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- timeout_after-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- timeout_after-method -->
+      
+        <div id="unblock-method" class="method-detail ">
+          <a name="method-i-unblock"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">unblock(blocker, fiber)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Invoked to wake up <a href="../Fiber.html"><code>Fiber</code></a> previously blocked with <a href="SchedulerInterface.html#method-i-block"><code>block</code></a> (for example, Mutex#lock calls <a href="SchedulerInterface.html#method-i-block"><code>block</code></a> and Mutex#unlock calls <a href="SchedulerInterface.html#method-i-unblock"><code>unblock</code></a>). The scheduler should use the <code>fiber</code> parameter to understand which fiber is unblocked.</p>
+
+<p><code>blocker</code> is what was awaited for, but it is informational only (for debugging and logging), and it is not guaranteed to be the same value as the <code>blocker</code> for <a href="SchedulerInterface.html#method-i-block"><code>block</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="unblock-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_scheduler_interface_unblock(VALUE self)
+{
+}
+            </pre> 
+            </div><!-- unblock-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unblock-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_SchedulerInterface_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_SchedulerInterface_versioned").load("/associated/3.1.2/SchedulerInterface.ihtml");</script> <div id='tx_SchedulerInterface' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_SchedulerInterface").load("/associated/SchedulerInterface.ihtml");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 3.1.2</small></p> 
+  
+   <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>. <a href="http://neurogami.com">Maximum R+D</a>.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+ 
+       <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.ihtml");
+    });
+
+    </script>
+
+
+ 
+		<script type='text/javascript'>
+
+	function loadPlus(plusdocs){
+			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
+					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
+					});
+	} 
+
+   //function loadInline(json){
+   // for (var lookFor in json) {
+    //  $(lookFor).after(json[lookFor]);
+    // }
+  // } // end loadInline
+
+
+$(document).ready(function() {
+		$.ajaxSetup({ cache: false });
+			$.get('/associated/3.1.2/plus_SchedulerInterface.ihtml', 
+			function(plusdocs) {
+			setTimeout(function() {
+				loadPlus(plusdocs);
+				}, 2000);
+			}
+			);
+
+
+//     $.ajax({
+//     dataType: "json",
+//      url: '/associated/3.1.2/inline_SchedulerInterface.js',
+//      success: function(json) {
+// 			setTimeout(function() {
+// 				loadInline(json);
+// 				}, 2000);
+// 			}
+//    });
+
+		});
+</script>
+		
+</body>
+</html>
+
+

@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.42.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta name='description' content='  Module : RubyVM::YJIT  -   Ruby 3.1.2 ' />
+  <meta content="2022-06-09 20:39:36 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = '..'  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+  <!-- rel_prefix = '..'   asset_rel_prefix = '..'  --> 
+  <title>Module: RubyVM::YJIT (Ruby 3.1.2) </title>
+  <link rel="stylesheet" href="../css/associated.css" type="text/css" >
+  <!-- link rel="stylesheet" href="..css/obf.css"  -->
+  <link rel="stylesheet" href="../css/inuit.css" >
+  <link rel="stylesheet" href="../css/grid.inuit.css" >
+  <link rel="stylesheet" href="../css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="../css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="../css/carbon17.css" type="text/css" >
+
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+
+   
+<script src="../js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+   <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body id="top" class="module rdocstar">
+
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  
+   <!-- carbon17 added here 2017-09-09 -->
+ 
+
+   <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>yjit.rb</li>      
+            
+          
+          <li class='in-file'>ast.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-_print_stats">::_print_stats</a></li>
+          
+          <li><a href="#method-c-blocks_for">::blocks_for</a></li>
+          
+          <li><a href="#method-c-comments_for">::comments_for</a></li>
+          
+          <li><a href="#method-c-disasm">::disasm</a></li>
+          
+          <li><a href="#method-c-disasm_block">::disasm_block</a></li>
+          
+          <li><a href="#method-c-enabled-3F">::enabled?</a></li>
+          
+          <li><a href="#method-c-graphviz_for">::graphviz_for</a></li>
+          
+          <li><a href="#method-c-print_counters">::print_counters</a></li>
+          
+          <li><a href="#method-c-print_sorted_exit_counts">::print_sorted_exit_counts</a></li>
+          
+          <li><a href="#method-c-reset_stats-21">::reset_stats!</a></li>
+          
+          <li><a href="#method-c-runtime_stats">::runtime_stats</a></li>
+          
+          <li><a href="#method-c-simulate_oom-21">::simulate_oom!</a></li>
+          
+          <li><a href="#method-c-stats_enabled-3F">::stats_enabled?</a></li>
+          
+          <li><a href="#method-c-total_exit_count">::total_exit_count</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul id='files'>
+        
+          
+          <li class="file"><a href="../_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../COPYING_ja.html">COPYING.ja</a></li>
+        
+          
+          <li class="file"><a href="../README_EXT.html">README.EXT</a></li>
+        
+          
+          <li class="file"><a href="../README_EXT_ja.html">README.EXT.ja</a></li>
+        
+          
+          <li class="file"><a href="../aclocal_m4.html">aclocal.m4</a></li>
+        
+          
+          <li class="file"><a href="../autogen_sh.html">autogen.sh</a></li>
+        
+          
+          <li class="file"><a href="../configure_ac.html">configure.ac</a></li>
+        
+          
+          <li class="file"><a href="../doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/contributing_rdoc.html">contributing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/extension_rdoc.html">extension.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/globals_rdoc.html">globals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/keywords_rdoc.html">keywords.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/marshal_rdoc.html">marshal.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/regexp_rdoc.html">regexp.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/security_rdoc.html">security.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/signals_rdoc.html">signals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax_rdoc.html">syntax.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/in_rdoc.html">in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/msec_rdoc.html">msec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/sec_rdoc.html">sec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/usec_rdoc.html">usec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/year_rdoc.html">year.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../lex_c_blt.html">lex.c.blt</a></li>
+        
+          
+          <li class="file"><a href="../node_name_inc.html">node_name.inc</a></li>
+        
+          
+          <li class="file"><a href="../sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="../sample/drb/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="../ARGF.html">ARGF</a></li>
+        
+          
+          
+          <li><a href="../ArgumentError.html">ArgumentError</a></li>
+        
+          
+          
+          <li><a href="../Array.html">Array</a></li>
+        
+          
+          
+          <li><a href="../BasicObject.html">BasicObject</a></li>
+        
+          
+          
+          <li><a href="../Binding.html">Binding</a></li>
+        
+          
+          
+          <li><a href="../Class.html">Class</a></li>
+        
+          
+          
+          <li><a href="../ClosedQueueError.html">ClosedQueueError</a></li>
+        
+          
+          
+          <li><a href="../Comparable.html">Comparable</a></li>
+        
+          
+          
+          <li><a href="../Complex.html">Complex</a></li>
+        
+          
+          
+          <li><a href="../Continuation.html">Continuation</a></li>
+        
+          
+          
+          <li><a href="../Dir.html">Dir</a></li>
+        
+          
+          
+          <li><a href="../ENV.html">ENV</a></li>
+        
+          
+          
+          <li><a href="../EOFError.html">EOFError</a></li>
+        
+          
+          
+          <li><a href="../Encoding.html">Encoding</a></li>
+        
+          
+          
+          <li><a href="../Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/Converter.html">Encoding::Converter</a></li>
+        
+          
+          
+          <li><a href="../Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+        
+          
+          
+          <li><a href="../Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+        
+          
+          
+          <li><a href="../EncodingError.html">EncodingError</a></li>
+        
+          
+          
+          <li><a href="../Enumerable.html">Enumerable</a></li>
+        
+          
+          
+          <li><a href="../Enumerator.html">Enumerator</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Chain.html">Enumerator::Chain</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Generator.html">Enumerator::Generator</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Producer.html">Enumerator::Producer</a></li>
+        
+          
+          
+          <li><a href="../Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+        
+          
+          
+          <li><a href="../Errno.html">Errno</a></li>
+        
+          
+          
+          <li><a href="../Exception.html">Exception</a></li>
+        
+          
+          
+          <li><a href="../FalseClass.html">FalseClass</a></li>
+        
+          
+          
+          <li><a href="../Fiber.html">Fiber</a></li>
+        
+          
+          
+          <li><a href="../Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+        
+          
+          
+          <li><a href="../FiberError.html">FiberError</a></li>
+        
+          
+          
+          <li><a href="../File.html">File</a></li>
+        
+          
+          
+          <li><a href="../File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="../File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="../File/Stat.html">File::Stat</a></li>
+        
+          
+          
+          <li><a href="../FileTest.html">FileTest</a></li>
+        
+          
+          
+          <li><a href="../Float.html">Float</a></li>
+        
+          
+          
+          <li><a href="../FloatDomainError.html">FloatDomainError</a></li>
+        
+          
+          
+          <li><a href="../FrozenError.html">FrozenError</a></li>
+        
+          
+          
+          <li><a href="../GC.html">GC</a></li>
+        
+          
+          
+          <li><a href="../GC/Profiler.html">GC::Profiler</a></li>
+        
+          
+          
+          <li><a href="../Hash.html">Hash</a></li>
+        
+          
+          
+          <li><a href="../IO.html">IO</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer.html">IO::Buffer</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+        
+          
+          
+          <li><a href="../IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+        
+          
+          
+          <li><a href="../IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IO/WaitReadable.html">IO::WaitReadable</a></li>
+        
+          
+          
+          <li><a href="../IO/WaitWritable.html">IO::WaitWritable</a></li>
+        
+          
+          
+          <li><a href="../IOError.html">IOError</a></li>
+        
+          
+          
+          <li><a href="../IndexError.html">IndexError</a></li>
+        
+          
+          
+          <li><a href="../Integer.html">Integer</a></li>
+        
+          
+          
+          <li><a href="../Interrupt.html">Interrupt</a></li>
+        
+          
+          
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="../KeyError.html">KeyError</a></li>
+        
+          
+          
+          <li><a href="../LoadError.html">LoadError</a></li>
+        
+          
+          
+          <li><a href="../LocalJumpError.html">LocalJumpError</a></li>
+        
+          
+          
+          <li><a href="../Marshal.html">Marshal</a></li>
+        
+          
+          
+          <li><a href="../MatchData.html">MatchData</a></li>
+        
+          
+          
+          <li><a href="../Math.html">Math</a></li>
+        
+          
+          
+          <li><a href="../Math/DomainError.html">Math::DomainError</a></li>
+        
+          
+          
+          <li><a href="../Method.html">Method</a></li>
+        
+          
+          
+          <li><a href="../Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="../NameError.html">NameError</a></li>
+        
+          
+          
+          <li><a href="../NilClass.html">NilClass</a></li>
+        
+          
+          
+          <li><a href="../NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+        
+          
+          
+          <li><a href="../NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+        
+          
+          
+          <li><a href="../NoMemoryError.html">NoMemoryError</a></li>
+        
+          
+          
+          <li><a href="../NoMethodError.html">NoMethodError</a></li>
+        
+          
+          
+          <li><a href="../NotImplementedError.html">NotImplementedError</a></li>
+        
+          
+          
+          <li><a href="../Numeric.html">Numeric</a></li>
+        
+          
+          
+          <li><a href="../Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="../ObjectSpace.html">ObjectSpace</a></li>
+        
+          
+          
+          <li><a href="../ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+        
+          
+          
+          <li><a href="../Pool.html">Pool</a></li>
+        
+          
+          
+          <li><a href="../Proc.html">Proc</a></li>
+        
+          
+          
+          <li><a href="../Process.html">Process</a></li>
+        
+          
+          
+          <li><a href="../Process/GID.html">Process::GID</a></li>
+        
+          
+          
+          <li><a href="../Process/Status.html">Process::Status</a></li>
+        
+          
+          
+          <li><a href="../Process/Sys.html">Process::Sys</a></li>
+        
+          
+          
+          <li><a href="../Process/UID.html">Process::UID</a></li>
+        
+          
+          
+          <li><a href="../Ractor.html">Ractor</a></li>
+        
+          
+          
+          <li><a href="../Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/Error.html">Ractor::Error</a></li>
+        
+          
+          
+          <li><a href="../Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/MovedError.html">Ractor::MovedError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+        
+          
+          
+          <li><a href="../Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+        
+          
+          
+          <li><a href="../Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+        
+          
+          
+          <li><a href="../Random.html">Random</a></li>
+        
+          
+          
+          <li><a href="../Random/Formatter.html">Random::Formatter</a></li>
+        
+          
+          
+          <li><a href="../Range.html">Range</a></li>
+        
+          
+          
+          <li><a href="../RangeError.html">RangeError</a></li>
+        
+          
+          
+          <li><a href="../Rational.html">Rational</a></li>
+        
+          
+          
+          <li><a href="../Refinement.html">Refinement</a></li>
+        
+          
+          
+          <li><a href="../Regexp.html">Regexp</a></li>
+        
+          
+          
+          <li><a href="../RegexpError.html">RegexpError</a></li>
+        
+          
+          
+          <li><a href="../Ripper.html">Ripper</a></li>
+        
+          
+          
+          <li><a href="../RubyVM.html">RubyVM</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+        
+          
+          
+          <li><a href="../RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+        
+          
+          
+          <li><a href="../RuntimeError.html">RuntimeError</a></li>
+        
+          
+          
+          <li><a href="../ScriptError.html">ScriptError</a></li>
+        
+          
+          
+          <li><a href="../SecurityError.html">SecurityError</a></li>
+        
+          
+          
+          <li><a href="../Signal.html">Signal</a></li>
+        
+          
+          
+          <li><a href="../SignalException.html">SignalException</a></li>
+        
+          
+          
+          <li><a href="../StandardError.html">StandardError</a></li>
+        
+          
+          
+          <li><a href="../StopIteration.html">StopIteration</a></li>
+        
+          
+          
+          <li><a href="../String.html">String</a></li>
+        
+          
+          
+          <li><a href="../Struct.html">Struct</a></li>
+        
+          
+          
+          <li><a href="../Symbol.html">Symbol</a></li>
+        
+          
+          
+          <li><a href="../SyntaxError.html">SyntaxError</a></li>
+        
+          
+          
+          <li><a href="../SystemCallError.html">SystemCallError</a></li>
+        
+          
+          
+          <li><a href="../SystemExit.html">SystemExit</a></li>
+        
+          
+          
+          <li><a href="../SystemStackError.html">SystemStackError</a></li>
+        
+          
+          
+          <li><a href="../Thread.html">Thread</a></li>
+        
+          
+          
+          <li><a href="../Thread/Backtrace.html">Thread::Backtrace</a></li>
+        
+          
+          
+          <li><a href="../Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+        
+          
+          
+          <li><a href="../Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+        
+          
+          
+          <li><a href="../Thread/Mutex.html">Thread::Mutex</a></li>
+        
+          
+          
+          <li><a href="../Thread/Queue.html">Thread::Queue</a></li>
+        
+          
+          
+          <li><a href="../Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+        
+          
+          
+          <li><a href="../ThreadError.html">ThreadError</a></li>
+        
+          
+          
+          <li><a href="../ThreadGroup.html">ThreadGroup</a></li>
+        
+          
+          
+          <li><a href="../Time.html">Time</a></li>
+        
+          
+          
+          <li><a href="../TracePoint.html">TracePoint</a></li>
+        
+          
+          
+          <li><a href="../TrueClass.html">TrueClass</a></li>
+        
+          
+          
+          <li><a href="../TypeError.html">TypeError</a></li>
+        
+          
+          
+          <li><a href="../UnboundMethod.html">UnboundMethod</a></li>
+        
+          
+          
+          <li><a href="../UncaughtThrowError.html">UncaughtThrowError</a></li>
+        
+          
+          
+          <li><a href="../UnicodeNormalize.html">UnicodeNormalize</a></li>
+        
+          
+          
+          <li><a href="../Warning.html">Warning</a></li>
+        
+          
+          
+          <li><a href="../ZeroDivisionError.html">ZeroDivisionError</a></li>
+        
+          
+          
+          <li><a href="../fatal.html">fatal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="module">RubyVM::YJIT</h1>
+
+    <div id="description" class="description">
+      
+<p>This module allows for introspection of <a href="YJIT.html"><code>YJIT</code></a>, CRuby&#39;s experimental in-process just-in-time compiler. This module exists only to help develop <a href="YJIT.html"><code>YJIT</code></a>, as such, everything in the module is highly implementation specific and comes with no API stability guarantee whatsoever.</p>
+
+<p>This module may not exist if <a href="YJIT.html"><code>YJIT</code></a> does not support the particular platform for which CRuby is built. There is also no API stability guarantee as to in what situations this module is defined.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="blocks_for-method" class="method-detail ">
+          <a name="method-c-blocks_for"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blocks_for</span><span
+              class="method-args">(p1)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Get a list of the <a href="YJIT.html"><code>YJIT</code></a> blocks associated with `rb_iseq`</p>
+            
+
+            
+            <div class="method-source-code" id="blocks_for-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+yjit_blocks_for(VALUE mod, VALUE rb_iseq)
+{
+    if (CLASS_OF(rb_iseq) != rb_cISeq) {
+        return rb_ary_new();
+    }
+
+    const rb_iseq_t *iseq = rb_iseqw_to_iseq(rb_iseq);
+
+    VALUE all_versions = rb_ary_new();
+    rb_darray_for(iseq-&gt;body-&gt;yjit_blocks, version_array_idx) {
+        rb_yjit_block_array_t versions = rb_darray_get(iseq-&gt;body-&gt;yjit_blocks, version_array_idx);
+
+        rb_darray_for(versions, block_idx) {
+            block_t *block = rb_darray_get(versions, block_idx);
+
+            // FIXME: The object craeted here can outlive the block itself
+            VALUE rb_block = TypedData_Wrap_Struct(cYjitBlock, &amp;yjit_block_type, block);
+            rb_ary_push(all_versions, rb_block);
+        }
+    }
+
+    return all_versions;
+}
+            </pre> 
+            </div><!-- blocks_for-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blocks_for-method -->
+      
+        <div id="comments_for-method" class="method-detail ">
+          <a name="method-c-comments_for"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">comments_for</span><span
+              class="method-args">(start_address, end_address)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="comments_for-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">comments_for</span>(<span class="ruby-identifier">start_address</span>, <span class="ruby-identifier">end_address</span>)
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">comments_for</span>(<span class="ruby-identifier">start_address</span>, <span class="ruby-identifier">end_address</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- comments_for-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- comments_for-method -->
+      
+        <div id="disasm-method" class="method-detail ">
+          <a name="method-c-disasm"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disasm</span><span
+              class="method-args">(iseq, tty: $stdout && $stdout.tty?)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="disasm-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">disasm</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-value">tty:</span> <span class="ruby-identifier">$stdout</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">tty?</span>)
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">of</span>(<span class="ruby-identifier">iseq</span>)
+
+  <span class="ruby-identifier">blocks</span> = <span class="ruby-identifier">blocks_for</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">blocks</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">str</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">disasm</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-comment"># Sort the blocks by increasing addresses</span>
+  <span class="ruby-identifier">sorted_blocks</span> = <span class="ruby-identifier">blocks</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:address</span>)
+
+  <span class="ruby-identifier">highlight</span> = <span class="ruby-operator">-&gt;</span>(<span class="ruby-identifier">str</span>) {
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">tty</span>
+      <span class="ruby-node">&quot;\x1b[1m#{str}\x1b[0m&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">str</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-identifier">cs</span> = <span class="ruby-constant">Disasm</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">sorted_blocks</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">block</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;== BLOCK #{i+1}/#{blocks.length}: #{block.code.length} BYTES, ISEQ RANGE [#{block.iseq_start_index},#{block.iseq_end_index}) &quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-value">80</span>, <span class="ruby-string">&quot;=&quot;</span>)
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+    <span class="ruby-identifier">comments</span> = <span class="ruby-identifier">comments_for</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">comment_idx</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">cs</span>.<span class="ruby-identifier">disasm</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">while</span> (<span class="ruby-identifier">comment</span> = <span class="ruby-identifier">comments</span>[<span class="ruby-identifier">comment_idx</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">address</span>
+        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;  ; #{highlight.call(comment.comment)}\n&quot;</span>
+        <span class="ruby-identifier">comment_idx</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(
+        <span class="ruby-string">&quot;  %&lt;address&gt;08x:  %&lt;instruction&gt;s\t%&lt;details&gt;s\n&quot;</span>,
+        <span class="ruby-value">address:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">address</span>,
+        <span class="ruby-value">instruction:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">mnemonic</span>,
+        <span class="ruby-value">details:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">op_str</span>
+      )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">block_sizes</span> = <span class="ruby-identifier">blocks</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">length</span> }
+  <span class="ruby-identifier">total_bytes</span> = <span class="ruby-identifier">block_sizes</span>.<span class="ruby-identifier">sum</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Total code size: #{total_bytes} bytes&quot;</span>
+  <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- disasm-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disasm-method -->
+      
+        <div id="disasm_block-method" class="method-detail ">
+          <a name="method-c-disasm_block"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">disasm_block</span><span
+              class="method-args">(cs, block, highlight)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="disasm_block-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">disasm_block</span>(<span class="ruby-identifier">cs</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">highlight</span>)
+  <span class="ruby-identifier">comments</span> = <span class="ruby-identifier">comments_for</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">comment_idx</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">str</span> = <span class="ruby-string">+&#39;&#39;</span>
+  <span class="ruby-identifier">cs</span>.<span class="ruby-identifier">disasm</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">while</span> (<span class="ruby-identifier">comment</span> = <span class="ruby-identifier">comments</span>[<span class="ruby-identifier">comment_idx</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">address</span>
+      <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;  ; #{highlight.call(comment.comment)}\n&quot;</span>
+      <span class="ruby-identifier">comment_idx</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(
+      <span class="ruby-string">&quot;  %&lt;address&gt;08x:  %&lt;instruction&gt;s\t%&lt;details&gt;s\n&quot;</span>,
+      <span class="ruby-value">address:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">address</span>,
+      <span class="ruby-value">instruction:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">mnemonic</span>,
+      <span class="ruby-value">details:</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">op_str</span>
+    )
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- disasm_block-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- disasm_block-method -->
+      
+        <div id="enabled-3F-method" class="method-detail ">
+          <a name="method-c-enabled-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enabled?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="enabled-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">enabled?</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">cexpr!</span> <span class="ruby-string">&#39;rb_yjit_enabled_p() ? Qtrue : Qfalse&#39;</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- enabled-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enabled-3F-method -->
+      
+        <div id="graphviz_for-method" class="method-detail ">
+          <a name="method-c-graphviz_for"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">graphviz_for</span><span
+              class="method-args">(iseq)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="graphviz_for-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">graphviz_for</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">of</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-identifier">cs</span> = <span class="ruby-constant">Disasm</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">highlight</span> = <span class="ruby-operator">-&gt;</span>(<span class="ruby-identifier">comment</span>) { <span class="ruby-node">&quot;&lt;b&gt;#{comment}&lt;/b&gt;&quot;</span> }
+  <span class="ruby-identifier">linebreak</span> = <span class="ruby-string">&quot;&lt;br align=\&quot;left\&quot;/&gt;\n&quot;</span>
+
+  <span class="ruby-identifier">buff</span> = <span class="ruby-string">+&#39;&#39;</span>
+  <span class="ruby-identifier">blocks</span> = <span class="ruby-identifier">blocks_for</span>(<span class="ruby-identifier">iseq</span>).<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;digraph g {\n&quot;</span>
+
+  <span class="ruby-comment"># Write the iseq info as a legend</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  legend [shape=record fontsize=\&quot;30\&quot; fillcolor=\&quot;lightgrey\&quot; style=\&quot;filled\&quot;];\n&quot;</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;  legend [label=\&quot;{ Instruction Disassembly For: | {#{iseq.base_label}@#{iseq.absolute_path}:#{iseq.first_lineno}}}\&quot;];\n&quot;</span>
+
+  <span class="ruby-comment"># Subgraph contains disassembly</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  subgraph disasm {\n&quot;</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  node [shape=record fontname=\&quot;courier\&quot;];\n&quot;</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  edge [fontname=\&quot;courier\&quot; penwidth=3];\n&quot;</span>
+  <span class="ruby-identifier">blocks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">disasm</span> = <span class="ruby-identifier">disasm_block</span>(<span class="ruby-identifier">cs</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">highlight</span>)
+
+    <span class="ruby-comment"># convert newlines to breaks that graphviz understands</span>
+    <span class="ruby-identifier">disasm</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\n/</span>, <span class="ruby-identifier">linebreak</span>)
+
+    <span class="ruby-comment"># strip leading whitespace</span>
+    <span class="ruby-identifier">disasm</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/^\s+/</span>, <span class="ruby-string">&#39;&#39;</span>)
+
+    <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;b#{block.id} [label=&lt;#{disasm}&gt;];\n&quot;</span>
+    <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">outgoing_ids</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">next_block</span> = <span class="ruby-identifier">blocks</span>.<span class="ruby-identifier">bsearch</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">nb</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">id</span> }
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">next_block</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">block</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">length</span>)
+        <span class="ruby-node">&quot;b#{block.id} -&gt; b#{id}[label=\&quot;Fall\&quot;];&quot;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-node">&quot;b#{block.id} -&gt; b#{id}[label=\&quot;Jump\&quot; style=dashed];&quot;</span>
+      <span class="ruby-keyword">end</span>
+    }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;  }&quot;</span>
+  <span class="ruby-identifier">buff</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;}&quot;</span>
+  <span class="ruby-identifier">buff</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- graphviz_for-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- graphviz_for-method -->
+      
+        <div id="reset_stats-21-method" class="method-detail ">
+          <a name="method-c-reset_stats-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset_stats!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Discard statistics collected for –yjit-stats.</p>
+            
+
+            
+            <div class="method-source-code" id="reset_stats-21-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">reset_stats!</span>
+  <span class="ruby-comment"># defined in yjit_iface.c</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">reset_stats_bang</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- reset_stats-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset_stats-21-method -->
+      
+        <div id="runtime_stats-method" class="method-detail ">
+          <a name="method-c-runtime_stats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">runtime_stats</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Return a hash for statistics generated for the –yjit-stats command line option. Return nil when option is not passed or unavailable.</p>
+            
+
+            
+            <div class="method-source-code" id="runtime_stats-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">runtime_stats</span>
+  <span class="ruby-comment"># defined in yjit_iface.c</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">get_yjit_stats</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- runtime_stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- runtime_stats-method -->
+      
+        <div id="simulate_oom-21-method" class="method-detail ">
+          <a name="method-c-simulate_oom-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">simulate_oom!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="simulate_oom-21-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">simulate_oom!</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">simulate_oom_bang</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- simulate_oom-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- simulate_oom-21-method -->
+      
+        <div id="stats_enabled-3F-method" class="method-detail ">
+          <a name="method-c-stats_enabled-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stats_enabled?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stats_enabled-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">stats_enabled?</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">yjit_stats_enabled_p</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- stats_enabled-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stats_enabled-3F-method -->
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="private-class-method-details" class="method-section section">
+        <h3 class="section-header">Private Class Methods</h3>
+
+      
+        <div id="_print_stats-method" class="method-detail ">
+          <a name="method-c-_print_stats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_print_stats</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Format and print out counters</p>
+            
+
+            
+            <div class="method-source-code" id="_print_stats-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_print_stats</span>
+  <span class="ruby-identifier">stats</span> = <span class="ruby-identifier">runtime_stats</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">stats</span>
+
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;***YJIT: Printing YJIT statistics on exit***&quot;</span>)
+
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;send_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;method call exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;invokesuper_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;invokesuper exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;leave_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;leave exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;gbpp_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;getblockparamproxy exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;getivar_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;getinstancevariable exit reasons:&#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;setivar_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;setinstancevariable exit reasons:&#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;oaref_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;opt_aref exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;expandarray_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;expandarray exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;opt_getinlinecache_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;opt_getinlinecache exit reasons: &#39;</span>)
+  <span class="ruby-identifier">print_counters</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&#39;invalidate_&#39;</span>, <span class="ruby-value">prompt:</span> <span class="ruby-string">&#39;invalidation reasons: &#39;</span>)
+
+  <span class="ruby-identifier">side_exits</span> = <span class="ruby-identifier">total_exit_count</span>(<span class="ruby-identifier">stats</span>)
+  <span class="ruby-identifier">total_exits</span> = <span class="ruby-identifier">side_exits</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:leave_interp_return</span>]
+
+  <span class="ruby-comment"># Number of instructions that finish executing in YJIT.</span>
+  <span class="ruby-comment"># See :count-placement: about the subtraction.</span>
+  <span class="ruby-identifier">retired_in_yjit</span> = <span class="ruby-identifier">stats</span>[<span class="ruby-value">:exec_instruction</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">side_exits</span>
+
+  <span class="ruby-comment"># Average length of instruction sequences executed by YJIT</span>
+  <span class="ruby-identifier">avg_len_in_yjit</span> = <span class="ruby-identifier">retired_in_yjit</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_exits</span>
+
+  <span class="ruby-comment"># Proportion of instructions that retire in YJIT</span>
+  <span class="ruby-identifier">total_insns_count</span> = <span class="ruby-identifier">retired_in_yjit</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:vm_insns_count</span>]
+  <span class="ruby-identifier">yjit_ratio_pct</span> = <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">retired_in_yjit</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_insns_count</span>
+
+  <span class="ruby-comment"># Number of failed compiler invocations</span>
+  <span class="ruby-identifier">compilation_failure</span> = <span class="ruby-identifier">stats</span>[<span class="ruby-value">:compilation_failure</span>]
+
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;bindings_allocations:  &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:binding_allocations</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;bindings_set:          &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:binding_set</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;compilation_failure:   &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">compilation_failure</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">compilation_failure</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;compiled_iseq_count:   &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:compiled_iseq_count</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;compiled_block_count:  &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:compiled_block_count</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;invalidation_count:    &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:invalidation_count</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;constant_state_bumps:  &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:constant_state_bumps</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;inline_code_size:      &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:inline_code_size</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;outlined_code_size:    &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:outlined_code_size</span>])
+
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;total_exit_count:      &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">total_exits</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;total_insns_count:     &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">total_insns_count</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;vm_insns_count:        &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:vm_insns_count</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;yjit_insns_count:      &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:exec_instruction</span>])
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ratio_in_yjit:         &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%9.1f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">yjit_ratio_pct</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;%&quot;</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;avg_len_in_yjit:       &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-string">&quot;%10.1f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">avg_len_in_yjit</span>)
+
+  <span class="ruby-identifier">print_sorted_exit_counts</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&quot;exit_&quot;</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- _print_stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _print_stats-method -->
+      
+        <div id="print_counters-method" class="method-detail ">
+          <a name="method-c-print_counters"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_counters</span><span
+              class="method-args">(counters, prefix:, prompt:)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_counters-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_counters</span>(<span class="ruby-identifier">counters</span>, <span class="ruby-value">prefix:</span>, <span class="ruby-value">prompt:</span>)
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">prompt</span>)
+  <span class="ruby-identifier">counters</span> = <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">filter</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>) }
+  <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">filter!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> }
+  <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">transform_keys!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">delete_prefix</span>(<span class="ruby-identifier">prefix</span>) }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;    (all relevant counters are zero)&quot;</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">counters</span> = <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">to_a</span>
+  <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">sort_by!</span> { <span class="ruby-operator">|</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">counter_value</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">counter_value</span> }
+  <span class="ruby-identifier">longest_name_length</span> = <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">max_by</span> { <span class="ruby-operator">|</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">_</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">total</span> = <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">sum</span> { <span class="ruby-operator">|</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">counter_value</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">counter_value</span> }
+
+  <span class="ruby-identifier">counters</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)<span class="ruby-operator">|</span>
+    <span class="ruby-identifier">percentage</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">fdiv</span>(<span class="ruby-identifier">total</span>) <span class="ruby-operator">*</span> <span class="ruby-value">100</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">printf</span>(<span class="ruby-string">&quot;    %*s %10d (%4.1f%%)\n&quot;</span>, <span class="ruby-identifier">longest_name_length</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">percentage</span>);
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- print_counters-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_counters-method -->
+      
+        <div id="print_sorted_exit_counts-method" class="method-detail ">
+          <a name="method-c-print_sorted_exit_counts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_sorted_exit_counts</span><span
+              class="method-args">(stats, prefix:, how_many: 20, left_pad: 4)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_sorted_exit_counts-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_sorted_exit_counts</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span>, <span class="ruby-value">how_many:</span> <span class="ruby-value">20</span>, <span class="ruby-value">left_pad:</span> <span class="ruby-value">4</span>)
+  <span class="ruby-identifier">exits</span> = []
+  <span class="ruby-identifier">stats</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>)
+      <span class="ruby-identifier">exits</span>.<span class="ruby-identifier">push</span> [<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">delete_prefix</span>(<span class="ruby-identifier">prefix</span>), <span class="ruby-identifier">v</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">exits</span> = <span class="ruby-identifier">exits</span>.<span class="ruby-identifier">sort_by</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">count</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span><span class="ruby-identifier">count</span> }[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">how_many</span>]
+  <span class="ruby-identifier">total_exits</span> = <span class="ruby-identifier">total_exit_count</span>(<span class="ruby-identifier">stats</span>)
+
+  <span class="ruby-identifier">top_n_total</span> = <span class="ruby-identifier">exits</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">count</span><span class="ruby-operator">|</span> <span class="ruby-identifier">count</span> }.<span class="ruby-identifier">sum</span>
+  <span class="ruby-identifier">top_n_exit_pct</span> = <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">top_n_total</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_exits</span>
+
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Top-#{how_many} most frequent exit ops (#{&quot;%.1f&quot; % top_n_exit_pct}% of exits):&quot;</span>
+
+  <span class="ruby-identifier">longest_insn_name_len</span> = <span class="ruby-identifier">exits</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">count</span><span class="ruby-operator">|</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">max</span>
+  <span class="ruby-identifier">exits</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">count</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">padding</span> = <span class="ruby-identifier">longest_insn_name_len</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">left_pad</span>
+    <span class="ruby-identifier">padded_name</span> = <span class="ruby-node">&quot;%#{padding}s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">padded_count</span> = <span class="ruby-string">&quot;%10d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">count</span>
+    <span class="ruby-identifier">percent</span> = <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">count</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_exits</span>
+    <span class="ruby-identifier">formatted_percent</span> = <span class="ruby-string">&quot;%.1f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">percent</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;#{padded_name}: #{padded_count} (#{formatted_percent}%)&quot;</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- print_sorted_exit_counts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_sorted_exit_counts-method -->
+      
+        <div id="total_exit_count-method" class="method-detail ">
+          <a name="method-c-total_exit_count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">total_exit_count</span><span
+              class="method-args">(stats, prefix: "exit_")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="total_exit_count-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File yjit.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">total_exit_count</span>(<span class="ruby-identifier">stats</span>, <span class="ruby-value">prefix:</span> <span class="ruby-string">&quot;exit_&quot;</span>)
+  <span class="ruby-identifier">total</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">stats</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">total</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">v</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">total</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- total_exit_count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- total_exit_count-method -->
+      
+      </div><!-- private-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_YJIT_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_YJIT_versioned").load("/associated/3.1.2/YJIT.ihtml");</script> <div id='tx_YJIT' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_YJIT").load("/associated/YJIT.ihtml");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 3.1.2</small></p> 
+  
+   <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, purveyors of fine dance noise.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+ 
+       <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.ihtml");
+    });
+
+    </script>
+
+
+ 
+		<script type='text/javascript'>
+
+	function loadPlus(plusdocs){
+			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
+					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
+					});
+	} 
+
+   //function loadInline(json){
+   // for (var lookFor in json) {
+    //  $(lookFor).after(json[lookFor]);
+    // }
+  // } // end loadInline
+
+
+$(document).ready(function() {
+		$.ajaxSetup({ cache: false });
+			$.get('/associated/3.1.2/plus_YJIT.ihtml', 
+			function(plusdocs) {
+			setTimeout(function() {
+				loadPlus(plusdocs);
+				}, 2000);
+			}
+			);
+
+
+//     $.ajax({
+//     dataType: "json",
+//      url: '/associated/3.1.2/inline_YJIT.js',
+//      success: function(json) {
+// 			setTimeout(function() {
+// 				loadInline(json);
+// 				}, 2000);
+// 			}
+//    });
+
+		});
+</script>
+		
+</body>
+</html>
+
+

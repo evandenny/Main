@@ -1,0 +1,257 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <!-- RD version: 0.42.0  -->
+    <!--  filepage  -->
+  <meta charset="utf-8">
+          
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" -->
+
+
+	<title>File: dir.rb [Ruby 3.1.2]</title>
+  <link rel="stylesheet" href="./css/associated.css" type="text/css" >
+  <link rel="stylesheet" href="./css/inuit.css" >
+  <link rel="stylesheet" href="./css/grid.inuit.css" >
+  <link rel="stylesheet" href="./css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="./css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="./css/carbon17.css" type="text/css" >
+
+  <!-- rel_prefix  = '' -->
+    
+    <!-- WHY? -->
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = '.'  --> 
+  <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2022-04-12 04:11:15 -0700</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			
+<p>Objects of class <a href="Dir.html"><code>Dir</code></a> are directory streams representing directories in the underlying file system. They provide a variety of ways to list directories and their contents. See also <a href="File.html"><code>File</code></a>.</p>
+
+<p>The directory used in these examples contains the two regular files (<code>config.h</code> and <code>main.rb</code>), the parent directory (<code>..</code>), and the directory itself (<code>.</code>).</p>
+
+<h2 id="label-What-27s+Here">What&#39;s Here<span><a href="#label-What-27s+Here">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>First, what&#39;s elsewhere. Class Dir:</p>
+<ul><li>
+<p>Inherits from <a href="Object.html#class-Object-label-What-27s+Here">class Object</a>.</p>
+</li><li>
+<p>Includes <a href="Enumerable.html#module-Enumerable-label-What-27s+Here">module Enumerable</a>, which provides dozens of additional methods.</p>
+</li></ul>
+
+<p>Here, class Dir provides methods that are useful for:</p>
+<ul><li>
+<p><a href="#class-Dir-label-Reading">Reading</a></p>
+</li><li>
+<p><a href="#class-Dir-label-Setting">Setting</a></p>
+</li><li>
+<p><a href="#class-Dir-label-Querying">Querying</a></p>
+</li><li>
+<p><a href="#class-Dir-label-Iterating">Iterating</a></p>
+</li><li>
+<p><a href="#class-Dir-label-Other">Other</a></p>
+</li></ul>
+
+<h3 id="label-Reading">Reading<span><a href="#label-Reading">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt>close
+<dd>
+<p>Closes the directory stream for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>pos=
+<dd>
+<p>Sets the position in the directory stream for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>read
+<dd>
+<p>Reads and returns the next entry in the directory stream for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>rewind
+<dd>
+<p>Sets the position in the directory stream for <code>self</code> to the first entry.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>seek
+<dd>
+<p>Sets the position in the directory stream for <code>self</code> the entry at the given offset.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="label-Setting">Setting<span><a href="#label-Setting">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt>::chdir
+<dd>
+<p>Changes the working directory of the current process to the given directory.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::chroot
+<dd>
+<p>Changes the file-system root for the current process to the given directory.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="label-Querying">Querying<span><a href="#label-Querying">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt>::[]
+<dd>
+<p>Same as ::glob without the ability to pass flags.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::children
+<dd>
+<p>Returns an array of names of the children (both files and directories) of the given directory, but not including <code>.</code> or <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::empty?
+<dd>
+<p>Returns whether the given path is an empty directory.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::entries
+<dd>
+<p>Returns an array of names of the children (both files and directories) of the given directory, including <code>.</code> and <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::exist?
+<dd>
+<p>Returns whether the given path is a directory.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::getwd (aliased as pwd)
+<dd>
+<p>Returns the path to the current working directory.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::glob
+<dd>
+<p>Returns an array of file paths matching the given pattern and flags.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::home
+<dd>
+<p>Returns the home directory path for a given user or the current user.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>children
+<dd>
+<p>Returns an array of names of the children (both files and directories) of <code>self</code>, but not including <code>.</code> or <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>fileno
+<dd>
+<p>Returns the integer file descriptor for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>path (aliased as to_path)
+<dd>
+<p>Returns the path used to create <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>tell (aliased as pos)
+<dd>
+<p>Returns the integer position in the directory stream for <code>self</code>.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="label-Iterating">Iterating<span><a href="#label-Iterating">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt>::each_child
+<dd>
+<p>Calls the given block with each entry in the given directory, but not including <code>.</code> or <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::foreach
+<dd>
+<p>Calls the given block with each entryin the given directory, including <code>.</code> and <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>each
+<dd>
+<p>Calls the given block with each entry in <code>self</code>, including <code>.</code> and <code>..</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>each_child
+<dd>
+<p>Calls the given block with each entry in <code>self</code>, but not including <code>.</code> or <code>..</code>.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="label-Other">Other<span><a href="#label-Other">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt>::mkdir
+<dd>
+<p>Creates a directory at the given path, with optional permissions.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::new
+<dd>
+<p>Returns a new Dir for the given path, with optional encoding.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::open
+<dd>
+<p>Same as ::new, but if a block is given, yields the Dir to the block, closing it upon block exit.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>::unlink (aliased as ::delete and ::rmdir)
+<dd>
+<p>Removes the given directory.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt>inspect
+<dd>
+<p>Returns a string description of <code>self</code>.</p>
+</dd></dl>
+</li></ul>
+
+		</div>
+		
+  </div>
+
+
+ <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+            <script src="./js/libs/jquery-1.6.2.min.js"></script>
+            <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script -->
+            <!-- script>window.jQuery || document.write('<script src="./js/libs/jquery-1.6.2.min.js"><\/script>')</script -->
+
+	<script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/rubydoc.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/libs/modernizr-2.0.6.min.js"></script>
+
+
+  <script defer src="./js/plugins.js"></script>
+  <script defer src="./js/script.js"></script>
+  <!-- end scripts-->
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  <div id='tx_fatal_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_fatal_versioned").load("/associated/3.1.2/fatal.ihtml");</script> <div id='tx_fatal' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_fatal").load("/associated/fatal.ihtml");</script> 
+      
+<div id="dsqus_thread"></div>
+
+</div>
+<div id="footer">
+  
+  <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>. <a href="http://neurogami.com">Hack your world.  Feed your head.  Live curious</a>.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+
+    <p><small>Generated with Rubydoc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+    </body>
+
+
+</html>
+

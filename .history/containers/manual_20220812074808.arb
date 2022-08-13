@@ -1,0 +1,21 @@
+def sayGoodnight(name)
+	puts "Goodnight, #{name}"
+end
+
+sayGoodnight("Evan")
+
+a = [ 1, 'cat', 3.14159 ]
+a[2] = nil
+
+require 'bundler/setup'
+require 'tsort'
+
+class Hash
+	include tsort
+	alias tsort_each_node each_key
+	def tsort_each_child(node, &block)
+		fetch(node).each(&block)
+	end
+end
+
+

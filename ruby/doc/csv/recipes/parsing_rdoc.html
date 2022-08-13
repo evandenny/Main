@@ -1,0 +1,1594 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <!-- RD version: 0.42.0  -->
+    <!--  filepage  -->
+  <meta charset="utf-8">
+          
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" -->
+
+
+	<title>File: parsing.rdoc [Ruby 3.1.2]</title>
+  <link rel="stylesheet" href="../../../css/associated.css" type="text/css" >
+  <link rel="stylesheet" href="../../../css/inuit.css" >
+  <link rel="stylesheet" href="../../../css/grid.inuit.css" >
+  <link rel="stylesheet" href="../../../css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="../../../css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="../../../css/carbon17.css" type="text/css" >
+
+  <!-- rel_prefix  = '../../..' -->
+    
+  <!-- rel_prefix = '../../..'   asset_rel_prefix = '../../..'  --> 
+  <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body class="file">
+<div id='actionbar' >
+<div class='wrapper'>
+<ul class='grids g0'></ul></div>
+
+
+
+</div> <!-- end action bar -->
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->          <div class='wrapper'>
+<!-- carbon17 added here 2017-09-09 -->
+ 
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <header>
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+      </header>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../COPYING_ja.html">COPYING.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../README_EXT.html">README.EXT</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../README_EXT_ja.html">README.EXT.ja</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../aclocal_m4.html">aclocal.m4</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../autogen_sh.html">autogen.sh</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../configure_ac.html">configure.ac</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/contributing_rdoc.html">contributing.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/extension_rdoc.html">extension.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/globals_rdoc.html">globals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/keywords_rdoc.html">keywords.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/marshal_rdoc.html">marshal.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/regexp_rdoc.html">regexp.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/security_rdoc.html">security.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/signals_rdoc.html">signals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax_rdoc.html">syntax.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/in_rdoc.html">in.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/msec_rdoc.html">msec.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/sec_rdoc.html">sec.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/usec_rdoc.html">usec.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/year_rdoc.html">year.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../lex_c_blt.html">lex.c.blt</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../node_name_inc.html">node_name.inc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+				
+        <!-- local_rel_prefix -->
+					<li class="file"><a href="../../../sample/drb/README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" ></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value="" class="quicksearch-field" >
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ARGF.html">ARGF</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ArgumentError.html">ArgumentError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Array.html">Array</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../BasicObject.html">BasicObject</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Binding.html">Binding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Class.html">Class</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ClosedQueueError.html">ClosedQueueError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Comparable.html">Comparable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Complex.html">Complex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Continuation.html">Continuation</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Dir.html">Dir</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ENV.html">ENV</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../EOFError.html">EOFError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding.html">Encoding</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding/Converter.html">Encoding::Converter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../EncodingError.html">EncodingError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerable.html">Enumerable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator.html">Enumerator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/Chain.html">Enumerator::Chain</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/Generator.html">Enumerator::Generator</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/Producer.html">Enumerator::Producer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Errno.html">Errno</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Exception.html">Exception</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../FalseClass.html">FalseClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Fiber.html">Fiber</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../FiberError.html">FiberError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../File.html">File</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../File/File/Constants.html">File::File::Constants</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../File/File/Constants.html">File::File::Constants</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../File/Stat.html">File::Stat</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../FileTest.html">FileTest</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Float.html">Float</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../FloatDomainError.html">FloatDomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../FrozenError.html">FrozenError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../GC.html">GC</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../GC/Profiler.html">GC::Profiler</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Hash.html">Hash</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO.html">IO</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/Buffer.html">IO::Buffer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/WaitReadable.html">IO::WaitReadable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IO/WaitWritable.html">IO::WaitWritable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IOError.html">IOError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../IndexError.html">IndexError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Integer.html">Integer</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Interrupt.html">Interrupt</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Kernel.html">Kernel</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../KeyError.html">KeyError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../LoadError.html">LoadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../LocalJumpError.html">LocalJumpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Marshal.html">Marshal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../MatchData.html">MatchData</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Math.html">Math</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Math/DomainError.html">Math::DomainError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Method.html">Method</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Module.html">Module</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NameError.html">NameError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NilClass.html">NilClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NoMemoryError.html">NoMemoryError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NoMethodError.html">NoMethodError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../NotImplementedError.html">NotImplementedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Numeric.html">Numeric</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Object.html">Object</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ObjectSpace.html">ObjectSpace</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Pool.html">Pool</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Proc.html">Proc</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Process.html">Process</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Process/GID.html">Process::GID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Process/Status.html">Process::Status</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Process/Sys.html">Process::Sys</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Process/UID.html">Process::UID</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor.html">Ractor</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/Error.html">Ractor::Error</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/MovedError.html">Ractor::MovedError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Random.html">Random</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Random/Formatter.html">Random::Formatter</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Range.html">Range</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RangeError.html">RangeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Rational.html">Rational</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Refinement.html">Refinement</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Regexp.html">Regexp</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RegexpError.html">RegexpError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Ripper.html">Ripper</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM.html">RubyVM</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../RuntimeError.html">RuntimeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ScriptError.html">ScriptError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SecurityError.html">SecurityError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Signal.html">Signal</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SignalException.html">SignalException</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../StandardError.html">StandardError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../StopIteration.html">StopIteration</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../String.html">String</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Struct.html">Struct</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Symbol.html">Symbol</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SyntaxError.html">SyntaxError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SystemCallError.html">SystemCallError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SystemExit.html">SystemExit</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../SystemStackError.html">SystemStackError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread.html">Thread</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/Backtrace.html">Thread::Backtrace</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/Mutex.html">Thread::Mutex</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/Queue.html">Thread::Queue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ThreadError.html">ThreadError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ThreadGroup.html">ThreadGroup</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Time.html">Time</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../TracePoint.html">TracePoint</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../TrueClass.html">TrueClass</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../TypeError.html">TypeError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../UnboundMethod.html">UnboundMethod</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../UncaughtThrowError.html">UncaughtThrowError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../UnicodeNormalize.html">UnicodeNormalize</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../Warning.html">Warning</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../ZeroDivisionError.html">ZeroDivisionError</a></li>
+				
+        <!--  local_rel_prefix -->
+					<li><a href="../../../fatal.html">fatal</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+  <div class='adzbox'  id="azk83167">
+      
+  </div> 
+	<div id="documentation">
+		
+<h2 id="label-Recipes+for+Parsing+CSV">Recipes for Parsing CSV<span><a href="#label-Recipes+for+Parsing+CSV">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>For other recipes, see <a href="./recipes_rdoc.html">Recipes for CSV</a>.</p>
+
+<p>All code snippets on this page assume that the following has been executed:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;csv&#39;</span>
+</pre>
+
+<h3 id="label-Contents">Contents<span><a href="#label-Contents">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p><a href="#label-Source+Formats">Source Formats</a></p>
+<ul><li>
+<p><a href="#label-Parsing+from+a+String">Parsing from a String</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Parse+from+String+with+Headers">Recipe: Parse from String with Headers</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Parse+from+String+Without+Headers">Recipe: Parse from String Without Headers</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Parsing+from+a+File">Parsing from a File</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Parse+from+File+with+Headers">Recipe: Parse from File with Headers</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Parse+from+File+Without+Headers">Recipe: Parse from File Without Headers</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Parsing+from+an+IO+Stream">Parsing from an IO Stream</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Parse+from+IO+Stream+with+Headers">Recipe: Parse from IO Stream with Headers</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Parse+from+IO+Stream+Without+Headers">Recipe: Parse from IO Stream Without Headers</a></p>
+</li></ul>
+</li></ul>
+</li><li>
+<p><a href="#label-RFC+4180+Compliance">RFC 4180 Compliance</a></p>
+<ul><li>
+<p><a href="#label-Row+Separator">Row Separator</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Handle+Compliant+Row+Separator">Recipe: Handle Compliant Row Separator</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Handle+Non-Compliant+Row+Separator">Recipe: Handle Non-Compliant Row Separator</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Column+Separator">Column Separator</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Handle+Compliant+Column+Separator">Recipe: Handle Compliant Column Separator</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Handle+Non-Compliant+Column+Separator">Recipe: Handle Non-Compliant Column Separator</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Quote+Character">Quote Character</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Handle+Compliant+Quote+Character">Recipe: Handle Compliant Quote Character</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Handle+Non-Compliant+Quote+Character">Recipe: Handle Non-Compliant Quote Character</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Recipe-3A+Allow+Liberal+Parsing">Recipe: Allow Liberal Parsing</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Special+Handling">Special Handling</a></p>
+<ul><li>
+<p><a href="#label-Special+Line+Handling">Special Line Handling</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Ignore+Blank+Lines">Recipe: Ignore Blank Lines</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Ignore+Selected+Lines">Recipe: Ignore Selected Lines</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Special+Field+Handling">Special Field Handling</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Strip+Fields">Recipe: Strip Fields</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Handle+Null+Fields">Recipe: Handle Null Fields</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Handle+Empty+Fields">Recipe: Handle Empty Fields</a></p>
+</li></ul>
+</li></ul>
+</li><li>
+<p><a href="#label-Converting+Fields">Converting Fields</a></p>
+<ul><li>
+<p><a href="#label-Converting+Fields+to+Objects">Converting Fields to Objects</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+Integers">Recipe: Convert Fields to Integers</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+Floats">Recipe: Convert Fields to Floats</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+Numerics">Recipe: Convert Fields to Numerics</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+Dates">Recipe: Convert Fields to Dates</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+DateTimes">Recipe: Convert Fields to DateTimes</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Assorted+Fields+to+Objects">Recipe: Convert Assorted Fields to Objects</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Fields+to+Other+Objects">Recipe: Convert Fields to Other Objects</a></p>
+</li></ul>
+</li><li>
+<p><a href="#label-Recipe-3A+Filter+Field+Strings">Recipe: Filter Field Strings</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Register+Field+Converters">Recipe: Register Field Converters</a></p>
+</li><li>
+<p><a href="#label-Using+Multiple+Field+Converters">Using Multiple Field Converters</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Specify+Multiple+Field+Converters+in+Option+-3Aconverters">Recipe: Specify Multiple Field Converters in Option :converters</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Specify+Multiple+Field+Converters+in+a+Custom+Converter+List">Recipe: Specify Multiple Field Converters in a Custom Converter List</a></p>
+</li></ul>
+</li></ul>
+</li><li>
+<p><a href="#label-Converting+Headers">Converting Headers</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Convert+Headers+to+Lowercase">Recipe: Convert Headers to Lowercase</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Convert+Headers+to+Symbols">Recipe: Convert Headers to Symbols</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Filter+Header+Strings">Recipe: Filter Header Strings</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Register+Header+Converters">Recipe: Register Header Converters</a></p>
+</li><li>
+<p><a href="#label-Using+Multiple+Header+Converters">Using Multiple Header Converters</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Specify+Multiple+Header+Converters+in+Option+-3Aheader_converters">Recipe: Specify Multiple Header Converters in Option :header_converters</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Specify+Multiple+Header+Converters+in+a+Custom+Header+Converter+List">Recipe: Specify Multiple Header Converters in a Custom Header Converter List</a></p>
+</li></ul>
+</li></ul>
+</li><li>
+<p><a href="#label-Diagnostics">Diagnostics</a></p>
+<ul><li>
+<p><a href="#label-Recipe-3A+Capture+Unconverted+Fields">Recipe: Capture Unconverted Fields</a></p>
+</li><li>
+<p><a href="#label-Recipe-3A+Capture+Field+Info">Recipe: Capture Field Info</a></p>
+</li></ul>
+</li></ul>
+
+<h3 id="label-Source+Formats">Source Formats<span><a href="#label-Source+Formats">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>You can parse CSV data from a String, from a File (via its path), or from an IO stream.</p>
+
+<h4 id="label-Parsing+from+a+String">Parsing from a String<span><a href="#label-Parsing+from+a+String">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>You can parse CSV data from a String, with or without headers.</p>
+
+<h5 id="label-Recipe-3A+Parse+from+String+with+Headers">Recipe: Parse from String with Headers<span><a href="#label-Recipe-3A+Parse+from+String+with+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use class method CSV.parse with option <code>headers</code> to read a source String all at once (may have memory resource implications):</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; #&lt;CSV::Table mode:col_or_row row_count:4&gt;</span>
+</pre>
+
+<p>Use instance method CSV#each with option <code>headers</code> to read a source String one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">string</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;foo&quot; &quot;Value&quot;:&quot;0&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;bar&quot; &quot;Value&quot;:&quot;1&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;baz&quot; &quot;Value&quot;:&quot;2&quot;&gt;</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Parse+from+String+Without+Headers">Recipe: Parse from String Without Headers<span><a href="#label-Recipe-3A+Parse+from+String+Without+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use class method CSV.parse without option <code>headers</code> to read a source String all at once (may have memory resource implications):</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;foo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<p>Use instance method CSV#each without option <code>headers</code> to read a source String one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">string</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-string">&quot;0&quot;</span>]
+[<span class="ruby-string">&quot;bar&quot;</span>, <span class="ruby-string">&quot;1&quot;</span>]
+[<span class="ruby-string">&quot;baz&quot;</span>, <span class="ruby-string">&quot;2&quot;</span>]
+</pre>
+
+<h4 id="label-Parsing+from+a+File">Parsing from a File<span><a href="#label-Parsing+from+a+File">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>You can parse CSV data from a File, with or without headers.</p>
+
+<h5 id="label-Recipe-3A+Parse+from+File+with+Headers">Recipe: Parse from File with Headers<span><a href="#label-Recipe-3A+Parse+from+File+with+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use instance method CSV#read with option <code>headers</code> to read a file all at once:</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">path</span> = <span class="ruby-string">&#39;t.csv&#39;</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">string</span>)
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; #&lt;CSV::Table mode:col_or_row row_count:4&gt;</span>
+</pre>
+
+<p>Use class method CSV.foreach with option <code>headers</code> to read one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">path</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;foo&quot; &quot;Value&quot;:&quot;0&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;bar&quot; &quot;Value&quot;:&quot;1&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;baz&quot; &quot;Value&quot;:&quot;2&quot;&gt;</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Parse+from+File+Without+Headers">Recipe: Parse from File Without Headers<span><a href="#label-Recipe-3A+Parse+from+File+Without+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use class method CSV.read without option <code>headers</code> to read a file all at once:</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;foo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">path</span> = <span class="ruby-string">&#39;t.csv&#39;</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">string</span>)
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<p>Use class method CSV.foreach without option <code>headers</code> to read one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-string">&quot;0&quot;</span>]
+[<span class="ruby-string">&quot;bar&quot;</span>, <span class="ruby-string">&quot;1&quot;</span>]
+[<span class="ruby-string">&quot;baz&quot;</span>, <span class="ruby-string">&quot;2&quot;</span>]
+</pre>
+
+<h4 id="label-Parsing+from+an+IO+Stream">Parsing from an IO Stream<span><a href="#label-Parsing+from+an+IO+Stream">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>You can parse CSV data from an IO stream, with or without headers.</p>
+
+<h5 id="label-Recipe-3A+Parse+from+IO+Stream+with+Headers">Recipe: Parse from IO Stream with Headers<span><a href="#label-Recipe-3A+Parse+from+IO+Stream+with+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use class method CSV.parse with option <code>headers</code> to read an IO stream all at once:</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">path</span> = <span class="ruby-string">&#39;t.csv&#39;</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">string</span>)
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span> <span class="ruby-comment"># =&gt; #&lt;CSV::Table mode:col_or_row row_count:4&gt;</span>
+</pre>
+
+<p>Use class method CSV.foreach with option <code>headers</code> to read one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;foo&quot; &quot;Value&quot;:&quot;0&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;bar&quot; &quot;Value&quot;:&quot;1&quot;&gt;</span>
+<span class="ruby-comment">#&lt;CSV::Row &quot;Name&quot;:&quot;baz&quot; &quot;Value&quot;:&quot;2&quot;&gt;</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Parse+from+IO+Stream+Without+Headers">Recipe: Parse from IO Stream Without Headers<span><a href="#label-Recipe-3A+Parse+from+IO+Stream+Without+Headers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use class method CSV.parse without option <code>headers</code> to read an IO stream all at once:</p>
+
+<pre class="ruby"><span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;foo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">path</span> = <span class="ruby-string">&#39;t.csv&#39;</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">string</span>)
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span> <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<p>Use class method CSV.foreach without option <code>headers</code> to read one row at a time:</p>
+
+<pre class="ruby"><span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-string">&quot;0&quot;</span>]
+[<span class="ruby-string">&quot;bar&quot;</span>, <span class="ruby-string">&quot;1&quot;</span>]
+[<span class="ruby-string">&quot;baz&quot;</span>, <span class="ruby-string">&quot;2&quot;</span>]
+</pre>
+
+<h3 id="label-RFC+4180+Compliance">RFC 4180 Compliance<span><a href="#label-RFC+4180+Compliance">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>By default, CSV parses data that is compliant with <a href="https://tools.ietf.org/html/rfc4180">RFC 4180</a> with respect to:</p>
+<ul><li>
+<p>Row separator.</p>
+</li><li>
+<p>Column separator.</p>
+</li><li>
+<p>Quote character.</p>
+</li></ul>
+
+<h4 id="label-Row+Separator">Row Separator<span><a href="#label-Row+Separator">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>RFC 4180 specifies the row separator CRLF (Ruby <code>&quot;\r\n&quot;</code>).</p>
+
+<p>Although the CSV default row separator is <code>&quot;\n&quot;</code>, the parser also by default handles row separator <code>&quot;\r&quot;</code> and the RFC-compliant <code>&quot;\r\n&quot;</code>.</p>
+
+<h5 id="label-Recipe-3A+Handle+Compliant+Row+Separator">Recipe: Handle Compliant Row Separator<span><a href="#label-Recipe-3A+Handle+Compliant+Row+Separator">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>For strict compliance, use option <code>:row_sep</code> to specify row separator <code>&quot;\r\n&quot;</code>, which allows the compliant row separator:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\r\nbar,1\r\nbaz,2\r\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">row_sep:</span> <span class="ruby-string">&quot;\r\n&quot;</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<p>But rejects other row separators:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">row_sep:</span> <span class="ruby-string">&quot;\r\n&quot;</span>) <span class="ruby-comment"># Raised MalformedCSVError</span>
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\rbar,1\rbaz,2\r&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">row_sep:</span> <span class="ruby-string">&quot;\r\n&quot;</span>) <span class="ruby-comment"># Raised MalformedCSVError</span>
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\n\rbar,1\n\rbaz,2\n\r&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">row_sep:</span> <span class="ruby-string">&quot;\r\n&quot;</span>) <span class="ruby-comment"># Raised MalformedCSVError</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Handle+Non-Compliant+Row+Separator">Recipe: Handle Non-Compliant Row Separator<span><a href="#label-Recipe-3A+Handle+Non-Compliant+Row+Separator">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>For data with non-compliant row separators, use option <code>:row_sep</code>. This example source uses semicolon (<code>&quot;;&quot;</code>) as its row separator:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1;bar,1;baz,2;&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">row_sep:</span> <span class="ruby-string">&#39;;&#39;</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h4 id="label-Column+Separator">Column Separator<span><a href="#label-Column+Separator">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>RFC 4180 specifies column separator COMMA (Ruby <code>&quot;,&quot;</code>).</p>
+
+<h5 id="label-Recipe-3A+Handle+Compliant+Column+Separator">Recipe: Handle Compliant Column Separator<span><a href="#label-Recipe-3A+Handle+Compliant+Column+Separator">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Because the CSV default comma separator is &#39;,&#39;, you need not specify option <code>:col_sep</code> for compliant data:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Handle+Non-Compliant+Column+Separator">Recipe: Handle Non-Compliant Column Separator<span><a href="#label-Recipe-3A+Handle+Non-Compliant+Column+Separator">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>For data with non-compliant column separators, use option <code>:col_sep</code>. This example source uses TAB (<code>&quot;\t&quot;</code>) as its column separator:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;foo,1\tbar,1\tbaz,2&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">col_sep:</span> <span class="ruby-string">&quot;\t&quot;</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h4 id="label-Quote+Character">Quote Character<span><a href="#label-Quote+Character">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>RFC 4180 specifies quote character DQUOTE (Ruby <code>&quot;\&quot;&quot;</code>).</p>
+
+<h5 id="label-Recipe-3A+Handle+Compliant+Quote+Character">Recipe: Handle Compliant Quote Character<span><a href="#label-Recipe-3A+Handle+Compliant+Quote+Character">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Because the CSV default quote character is <code>&quot;\&quot;&quot;</code>, you need not specify option <code>:quote_char</code> for compliant data:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;\&quot;foo\&quot;,\&quot;1\&quot;\n\&quot;bar\&quot;,\&quot;1\&quot;\n\&quot;baz\&quot;,\&quot;2\&quot;\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Handle+Non-Compliant+Quote+Character">Recipe: Handle Non-Compliant Quote Character<span><a href="#label-Recipe-3A+Handle+Non-Compliant+Quote+Character">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>For data with non-compliant quote characters, use option <code>:quote_char</code>. This example source uses SQUOTE (<code>&quot;&#39;&quot;</code>) as its quote character:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;&#39;foo&#39;,&#39;1&#39;\n&#39;bar&#39;,&#39;1&#39;\n&#39;baz&#39;,&#39;2&#39;\n&quot;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">quote_char:</span> <span class="ruby-string">&quot;&#39;&quot;</span>) <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;1&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Allow+Liberal+Parsing">Recipe: Allow Liberal Parsing<span><a href="#label-Recipe-3A+Allow+Liberal+Parsing">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Use option <code>:liberal_parsing</code> to specify that CSV should attempt to parse input not conformant with RFC 4180, such as double quotes in unquoted fields:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&#39;is,this &quot;three, or four&quot;,fields&#39;</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>) <span class="ruby-comment"># Raises MalformedCSVError</span>
+<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">liberal_parsing:</span> <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; [[&quot;is&quot;, &quot;this \&quot;three&quot;, &quot; or four\&quot;&quot;, &quot;fields&quot;]]</span>
+</pre>
+
+<h3 id="label-Special+Handling">Special Handling<span><a href="#label-Special+Handling">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>You can use parsing options to specify special handling for certain lines and fields.</p>
+
+<h4 id="label-Special+Line+Handling">Special Line Handling<span><a href="#label-Special+Line+Handling">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Use parsing options to specify special handling for blank lines, or for other selected lines.</p>
+
+<h5 id="label-Recipe-3A+Ignore+Blank+Lines">Recipe: Ignore Blank Lines<span><a href="#label-Recipe-3A+Ignore+Blank+Lines">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use option <code>:skip_blanks</code> to ignore blank lines:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-identifier">&lt;&lt;-EOT</span>
+<span class="ruby-value">foo,0
+
+bar,1
+baz,2
+
+,
+</span><span class="ruby-identifier">EOT</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">skip_blanks:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-identifier">parsed</span> <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;], [nil, nil]]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Ignore+Selected+Lines">Recipe: Ignore Selected Lines<span><a href="#label-Recipe-3A+Ignore+Selected+Lines">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use option <code>:skip_lines</code> to ignore selected lines.</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-identifier">&lt;&lt;-EOT</span>
+<span class="ruby-value"># Comment
+foo,0
+bar,1
+baz,2
+# Another comment
+</span><span class="ruby-identifier">EOT</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">skip_lines:</span> <span class="ruby-regexp">/^#/</span>)
+<span class="ruby-identifier">parsed</span> <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<h4 id="label-Special+Field+Handling">Special Field Handling<span><a href="#label-Special+Field+Handling">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Use parsing options to specify special handling for certain field values.</p>
+
+<h5 id="label-Recipe-3A+Strip+Fields">Recipe: Strip Fields<span><a href="#label-Recipe-3A+Strip+Fields">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use option <code>:strip</code> to strip parsed field values:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse_line</span>(<span class="ruby-string">&#39; a , b &#39;</span>, <span class="ruby-value">strip:</span> <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Handle+Null+Fields">Recipe: Handle Null Fields<span><a href="#label-Recipe-3A+Handle+Null+Fields">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use option <code>:nil_value</code> to specify a value that will replace each field that is null (no text):</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse_line</span>(<span class="ruby-string">&#39;a,,b,,c&#39;</span>, <span class="ruby-value">nil_value:</span> <span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; [&quot;a&quot;, 0, &quot;b&quot;, 0, &quot;c&quot;]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Handle+Empty+Fields">Recipe: Handle Empty Fields<span><a href="#label-Recipe-3A+Handle+Empty+Fields">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Use option <code>:empty_value</code> to specify a value that will replace each field that is empty (String of length 0);</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse_line</span>(<span class="ruby-string">&#39;a,&quot;&quot;,b,&quot;&quot;,c&#39;</span>, <span class="ruby-value">empty_value:</span> <span class="ruby-string">&#39;x&#39;</span>) <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;x&quot;, &quot;b&quot;, &quot;x&quot;, &quot;c&quot;]</span>
+</pre>
+
+<h3 id="label-Converting+Fields">Converting Fields<span><a href="#label-Converting+Fields">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>You can use field converters to change parsed String fields into other objects, or to otherwise modify the String fields.</p>
+
+<h4 id="label-Converting+Fields+to+Objects">Converting Fields to Objects<span><a href="#label-Converting+Fields+to+Objects">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Use field converters to change parsed String objects into other, more specific, objects.</p>
+
+<p>There are built-in field converters for converting to objects of certain classes:</p>
+<ul><li>
+<p>Float</p>
+</li><li>
+<p>Integer</p>
+</li><li>
+<p>Date</p>
+</li><li>
+<p>DateTime</p>
+</li></ul>
+
+<p>Other built-in field converters include:</p>
+<ul><li>
+<p><code>:numeric</code>: converts to Integer and Float.</p>
+</li><li>
+<p><code>:all</code>: converts to DateTime, Integer, Float.</p>
+</li></ul>
+
+<p>You can also define field converters to convert to objects of other classes.</p>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+Integers">Recipe: Convert Fields to Integers<span><a href="#label-Recipe-3A+Convert+Fields+to+Integers">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert fields to Integer objects using built-in converter <code>:integer</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:integer</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Value&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Integer, Integer, Integer]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+Floats">Recipe: Convert Fields to Floats<span><a href="#label-Recipe-3A+Convert+Fields+to+Floats">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert fields to Float objects using built-in converter <code>:float</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:float</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Value&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Float, Float, Float]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+Numerics">Recipe: Convert Fields to Numerics<span><a href="#label-Recipe-3A+Convert+Fields+to+Numerics">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert fields to Integer and Float objects using built-in converter <code>:numeric</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1.1\nbaz,2.2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:numeric</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Value&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Integer, Float, Float]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+Dates">Recipe: Convert Fields to Dates<span><a href="#label-Recipe-3A+Convert+Fields+to+Dates">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert fields to Date objects using built-in converter <code>:date</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Date\nfoo,2001-02-03\nbar,2001-02-04\nbaz,2001-02-03\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:date</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Date&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Date, Date, Date]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+DateTimes">Recipe: Convert Fields to DateTimes<span><a href="#label-Recipe-3A+Convert+Fields+to+DateTimes">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert fields to DateTime objects using built-in converter <code>:date_time</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,DateTime\nfoo,2001-02-03\nbar,2001-02-04\nbaz,2020-05-07T14:59:00-05:00\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:date_time</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;DateTime&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [DateTime, DateTime, DateTime]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Assorted+Fields+to+Objects">Recipe: Convert Assorted Fields to Objects<span><a href="#label-Recipe-3A+Convert+Assorted+Fields+to+Objects">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Convert assorted fields to objects using built-in converter <code>:all</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Type,Value\nInteger,0\nFloat,1.0\nDateTime,2001-02-04\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:all</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Value&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Integer, Float, DateTime]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Convert+Fields+to+Other+Objects">Recipe: Convert Fields to Other Objects<span><a href="#label-Recipe-3A+Convert+Fields+to+Other+Objects">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Define a custom field converter to convert String fields into other objects. This example defines and uses a custom field converter that converts each column-1 value to a Rational object:</p>
+
+<pre class="ruby"><span class="ruby-identifier">rational_converter</span> = <span class="ruby-identifier">proc</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_context</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">field_context</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_r</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">field</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-identifier">rational_converter</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[<span class="ruby-string">&#39;Value&#39;</span>].<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Rational, Rational, Rational]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Filter+Field+Strings">Recipe: Filter Field Strings<span><a href="#label-Recipe-3A+Filter+Field+Strings">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Define a custom field converter to modify String fields. This example defines and uses a custom field converter that strips whitespace from each field value:</p>
+
+<pre class="ruby"><span class="ruby-identifier">strip_converter</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">strip</span> }
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\n foo , 0 \n bar , 1 \n baz , 2 \n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-identifier">strip_converter</span>)
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Name&#39;</span>] <span class="ruby-comment"># =&gt; [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]</span>
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Value&#39;</span>] <span class="ruby-comment"># =&gt; [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Register+Field+Converters">Recipe: Register Field Converters<span><a href="#label-Recipe-3A+Register+Field+Converters">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Register a custom field converter, assigning it a name; then refer to the converter by its name:</p>
+
+<pre class="ruby"><span class="ruby-identifier">rational_converter</span> = <span class="ruby-identifier">proc</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_context</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">field_context</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_r</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">field</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Converters</span>[<span class="ruby-value">:rational</span>] = <span class="ruby-identifier">rational_converter</span>
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:rational</span>)
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Value&#39;</span>] <span class="ruby-comment"># =&gt; [(0/1), (1/1), (2/1)]</span>
+</pre>
+
+<h4 id="label-Using+Multiple+Field+Converters">Using Multiple Field Converters<span><a href="#label-Using+Multiple+Field+Converters">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>You can use multiple field converters in either of these ways:</p>
+<ul><li>
+<p>Specify converters in option <code>:converters</code>.</p>
+</li><li>
+<p>Specify converters in a custom converter list.</p>
+</li></ul>
+
+<h5 id="label-Recipe-3A+Specify+Multiple+Field+Converters+in+Option+-3Aconverters">Recipe: Specify Multiple Field Converters in Option <code>:converters</code><span><a href="#label-Recipe-3A+Specify+Multiple+Field+Converters+in+Option+-3Aconverters">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Apply multiple field converters by specifying them in option <code>:converters</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1.0\nbaz,2.0\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> [<span class="ruby-value">:integer</span>, <span class="ruby-value">:float</span>])
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Value&#39;</span>] <span class="ruby-comment"># =&gt; [0, 1.0, 2.0]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Specify+Multiple+Field+Converters+in+a+Custom+Converter+List">Recipe: Specify Multiple Field Converters in a Custom Converter List<span><a href="#label-Recipe-3A+Specify+Multiple+Field+Converters+in+a+Custom+Converter+List">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Apply multiple field converters by defining and registering a custom converter list:</p>
+
+<pre class="ruby"><span class="ruby-identifier">strip_converter</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">strip</span> }
+<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Converters</span>[<span class="ruby-value">:strip</span>] = <span class="ruby-identifier">strip_converter</span>
+<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Converters</span>[<span class="ruby-value">:my_converters</span>] = [<span class="ruby-value">:integer</span>, <span class="ruby-value">:float</span>, <span class="ruby-value">:strip</span>]
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\n foo , 0 \n bar , 1.0 \n baz , 2.0 \n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:my_converters</span>)
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Name&#39;</span>] <span class="ruby-comment"># =&gt; [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]</span>
+<span class="ruby-identifier">parsed</span>[<span class="ruby-string">&#39;Value&#39;</span>] <span class="ruby-comment"># =&gt; [0, 1.0, 2.0]</span>
+</pre>
+
+<h3 id="label-Converting+Headers">Converting Headers<span><a href="#label-Converting+Headers">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>You can use header converters to modify parsed String headers.</p>
+
+<p>Built-in header converters include:</p>
+<ul><li>
+<p><code>:symbol</code>: converts String header to Symbol.</p>
+</li><li>
+<p><code>:downcase</code>: converts String header to lowercase.</p>
+</li></ul>
+
+<p>You can also define header converters to otherwise modify header Strings.</p>
+
+<h4 id="label-Recipe-3A+Convert+Headers+to+Lowercase">Recipe: Convert Headers to Lowercase<span><a href="#label-Recipe-3A+Convert+Headers+to+Lowercase">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Convert headers to lowercase using built-in converter <code>:downcase</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> <span class="ruby-value">:downcase</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [&quot;name&quot;, &quot;value&quot;]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Convert+Headers+to+Symbols">Recipe: Convert Headers to Symbols<span><a href="#label-Recipe-3A+Convert+Headers+to+Symbols">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Convert headers to downcased Symbols using built-in converter <code>:symbol</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> <span class="ruby-value">:symbol</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [:name, :value]</span>
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">header</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">class</span>} <span class="ruby-comment"># =&gt; [Symbol, Symbol]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Filter+Header+Strings">Recipe: Filter Header Strings<span><a href="#label-Recipe-3A+Filter+Header+Strings">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Define a custom header converter to modify String fields. This example defines and uses a custom header converter that capitalizes each header String:</p>
+
+<pre class="ruby"><span class="ruby-identifier">capitalize_converter</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">header</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">capitalize</span> }
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;NAME,VALUE\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> <span class="ruby-identifier">capitalize_converter</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [&quot;Name&quot;, &quot;Value&quot;]</span>
+</pre>
+
+<h4 id="label-Recipe-3A+Register+Header+Converters">Recipe: Register Header Converters<span><a href="#label-Recipe-3A+Register+Header+Converters">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Register a custom header converter, assigning it a name; then refer to the converter by its name:</p>
+
+<pre class="ruby"><span class="ruby-identifier">capitalize_converter</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">header</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">capitalize</span> }
+<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">HeaderConverters</span>[<span class="ruby-value">:capitalize</span>] = <span class="ruby-identifier">capitalize_converter</span>
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;NAME,VALUE\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> <span class="ruby-value">:capitalize</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [&quot;Name&quot;, &quot;Value&quot;]</span>
+</pre>
+
+<h4 id="label-Using+Multiple+Header+Converters">Using Multiple Header Converters<span><a href="#label-Using+Multiple+Header+Converters">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>You can use multiple header converters in either of these ways:</p>
+<ul><li>
+<p>Specify header converters in option <code>:header_converters</code>.</p>
+</li><li>
+<p>Specify header converters in a custom header converter list.</p>
+</li></ul>
+
+<h5 id="label-Recipe-3A+Specify+Multiple+Header+Converters+in+Option+-3Aheader_converters">Recipe: Specify Multiple Header Converters in Option :header_converters<span><a href="#label-Recipe-3A+Specify+Multiple+Header+Converters+in+Option+-3Aheader_converters">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Apply multiple header converters by specifying them in option <code>:header_converters</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1.0\nbaz,2.0\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> [<span class="ruby-value">:downcase</span>, <span class="ruby-value">:symbol</span>])
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [:name, :value]</span>
+</pre>
+
+<h5 id="label-Recipe-3A+Specify+Multiple+Header+Converters+in+a+Custom+Header+Converter+List">Recipe: Specify Multiple Header Converters in a Custom Header Converter List<span><a href="#label-Recipe-3A+Specify+Multiple+Header+Converters+in+a+Custom+Header+Converter+List">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>Apply multiple header converters by defining and registering a custom header converter list:</p>
+
+<pre class="ruby"><span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">HeaderConverters</span>[<span class="ruby-value">:my_header_converters</span>] = [<span class="ruby-value">:symbol</span>, <span class="ruby-value">:downcase</span>]
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;NAME,VALUE\nfoo,0\nbar,1.0\nbaz,2.0\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">headers:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">header_converters:</span> <span class="ruby-value">:my_header_converters</span>)
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">headers</span> <span class="ruby-comment"># =&gt; [:name, :value]</span>
+</pre>
+
+<h3 id="label-Diagnostics">Diagnostics<span><a href="#label-Diagnostics">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<h4 id="label-Recipe-3A+Capture+Unconverted+Fields">Recipe: Capture Unconverted Fields<span><a href="#label-Recipe-3A+Capture+Unconverted+Fields">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>To capture unconverted field values, use option <code>:unconverted_fields</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">source</span> = <span class="ruby-string">&quot;Name,Value\nfoo,0\nbar,1\nbaz,2\n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">converters:</span> <span class="ruby-value">:integer</span>, <span class="ruby-value">unconverted_fields:</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-identifier">parsed</span> <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">unconverted_fields</span> }
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-string">&quot;Name&quot;</span>, <span class="ruby-string">&quot;Value&quot;</span>]
+[<span class="ruby-string">&quot;foo&quot;</span>, <span class="ruby-string">&quot;0&quot;</span>]
+[<span class="ruby-string">&quot;bar&quot;</span>, <span class="ruby-string">&quot;1&quot;</span>]
+[<span class="ruby-string">&quot;baz&quot;</span>, <span class="ruby-string">&quot;2&quot;</span>]
+</pre>
+
+<h4 id="label-Recipe-3A+Capture+Field+Info">Recipe: Capture Field Info<span><a href="#label-Recipe-3A+Capture+Field+Info">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>To capture field info in a custom converter, accept two block arguments. The first is the field value; the second is a <code>CSV::FieldInfo</code> object:</p>
+
+<pre class="ruby"><span class="ruby-identifier">strip_converter</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> <span class="ruby-identifier">field_info</span>; <span class="ruby-identifier">field</span>.<span class="ruby-identifier">strip</span> }
+<span class="ruby-identifier">source</span> = <span class="ruby-string">&quot; foo , 0 \n bar , 1 \n baz , 2 \n&quot;</span>
+<span class="ruby-identifier">parsed</span> = <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">converters:</span> <span class="ruby-identifier">strip_converter</span>)
+<span class="ruby-identifier">parsed</span> <span class="ruby-comment"># =&gt; [[&quot;foo&quot;, &quot;0&quot;], [&quot;bar&quot;, &quot;1&quot;], [&quot;baz&quot;, &quot;2&quot;]]</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby"><span class="ruby-comment">#&lt;struct CSV::FieldInfo index=0, line=1, header=nil&gt;</span>
+<span class="ruby-comment">#&lt;struct CSV::FieldInfo index=1, line=1, header=nil&gt;</span>
+<span class="ruby-comment">#&lt;struct CSV::FieldInfo index=0, line=2, header=nil&gt;</span>
+<span class="ruby-comment">#&lt;struct CSV::FieldInfo index=1, line=2, header=nil&gt;</span>
+<span class="ruby-comment">#&lt;struct CSV::FieldInfo index=0, line=3, header=nil&gt;</span>
+<span class="ruby-comment">#&lt;struct CSV::FieldInfo index=1, line=3, header=nil&gt;</span>
+</pre>
+
+	</div>
+
+
+                <div id="footer">
+                
+                <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>. <a href="http://neurogami.com">Maximum R+D</a>.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+
+                
+                <p id="validator-badges"><small>Generated with Rubydoc Rdoc Generator 0.42.0</small>.</p>
+              </div>
+
+
+    
+
+
+</body>
+
+</html>
+

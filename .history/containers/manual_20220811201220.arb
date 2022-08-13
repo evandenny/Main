@@ -1,0 +1,11 @@
+def class sample
+	def run
+		#...
+	end
+end
+
+def sayGoodnight(name)
+	result = "Goodnight, #{name}"
+end
+
+sayGoodnight("Evan")

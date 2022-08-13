@@ -1,0 +1,3628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.42.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta name='description' content='  Class : Range  -   Ruby 3.1.2 ' />
+  <meta content="2022-06-09 20:39:34 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+  <title>Class: Range (Ruby 3.1.2) </title>
+  <link rel="stylesheet" href="css/associated.css" type="text/css" >
+  <!-- link rel="stylesheet" href=".css/obf.css"  -->
+  <link rel="stylesheet" href="css/inuit.css" >
+  <link rel="stylesheet" href="css/grid.inuit.css" >
+  <link rel="stylesheet" href="css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="css/carbon17.css" type="text/css" >
+
+
+  <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+
+   
+<script src="/js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+   <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body id="top" class="class rdocstar">
+
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  
+   <!-- carbon17 added here 2017-09-09 -->
+ 
+
+   <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>range.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-25">#%</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-3D-3D-3D">#===</a></li>
+          
+          <li><a href="#method-i-begin">#begin</a></li>
+          
+          <li><a href="#method-i-bsearch">#bsearch</a></li>
+          
+          <li><a href="#method-i-count">#count</a></li>
+          
+          <li><a href="#method-i-cover-3F">#cover?</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-end">#end</a></li>
+          
+          <li><a href="#method-i-entries">#entries</a></li>
+          
+          <li><a href="#method-i-eql-3F">#eql?</a></li>
+          
+          <li><a href="#method-i-exclude_end-3F">#exclude_end?</a></li>
+          
+          <li><a href="#method-i-first">#first</a></li>
+          
+          <li><a href="#method-i-hash">#hash</a></li>
+          
+          <li><a href="#method-i-include-3F">#include?</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-last">#last</a></li>
+          
+          <li><a href="#method-i-max">#max</a></li>
+          
+          <li><a href="#method-i-member-3F">#member?</a></li>
+          
+          <li><a href="#method-i-min">#min</a></li>
+          
+          <li><a href="#method-i-minmax">#minmax</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-step">#step</a></li>
+          
+          <li><a href="#method-i-to_a">#to_a</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Enumerable.html">Enumerable</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul id='files'>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./COPYING_ja.html">COPYING.ja</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT.html">README.EXT</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT_ja.html">README.EXT.ja</a></li>
+        
+          
+          <li class="file"><a href="./aclocal_m4.html">aclocal.m4</a></li>
+        
+          
+          <li class="file"><a href="./autogen_sh.html">autogen.sh</a></li>
+        
+          
+          <li class="file"><a href="./configure_ac.html">configure.ac</a></li>
+        
+          
+          <li class="file"><a href="./doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/contributing_rdoc.html">contributing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_rdoc.html">extension.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/globals_rdoc.html">globals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/keywords_rdoc.html">keywords.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/marshal_rdoc.html">marshal.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/regexp_rdoc.html">regexp.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/security_rdoc.html">security.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/signals_rdoc.html">signals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax_rdoc.html">syntax.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/in_rdoc.html">in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/msec_rdoc.html">msec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_rdoc.html">sec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/usec_rdoc.html">usec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/year_rdoc.html">year.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./lex_c_blt.html">lex.c.blt</a></li>
+        
+          
+          <li class="file"><a href="./node_name_inc.html">node_name.inc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="./ARGF.html">ARGF</a></li>
+        
+          
+          
+          <li><a href="./ArgumentError.html">ArgumentError</a></li>
+        
+          
+          
+          <li><a href="./Array.html">Array</a></li>
+        
+          
+          
+          <li><a href="./BasicObject.html">BasicObject</a></li>
+        
+          
+          
+          <li><a href="./Binding.html">Binding</a></li>
+        
+          
+          
+          <li><a href="./Class.html">Class</a></li>
+        
+          
+          
+          <li><a href="./ClosedQueueError.html">ClosedQueueError</a></li>
+        
+          
+          
+          <li><a href="./Comparable.html">Comparable</a></li>
+        
+          
+          
+          <li><a href="./Complex.html">Complex</a></li>
+        
+          
+          
+          <li><a href="./Continuation.html">Continuation</a></li>
+        
+          
+          
+          <li><a href="./Dir.html">Dir</a></li>
+        
+          
+          
+          <li><a href="./ENV.html">ENV</a></li>
+        
+          
+          
+          <li><a href="./EOFError.html">EOFError</a></li>
+        
+          
+          
+          <li><a href="./Encoding.html">Encoding</a></li>
+        
+          
+          
+          <li><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/Converter.html">Encoding::Converter</a></li>
+        
+          
+          
+          <li><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+        
+          
+          
+          <li><a href="./EncodingError.html">EncodingError</a></li>
+        
+          
+          
+          <li><a href="./Enumerable.html">Enumerable</a></li>
+        
+          
+          
+          <li><a href="./Enumerator.html">Enumerator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Chain.html">Enumerator::Chain</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Generator.html">Enumerator::Generator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Producer.html">Enumerator::Producer</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+        
+          
+          
+          <li><a href="./Errno.html">Errno</a></li>
+        
+          
+          
+          <li><a href="./Exception.html">Exception</a></li>
+        
+          
+          
+          <li><a href="./FalseClass.html">FalseClass</a></li>
+        
+          
+          
+          <li><a href="./Fiber.html">Fiber</a></li>
+        
+          
+          
+          <li><a href="./Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+        
+          
+          
+          <li><a href="./FiberError.html">FiberError</a></li>
+        
+          
+          
+          <li><a href="./File.html">File</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/Stat.html">File::Stat</a></li>
+        
+          
+          
+          <li><a href="./FileTest.html">FileTest</a></li>
+        
+          
+          
+          <li><a href="./Float.html">Float</a></li>
+        
+          
+          
+          <li><a href="./FloatDomainError.html">FloatDomainError</a></li>
+        
+          
+          
+          <li><a href="./FrozenError.html">FrozenError</a></li>
+        
+          
+          
+          <li><a href="./GC.html">GC</a></li>
+        
+          
+          
+          <li><a href="./GC/Profiler.html">GC::Profiler</a></li>
+        
+          
+          
+          <li><a href="./Hash.html">Hash</a></li>
+        
+          
+          
+          <li><a href="./IO.html">IO</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer.html">IO::Buffer</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitReadable.html">IO::WaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitWritable.html">IO::WaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IOError.html">IOError</a></li>
+        
+          
+          
+          <li><a href="./IndexError.html">IndexError</a></li>
+        
+          
+          
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          
+          
+          <li><a href="./Interrupt.html">Interrupt</a></li>
+        
+          
+          
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="./KeyError.html">KeyError</a></li>
+        
+          
+          
+          <li><a href="./LoadError.html">LoadError</a></li>
+        
+          
+          
+          <li><a href="./LocalJumpError.html">LocalJumpError</a></li>
+        
+          
+          
+          <li><a href="./Marshal.html">Marshal</a></li>
+        
+          
+          
+          <li><a href="./MatchData.html">MatchData</a></li>
+        
+          
+          
+          <li><a href="./Math.html">Math</a></li>
+        
+          
+          
+          <li><a href="./Math/DomainError.html">Math::DomainError</a></li>
+        
+          
+          
+          <li><a href="./Method.html">Method</a></li>
+        
+          
+          
+          <li><a href="./Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="./NameError.html">NameError</a></li>
+        
+          
+          
+          <li><a href="./NilClass.html">NilClass</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+        
+          
+          
+          <li><a href="./NoMemoryError.html">NoMemoryError</a></li>
+        
+          
+          
+          <li><a href="./NoMethodError.html">NoMethodError</a></li>
+        
+          
+          
+          <li><a href="./NotImplementedError.html">NotImplementedError</a></li>
+        
+          
+          
+          <li><a href="./Numeric.html">Numeric</a></li>
+        
+          
+          
+          <li><a href="./Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+        
+          
+          
+          <li><a href="./Pool.html">Pool</a></li>
+        
+          
+          
+          <li><a href="./Proc.html">Proc</a></li>
+        
+          
+          
+          <li><a href="./Process.html">Process</a></li>
+        
+          
+          
+          <li><a href="./Process/GID.html">Process::GID</a></li>
+        
+          
+          
+          <li><a href="./Process/Status.html">Process::Status</a></li>
+        
+          
+          
+          <li><a href="./Process/Sys.html">Process::Sys</a></li>
+        
+          
+          
+          <li><a href="./Process/UID.html">Process::UID</a></li>
+        
+          
+          
+          <li><a href="./Ractor.html">Ractor</a></li>
+        
+          
+          
+          <li><a href="./Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/Error.html">Ractor::Error</a></li>
+        
+          
+          
+          <li><a href="./Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedError.html">Ractor::MovedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+        
+          
+          
+          <li><a href="./Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+        
+          
+          
+          <li><a href="./Random.html">Random</a></li>
+        
+          
+          
+          <li><a href="./Random/Formatter.html">Random::Formatter</a></li>
+        
+          
+          
+          <li><a href="./Range.html">Range</a></li>
+        
+          
+          
+          <li><a href="./RangeError.html">RangeError</a></li>
+        
+          
+          
+          <li><a href="./Rational.html">Rational</a></li>
+        
+          
+          
+          <li><a href="./Refinement.html">Refinement</a></li>
+        
+          
+          
+          <li><a href="./Regexp.html">Regexp</a></li>
+        
+          
+          
+          <li><a href="./RegexpError.html">RegexpError</a></li>
+        
+          
+          
+          <li><a href="./Ripper.html">Ripper</a></li>
+        
+          
+          
+          <li><a href="./RubyVM.html">RubyVM</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+        
+          
+          
+          <li><a href="./RuntimeError.html">RuntimeError</a></li>
+        
+          
+          
+          <li><a href="./ScriptError.html">ScriptError</a></li>
+        
+          
+          
+          <li><a href="./SecurityError.html">SecurityError</a></li>
+        
+          
+          
+          <li><a href="./Signal.html">Signal</a></li>
+        
+          
+          
+          <li><a href="./SignalException.html">SignalException</a></li>
+        
+          
+          
+          <li><a href="./StandardError.html">StandardError</a></li>
+        
+          
+          
+          <li><a href="./StopIteration.html">StopIteration</a></li>
+        
+          
+          
+          <li><a href="./String.html">String</a></li>
+        
+          
+          
+          <li><a href="./Struct.html">Struct</a></li>
+        
+          
+          
+          <li><a href="./Symbol.html">Symbol</a></li>
+        
+          
+          
+          <li><a href="./SyntaxError.html">SyntaxError</a></li>
+        
+          
+          
+          <li><a href="./SystemCallError.html">SystemCallError</a></li>
+        
+          
+          
+          <li><a href="./SystemExit.html">SystemExit</a></li>
+        
+          
+          
+          <li><a href="./SystemStackError.html">SystemStackError</a></li>
+        
+          
+          
+          <li><a href="./Thread.html">Thread</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace.html">Thread::Backtrace</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+        
+          
+          
+          <li><a href="./Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+        
+          
+          
+          <li><a href="./Thread/Mutex.html">Thread::Mutex</a></li>
+        
+          
+          
+          <li><a href="./Thread/Queue.html">Thread::Queue</a></li>
+        
+          
+          
+          <li><a href="./Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+        
+          
+          
+          <li><a href="./ThreadError.html">ThreadError</a></li>
+        
+          
+          
+          <li><a href="./ThreadGroup.html">ThreadGroup</a></li>
+        
+          
+          
+          <li><a href="./Time.html">Time</a></li>
+        
+          
+          
+          <li><a href="./TracePoint.html">TracePoint</a></li>
+        
+          
+          
+          <li><a href="./TrueClass.html">TrueClass</a></li>
+        
+          
+          
+          <li><a href="./TypeError.html">TypeError</a></li>
+        
+          
+          
+          <li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+        
+          
+          
+          <li><a href="./UncaughtThrowError.html">UncaughtThrowError</a></li>
+        
+          
+          
+          <li><a href="./UnicodeNormalize.html">UnicodeNormalize</a></li>
+        
+          
+          
+          <li><a href="./Warning.html">Warning</a></li>
+        
+          
+          
+          <li><a href="./ZeroDivisionError.html">ZeroDivisionError</a></li>
+        
+          
+          
+          <li><a href="./fatal.html">fatal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="class">Range</h1>
+
+    <div id="description" class="description">
+      
+<p>A Range object represents a collection of values that are between given begin and end values.</p>
+
+<p>You can create an Range object explicitly with:</p>
+<ul><li>
+<p>A <a href="doc/syntax/literals_rdoc.html#label-Range+Literals">range literal</a>:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Ranges that use &#39;..&#39; to include the given end value.</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>      <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+<span class="ruby-comment"># Ranges that use &#39;...&#39; to exclude the given end value.</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>     <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+</pre>
+</li></ul>
+
+<p>A range may be created using method <a href="Range.html#method-c-new"><code>Range.new</code></a>:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Ranges that by default include the given end value.</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>     <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;a&#39;</span>, <span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+<span class="ruby-comment"># Ranges that use third argument +exclude_end+ to exclude the given end value.</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">to_a</span>     <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;a&#39;</span>, <span class="ruby-string">&#39;d&#39;</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+</pre>
+
+<h2 id="class-Range-label-Beginless+Ranges">Beginless Ranges<span><a href="#class-Range-label-Beginless+Ranges">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>A <em>beginless</em> <em>range</em> has a definite end value, but a <code>nil</code> begin value. Such a range includes all values up to the end value.</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-operator">..</span><span class="ruby-value">4</span>)               <span class="ruby-comment"># =&gt; nil..4</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">begin</span>                 <span class="ruby-comment"># =&gt; nil</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">-50</span>)         <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)           <span class="ruby-comment"># =&gt; true</span>
+
+<span class="ruby-identifier">r</span> = (<span class="ruby-operator">...</span><span class="ruby-value">4</span>)              <span class="ruby-comment"># =&gt; nil...4</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)           <span class="ruby-comment"># =&gt; false</span>
+
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-value">4</span>)       <span class="ruby-comment"># =&gt; nil..4</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; nil...4</span>
+</pre>
+
+<p>A beginless range may be used to slice an array:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>]
+<span class="ruby-identifier">r</span> = (<span class="ruby-operator">..</span><span class="ruby-value">2</span>) <span class="ruby-comment"># =&gt; nil...2</span>
+<span class="ruby-identifier">a</span>[<span class="ruby-identifier">r</span>]      <span class="ruby-comment"># =&gt; [1, 2]</span>
+</pre>
+
+<p>Method <code>each</code> for a beginless range raises an exception.</p>
+
+<h2 id="class-Range-label-Endless+Ranges">Endless Ranges<span><a href="#class-Range-label-Endless+Ranges">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>An <em>endless</em> <em>range</em> has a definite begin value, but a <code>nil</code> end value. Such a range includes all values from the begin value.</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span>)         <span class="ruby-comment"># =&gt; 1..</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">end</span>             <span class="ruby-comment"># =&gt; nil</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">50</span>)    <span class="ruby-comment"># =&gt; true</span>
+
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>) <span class="ruby-comment"># =&gt; 1..</span>
+</pre>
+
+<p>The literal for  an endless range may be written with either two dots or three. The range has the same elements, either way. But note that the two are not equal:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r0</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span>)           <span class="ruby-comment"># =&gt; 1..</span>
+<span class="ruby-identifier">r1</span> = (<span class="ruby-value">1</span><span class="ruby-operator">...</span>)          <span class="ruby-comment"># =&gt; 1...</span>
+<span class="ruby-identifier">r0</span>.<span class="ruby-identifier">begin</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">r1</span>.<span class="ruby-identifier">begin</span> <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r0</span>.<span class="ruby-identifier">end</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">r1</span>.<span class="ruby-identifier">end</span>     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">r1</span>             <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>An endless range may be used to slice an array:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>]
+<span class="ruby-identifier">r</span> = (<span class="ruby-value">2</span><span class="ruby-operator">..</span>) <span class="ruby-comment"># =&gt; 2..</span>
+<span class="ruby-identifier">a</span>[<span class="ruby-identifier">r</span>]      <span class="ruby-comment"># =&gt; [3, 4]</span>
+</pre>
+
+<p>Method <code>each</code> for an endless range calls the given block indefinitely:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+<span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">even?</span>
+  <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [2, 4, 6, 8, 10]</span>
+</pre>
+
+<h2 id="class-Range-label-Ranges+and+Other+Classes">Ranges and Other Classes<span><a href="#class-Range-label-Ranges+and+Other+Classes">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>An object may be put into a range if its class implements instance method <code>&lt;=&gt;</code>. Ruby core classes that do so include <a href="Array.html"><code>Array</code></a>, <a href="Complex.html"><code>Complex</code></a>, <a href="File/Stat.html"><code>File::Stat</code></a>, <a href="Float.html"><code>Float</code></a>, <a href="Integer.html"><code>Integer</code></a>, <a href="Kernel.html"><code>Kernel</code></a>, <a href="Module.html"><code>Module</code></a>, <a href="Numeric.html"><code>Numeric</code></a>, <a href="Rational.html"><code>Rational</code></a>, <a href="String.html"><code>String</code></a>, <a href="Symbol.html"><code>Symbol</code></a>, and <a href="Time.html"><code>Time</code></a>.</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">t0</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>         <span class="ruby-comment"># =&gt; 2021-09-19 09:22:48.4854986 -0500</span>
+<span class="ruby-identifier">t1</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>         <span class="ruby-comment"># =&gt; 2021-09-19 09:22:56.0365079 -0500</span>
+<span class="ruby-identifier">t2</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>         <span class="ruby-comment"># =&gt; 2021-09-19 09:23:08.5263283 -0500</span>
+(<span class="ruby-identifier">t0</span><span class="ruby-operator">..</span><span class="ruby-identifier">t2</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">t1</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-identifier">t0</span><span class="ruby-operator">..</span><span class="ruby-identifier">t1</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">t2</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>A range can be iterated over only if its elements implement instance method <code>succ</code>. Ruby core classes that do so include <a href="Integer.html"><code>Integer</code></a>, <a href="String.html"><code>String</code></a>, and <a href="Symbol.html"><code>Symbol</code></a> (but not the other classes mentioned above).</p>
+
+<p>Iterator methods include:</p>
+<ul><li>
+<p>In Range itself: <a href="Range.html#method-i-each"><code>each</code></a>, <a href="Range.html#method-i-step"><code>step</code></a>, and <a href="Range.html#method-i-25"><code>%</code></a></p>
+</li><li>
+<p>Included from module Enumerable: <a href="Enumerable.html#method-i-each_entry"><code>each_entry</code></a>, <a href="Enumerable.html#method-i-each_with_index"><code>each_with_index</code></a>, <a href="Enumerable.html#method-i-each_with_object"><code>each_with_object</code></a>, <a href="Enumerable.html#method-i-each_slice"><code>each_slice</code></a>, <a href="Enumerable.html#method-i-each_cons"><code>each_cons</code></a>, and <a href="Enumerable.html#method-i-reverse_each"><code>reverse_each</code></a>.</p>
+</li></ul>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>) }
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<h2 id="class-Range-label-Ranges+and+User-Defined+Classes">Ranges and User-Defined Classes<span><a href="#class-Range-label-Ranges+and+User-Defined+Classes">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>A user-defined class that is to be used in a range must implement instance <code>&lt;=&gt;</code>; see <a href="Integer.html#label-method-i-3C-3D-3E">Integer#<=></a>. To make iteration available, it must also implement instance method <code>succ</code>; see <a href="Integer.html#method-i-succ"><code>Integer#succ</code></a>.</p>
+
+<p>The class below implements both <code>&lt;=&gt;</code> and <code>succ</code>, and so can be used both to construct ranges and to iterate over them. Note that the <a href="Comparable.html"><code>Comparable</code></a> module is included so the <code>==</code> method is defined in terms of <code>&lt;=&gt;</code>.</p>
+
+<pre class="ruby"><span class="ruby-comment"># Represent a string of &#39;X&#39; characters.</span>
+<span class="ruby-keyword">class</span> <span class="ruby-constant">Xs</span>
+  <span class="ruby-identifier">include</span> <span class="ruby-constant">Comparable</span>
+  <span class="ruby-identifier">attr_accessor</span> <span class="ruby-value">:length</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">n</span>)
+    <span class="ruby-ivar">@length</span> = <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">succ</span>
+    <span class="ruby-constant">Xs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@length</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-ivar">@length</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+    <span class="ruby-identifier">sprintf</span> <span class="ruby-node">&quot;%2d #{inspect}&quot;</span>, <span class="ruby-ivar">@length</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">inspect</span>
+    <span class="ruby-string">&#39;X&#39;</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@length</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">r</span> = <span class="ruby-constant">Xs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">3</span>)<span class="ruby-operator">..</span><span class="ruby-constant">Xs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">6</span>) <span class="ruby-comment">#=&gt; XXX..XXXXXX</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">to_a</span>                   <span class="ruby-comment">#=&gt; [XXX, XXXX, XXXXX, XXXXXX]</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Xs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">5</span>))    <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Xs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">7</span>))    <span class="ruby-comment">#=&gt; false</span>
+</pre>
+
+<h2 id="class-Range-label-What-27s+Here">What&#39;s Here<span><a href="#class-Range-label-What-27s+Here">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>First, what&#39;s elsewhere. Class Range:</p>
+<ul><li>
+<p>Inherits from <a href="Object.html#class-Object-label-What-27s+Here">class Object</a>.</p>
+</li><li>
+<p>Includes <a href="Enumerable.html#module-Enumerable-label-What-27s+Here">module Enumerable</a>, which provides dozens of additional methods.</p>
+</li></ul>
+
+<p>Here, class Range provides methods that are useful for:</p>
+<ul><li>
+<p><a href="#class-Range-label-Methods+for+Creating+a+Range">Creating a Range</a></p>
+</li><li>
+<p><a href="#class-Range-label-Methods+for+Querying">Querying</a></p>
+</li><li>
+<p><a href="#class-Range-label-Methods+for+Comparing">Comparing</a></p>
+</li><li>
+<p><a href="#class-Range-label-Methods+for+Iterating">Iterating</a></p>
+</li><li>
+<p><a href="#class-Range-label-Methods+for+Converting">Converting</a></p>
+</li></ul>
+
+<h3 id="class-Range-label-Methods+for+Creating+a+Range">Methods for Creating a Range<span><a href="#class-Range-label-Methods+for+Creating+a+Range">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-c-new"><code>::new</code></a>
+<dd>
+<p>Returns a new range.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="class-Range-label-Methods+for+Querying">Methods for Querying<span><a href="#class-Range-label-Methods+for+Querying">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-begin"><code>begin</code></a>
+<dd>
+<p>Returns the begin value given for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-bsearch"><code>bsearch</code></a>
+<dd>
+<p>Returns an element from <code>self</code> selected by a binary search.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-count"><code>count</code></a>
+<dd>
+<p>Returns a count of elements in <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-end"><code>end</code></a>
+<dd>
+<p>Returns the end value given for <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-exclude_end-3F"><code>exclude_end?</code></a>
+<dd>
+<p>Returns whether the end object is excluded.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-first"><code>first</code></a>
+<dd>
+<p>Returns the first elements of <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-hash"><code>hash</code></a>
+<dd>
+<p>Returns the integer hash code.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-last"><code>last</code></a>
+<dd>
+<p>Returns the last elements of <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-max"><code>max</code></a>
+<dd>
+<p>Returns the maximum values in <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-min"><code>min</code></a>
+<dd>
+<p>Returns the minimum values in <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-minmax"><code>minmax</code></a>
+<dd>
+<p>Returns the minimum and maximum values in <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-size"><code>size</code></a>
+<dd>
+<p>Returns the count of elements in <code>self</code>.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="class-Range-label-Methods+for+Comparing">Methods for Comparing<span><a href="#class-Range-label-Methods+for+Comparing">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt><a href="#method-i-3D-3D">#==</a>
+<dd>
+<p>Returns whether a given object is equal to <code>self</code> (uses #==).</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-3D-3D-3D"><code>===</code></a>
+<dd>
+<p>Returns whether the given object is between the begin and end values.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-cover-3F"><code>cover?</code></a>
+<dd>
+<p>Returns whether a given object is within <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-eql-3F"><code>eql?</code></a>
+<dd>
+<p>Returns whether a given object is equal to <code>self</code> (uses <a href="Range.html#method-i-eql-3F"><code>eql?</code></a>).</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-include-3F"><code>include?</code></a> (aliased as <a href="Range.html#method-i-member-3F"><code>member?</code></a>)
+<dd>
+<p>Returns whether a given object is an element of <code>self</code>.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="class-Range-label-Methods+for+Iterating">Methods for Iterating<span><a href="#class-Range-label-Methods+for+Iterating">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-25"><code>%</code></a>
+<dd>
+<p>Requires argument <code>n</code>; calls the block with each <code>n</code>-th element of <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-each"><code>each</code></a>
+<dd>
+<p>Calls the block with each element of <code>self</code>.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-step"><code>step</code></a>
+<dd>
+<p>Takes optional argument <code>n</code> (defaults to 1); calls the block with each <code>n</code>-th element of <code>self</code>.</p>
+</dd></dl>
+</li></ul>
+
+<h3 id="class-Range-label-Methods+for+Converting">Methods for Converting<span><a href="#class-Range-label-Methods+for+Converting">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-inspect"><code>inspect</code></a>
+<dd>
+<p>Returns a string representation of <code>self</code> (uses <a href="Range.html#method-i-inspect"><code>inspect</code></a>).</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-to_a"><code>to_a</code></a> (aliased as <a href="Range.html#method-i-entries"><code>entries</code></a>)
+<dd>
+<p>Returns elements of <code>self</code> in an array.</p>
+</dd></dl>
+</li><li><dl class="rdoc-list note-list"><dt><a href="Range.html#method-i-to_s"><code>to_s</code></a>
+<dd>
+<p>Returns a string representation of <code>self</code> (uses <a href="Range.html#method-i-to_s"><code>to_s</code></a>).</p>
+</dd></dl>
+</li></ul>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(begin, end, exclude_end = false) &rarr; new_range</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a new range based on the given objects <code>begin</code> and <code>end</code>. Optional argument <code>exclude_end</code> determines whether object <code>end</code> is included as the last object in the range:</p>
+
+<pre class="ruby"><span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">5</span>).<span class="ruby-identifier">to_a</span>            <span class="ruby-comment"># =&gt; [2, 3, 4, 5]</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">5</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">to_a</span>      <span class="ruby-comment"># =&gt; [2, 3, 4]</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;a&#39;</span>, <span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span>        <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;a&#39;</span>, <span class="ruby-string">&#39;d&#39;</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_initialize(int argc, VALUE *argv, VALUE range)
+{
+    VALUE beg, end, flags;
+
+    rb_scan_args(argc, argv, &quot;21&quot;, &amp;beg, &amp;end, &amp;flags);
+    range_modify(range);
+    range_init(range, beg, end, RBOOL(RTEST(flags)));
+    return Qnil;
+}
+            </pre> 
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="25-method" class="method-detail ">
+          <a name="method-i-25"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">%(n) {|element| ... } &rarr; self</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">%(n)                  &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Iterates over the elements of <code>self</code>.</p>
+
+<p>With a block given, calls the block with selected elements of the range; returns <code>self</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">%</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; 1..5</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [1, 3, 5]</span>
+<span class="ruby-identifier">a</span> = []
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;e&#39;</span>).<span class="ruby-identifier">%</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; &quot;a&quot;..&quot;e&quot;</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;c&quot;, &quot;e&quot;]</span>
+</pre>
+
+<p>With no block given, returns an enumerator, which will be of class <a href="Enumerator/ArithmeticSequence.html"><code>Enumerator::ArithmeticSequence</code></a> if <code>self</code> is numeric; otherwise of class Enumerator:</p>
+
+<pre class="ruby"><span class="ruby-identifier">e</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>) <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-comment"># =&gt; ((1..5).%(2))</span>
+<span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>        <span class="ruby-comment"># =&gt; Enumerator::ArithmeticSequence</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;e&#39;</span>) <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-comment"># =&gt;  #&lt;Enumerator: ...&gt;</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-step"><code>Range#step</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="25-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_percent_step(VALUE range, VALUE step)
+{
+    return range_step(1, &amp;step, range);
+}
+            </pre> 
+            </div><!-- 25-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 25-method -->
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">self == other &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if and only if:</p>
+<ul><li>
+<p><code>other</code> is a range.</p>
+</li><li>
+<p><code>other.begin == self.begin</code>.</p>
+</li><li>
+<p><code>other.end == self.end</code>.</p>
+</li><li>
+<p><code>other.exclude_end? == self.exclude_end?</code>.</p>
+</li></ul>
+
+<p>Otherwise returns <code>false</code>.</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)                <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span> = <span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">5</span>)
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;foo&#39;</span>                 <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> (<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)                <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)                <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">5</span>)               <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">5</span>, <span class="ruby-keyword">true</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Note that even with the same argument, the return values of #== and <a href="Range.html#method-i-eql-3F"><code>eql?</code></a> can differ:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>) <span class="ruby-operator">==</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2.0</span>)   <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>).<span class="ruby-identifier">eql?</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2.0</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-eql-3F"><code>Range#eql?</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_eq(VALUE range, VALUE obj)
+{
+    if (range == obj)
+        return Qtrue;
+    if (!rb_obj_is_kind_of(obj, rb_cRange))
+        return Qfalse;
+
+    return rb_exec_recursive_paired(recursive_equal, range, obj, obj);
+}
+            </pre> 
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+      
+        <div id="3D-3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">self === object &rarr;  true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if <code>object</code> is between <code>self.begin</code> and <code>self.end</code>. <code>false</code> otherwise:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-operator">===</span> <span class="ruby-value">2</span>       <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-operator">===</span> <span class="ruby-value">5</span>       <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-operator">===</span> <span class="ruby-string">&#39;a&#39;</span>     <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-operator">===</span> <span class="ruby-value">4</span>       <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>) <span class="ruby-operator">===</span> <span class="ruby-value">4</span>      <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>) <span class="ruby-operator">===</span> <span class="ruby-string">&#39;c&#39;</span> <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>) <span class="ruby-operator">===</span> <span class="ruby-string">&#39;e&#39;</span> <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>A case statement uses method <code>===</code>, and so:</p>
+
+<pre class="ruby"><span class="ruby-keyword">case</span> <span class="ruby-value">79</span>
+<span class="ruby-keyword">when</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">50</span>)
+  <span class="ruby-string">&quot;low&quot;</span>
+<span class="ruby-keyword">when</span> (<span class="ruby-value">51</span><span class="ruby-operator">..</span><span class="ruby-value">75</span>)
+  <span class="ruby-string">&quot;medium&quot;</span>
+<span class="ruby-keyword">when</span> (<span class="ruby-value">76</span><span class="ruby-operator">..</span><span class="ruby-value">100</span>)
+  <span class="ruby-string">&quot;high&quot;</span>
+<span class="ruby-keyword">end</span> <span class="ruby-comment"># =&gt; &quot;high&quot;</span>
+
+<span class="ruby-keyword">case</span> <span class="ruby-string">&quot;2.6.5&quot;</span>
+<span class="ruby-keyword">when</span> <span class="ruby-operator">...</span><span class="ruby-string">&quot;2.4&quot;</span>
+  <span class="ruby-string">&quot;EOL&quot;</span>
+<span class="ruby-keyword">when</span> <span class="ruby-string">&quot;2.4&quot;</span><span class="ruby-operator">...</span><span class="ruby-string">&quot;2.5&quot;</span>
+  <span class="ruby-string">&quot;maintenance&quot;</span>
+<span class="ruby-keyword">when</span> <span class="ruby-string">&quot;2.5&quot;</span><span class="ruby-operator">...</span><span class="ruby-string">&quot;3.0&quot;</span>
+  <span class="ruby-string">&quot;stable&quot;</span>
+<span class="ruby-keyword">when</span> <span class="ruby-string">&quot;3.1&quot;</span><span class="ruby-operator">..</span>
+  <span class="ruby-string">&quot;upcoming&quot;</span>
+<span class="ruby-keyword">end</span> <span class="ruby-comment"># =&gt; &quot;stable&quot;</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="3D-3D-3D-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_eqq(VALUE range, VALUE val)
+{
+    VALUE ret = range_include_internal(range, val, 1);
+    if (ret != Qundef) return ret;
+    return r_cover_p(range, RANGE_BEG(range), RANGE_END(range), val);
+}
+            </pre> 
+            </div><!-- 3D-3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-3D-method -->
+      
+        <div id="begin-method" class="method-detail ">
+          <a name="method-i-begin"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">begin &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the object that defines the beginning of <code>self</code>.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">begin</span> <span class="ruby-comment"># =&gt; 1</span>
+(<span class="ruby-operator">..</span><span class="ruby-value">2</span>).<span class="ruby-identifier">begin</span>  <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-first"><code>Range#first</code></a>, <a href="Range.html#method-i-end"><code>Range#end</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="begin-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_begin(VALUE range)
+{
+    return RANGE_BEG(range);
+}
+            </pre> 
+            </div><!-- begin-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- begin-method -->
+      
+        <div id="bsearch-method" class="method-detail ">
+          <a name="method-i-bsearch"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">bsearch {|obj| block }  &rarr; value</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns an element from <code>self</code> selected by a binary search.</p>
+
+<p>See Binary Searching.</p>
+            
+
+            
+            <div class="method-source-code" id="bsearch-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_bsearch(VALUE range)
+{
+    VALUE beg, end, satisfied = Qnil;
+    int smaller;
+
+    /* Implementation notes:
+     * Floats are handled by mapping them to 64 bits integers.
+     * Apart from sign issues, floats and their 64 bits integer have the
+     * same order, assuming they are represented as exponent followed
+     * by the mantissa. This is true with or without implicit bit.
+     *
+     * Finding the average of two ints needs to be careful about
+     * potential overflow (since float to long can use 64 bits)
+     * as well as the fact that -1/2 can be 0 or -1 in C89.
+     *
+     * Note that -0.0 is mapped to the same int as 0.0 as we don&#39;t want
+     * (-1...0.0).bsearch to yield -0.0.
+     */
+
+#define BSEARCH(conv) \
+    do { \
+        RETURN_ENUMERATOR(range, 0, 0); \
+        if (EXCL(range)) high--; \
+        org_high = high; \
+        while (low &lt; high) { \
+            mid = ((high &lt; 0) == (low &lt; 0)) ? low + ((high - low) / 2) \
+                : (low &lt; -high) ? -((-1 - low - high)/2 + 1) : (low + high) / 2; \
+            BSEARCH_CHECK(conv(mid)); \
+            if (smaller) { \
+                high = mid; \
+            } \
+            else { \
+                low = mid + 1; \
+            } \
+        } \
+        if (low == org_high) { \
+            BSEARCH_CHECK(conv(low)); \
+            if (!smaller) return Qnil; \
+        } \
+        return satisfied; \
+    } while (0)
+
+
+    beg = RANGE_BEG(range);
+    end = RANGE_END(range);
+
+    if (FIXNUM_P(beg) &amp;&amp; FIXNUM_P(end)) {
+        long low = FIX2LONG(beg);
+        long high = FIX2LONG(end);
+        long mid, org_high;
+        BSEARCH(INT2FIX);
+    }
+#if SIZEOF_DOUBLE == 8 &amp;&amp; defined(HAVE_INT64_T)
+    else if (RB_FLOAT_TYPE_P(beg) || RB_FLOAT_TYPE_P(end)) {
+        int64_t low  = double_as_int64(NIL_P(beg) ? -HUGE_VAL : RFLOAT_VALUE(rb_Float(beg)));
+        int64_t high = double_as_int64(NIL_P(end) ?  HUGE_VAL : RFLOAT_VALUE(rb_Float(end)));
+        int64_t mid, org_high;
+        BSEARCH(int64_as_double_to_num);
+    }
+#endif
+    else if (is_integer_p(beg) &amp;&amp; is_integer_p(end)) {
+        RETURN_ENUMERATOR(range, 0, 0);
+        return bsearch_integer_range(beg, end, EXCL(range));
+    }
+    else if (is_integer_p(beg) &amp;&amp; NIL_P(end)) {
+        VALUE diff = LONG2FIX(1);
+        RETURN_ENUMERATOR(range, 0, 0);
+        while (1) {
+            VALUE mid = rb_funcall(beg, &#39;+&#39;, 1, diff);
+            BSEARCH_CHECK(mid);
+            if (smaller) {
+                return bsearch_integer_range(beg, mid, 0);
+            }
+            diff = rb_funcall(diff, &#39;*&#39;, 1, LONG2FIX(2));
+        }
+    }
+    else if (NIL_P(beg) &amp;&amp; is_integer_p(end)) {
+        VALUE diff = LONG2FIX(-1);
+        RETURN_ENUMERATOR(range, 0, 0);
+        while (1) {
+            VALUE mid = rb_funcall(end, &#39;+&#39;, 1, diff);
+            BSEARCH_CHECK(mid);
+            if (!smaller) {
+                return bsearch_integer_range(mid, end, 0);
+            }
+            diff = rb_funcall(diff, &#39;*&#39;, 1, LONG2FIX(2));
+        }
+    }
+    else {
+        rb_raise(rb_eTypeError, &quot;can&#39;t do binary search for %s&quot;, rb_obj_classname(beg));
+    }
+    return range;
+}
+            </pre> 
+            </div><!-- bsearch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bsearch-method -->
+      
+        <div id="count-method" class="method-detail ">
+          <a name="method-i-count"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">count &rarr; integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">count(object) &rarr; integer</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">count {|element| ... } &rarr; integer</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the count of elements, based on an argument or block criterion, if given.</p>
+
+<p>With no argument and no block given, returns the number of elements:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>      <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>     <span class="ruby-comment"># =&gt; 3</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">count</span>  <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">count</span> <span class="ruby-comment"># =&gt; 3</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">count</span>       <span class="ruby-comment"># =&gt; Infinity</span>
+(<span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>       <span class="ruby-comment"># =&gt; Infinity</span>
+</pre>
+
+<p>With argument <code>object</code>, returns the number of <code>object</code> found in <code>self</code>, which will usually be zero or one:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>(<span class="ruby-value">2</span>)   <span class="ruby-comment"># =&gt; 1</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>(<span class="ruby-value">5</span>)   <span class="ruby-comment"># =&gt; 0</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span>(<span class="ruby-string">&#39;a&#39;</span>)  <span class="ruby-comment"># =&gt; 0</span>
+</pre>
+
+<p>With a block given, calls the block with each element; returns the number of elements for which the block returns a truthy value:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">count</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">element</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> } <span class="ruby-comment"># =&gt; 2</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-size"><code>Range#size</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="count-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_count(int argc, VALUE *argv, VALUE range)
+{
+    if (argc != 0) {
+        /* It is odd for instance (1...).count(0) to return Infinity. Just let
+         * it loop. */
+        return rb_call_super(argc, argv);
+    }
+    else if (rb_block_given_p()) {
+        /* Likewise it is odd for instance (1...).count {|x| x == 0 } to return
+         * Infinity. Just let it loop. */
+        return rb_call_super(argc, argv);
+    }
+    else if (NIL_P(RANGE_END(range))) {
+        /* We are confident that the answer is Infinity. */
+        return DBL2NUM(HUGE_VAL);
+    }
+    else if (NIL_P(RANGE_BEG(range))) {
+        /* We are confident that the answer is Infinity. */
+        return DBL2NUM(HUGE_VAL);
+    }
+    else {
+        return rb_call_super(argc, argv);
+    }
+}
+            </pre> 
+            </div><!-- count-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- count-method -->
+      
+        <div id="cover-3F-method" class="method-detail ">
+          <a name="method-i-cover-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">cover?(object) &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">cover?(range) &rarr; true or false</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if the given argument is within <code>self</code>, <code>false</code> otherwise.</p>
+
+<p>With non-range argument <code>object</code>, evaluates with <code>&lt;=</code> and <code>&lt;</code>.</p>
+
+<p>For range <code>self</code> with included end value (<code>#exclude_end? == false</code>), evaluates thus:</p>
+
+<pre class="ruby"><span class="ruby-keyword">self</span>.<span class="ruby-identifier">begin</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">object</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">end</span>
+</pre>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">4</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">0</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">5</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;foo&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+
+<span class="ruby-identifier">r</span> = (<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;a&#39;</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;d&#39;</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39; &#39;</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;e&#39;</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">0</span>)       <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>For range <code>r</code> with excluded end value (<code>#exclude_end? == true</code>), evaluates thus:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span>.<span class="ruby-identifier">begin</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">object</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">end</span>
+</pre>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">3</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">0</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">4</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;foo&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+
+<span class="ruby-identifier">r</span> = (<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;a&#39;</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;c&#39;</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39; &#39;</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;d&#39;</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">0</span>)       <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>With range argument <code>range</code>, compares the first and last elements of <code>self</code> and <code>range</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)     <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+
+<span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>)     <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)     <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>If begin and end are numeric, <a href="Range.html#method-i-cover-3F"><code>cover?</code></a> behaves like <a href="Range.html#method-i-include-3F"><code>include?</code></a></p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+</pre>
+
+<p>But when not numeric, the two methods may differ:</p>
+
+<pre class="ruby">(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;cc&#39;</span>)   <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;cc&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Returns <code>false</code> if either:</p>
+<ul><li>
+<p>The begin value of <code>self</code> is larger than its end value.</p>
+</li><li>
+<p>An internal call to <code>&lt;=&gt;</code> returns <code>nil</code>; that is, the operands are not comparable.</p>
+</li></ul>
+
+<p>Related: <a href="Range.html#method-i-include-3F"><code>Range#include?</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="cover-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_cover(VALUE range, VALUE val)
+{
+    VALUE beg, end;
+
+    beg = RANGE_BEG(range);
+    end = RANGE_END(range);
+
+    if (rb_obj_is_kind_of(val, rb_cRange)) {
+        return RBOOL(r_cover_range_p(range, beg, end, val));
+    }
+    return r_cover_p(range, beg, end, val);
+}
+            </pre> 
+            </div><!-- cover-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cover-3F-method -->
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">each {|element| ... } &rarr; self</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">each                  &rarr; an_enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>With a block given, passes each element of <code>self</code> to the block:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; 1..4</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<p>Raises an exception unless <code>self.first.respond_to?(:succ)</code>.</p>
+
+<p>With no block given, returns an enumerator.</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_each(VALUE range)
+{
+    VALUE beg, end;
+    long i;
+
+    RETURN_SIZED_ENUMERATOR(range, 0, 0, range_enum_size);
+
+    beg = RANGE_BEG(range);
+    end = RANGE_END(range);
+
+    if (FIXNUM_P(beg) &amp;&amp; NIL_P(end)) {
+        range_each_fixnum_endless(beg);
+    }
+    else if (FIXNUM_P(beg) &amp;&amp; FIXNUM_P(end)) { /* fixnums are special */
+        return range_each_fixnum_loop(beg, end, range);
+    }
+    else if (RB_INTEGER_TYPE_P(beg) &amp;&amp; (NIL_P(end) || RB_INTEGER_TYPE_P(end))) {
+        if (SPECIAL_CONST_P(end) || RBIGNUM_POSITIVE_P(end)) { /* end &gt;= FIXNUM_MIN */
+            if (!FIXNUM_P(beg)) {
+                if (RBIGNUM_NEGATIVE_P(beg)) {
+                    do {
+                        rb_yield(beg);
+                    } while (!FIXNUM_P(beg = rb_big_plus(beg, INT2FIX(1))));
+                    if (NIL_P(end)) range_each_fixnum_endless(beg);
+                    if (FIXNUM_P(end)) return range_each_fixnum_loop(beg, end, range);
+                }
+                else {
+                    if (NIL_P(end)) range_each_bignum_endless(beg);
+                    if (FIXNUM_P(end)) return range;
+                }
+            }
+            if (FIXNUM_P(beg)) {
+                i = FIX2LONG(beg);
+                do {
+                    rb_yield(LONG2FIX(i));
+                } while (POSFIXABLE(++i));
+                beg = LONG2NUM(i);
+            }
+            ASSUME(!FIXNUM_P(beg));
+            ASSUME(!SPECIAL_CONST_P(end));
+        }
+        if (!FIXNUM_P(beg) &amp;&amp; RBIGNUM_SIGN(beg) == RBIGNUM_SIGN(end)) {
+            if (EXCL(range)) {
+                while (rb_big_cmp(beg, end) == INT2FIX(-1)) {
+                    rb_yield(beg);
+                    beg = rb_big_plus(beg, INT2FIX(1));
+                }
+            }
+            else {
+                VALUE c;
+                while ((c = rb_big_cmp(beg, end)) != INT2FIX(1)) {
+                    rb_yield(beg);
+                    if (c == INT2FIX(0)) break;
+                    beg = rb_big_plus(beg, INT2FIX(1));
+                }
+            }
+        }
+    }
+    else if (SYMBOL_P(beg) &amp;&amp; (NIL_P(end) || SYMBOL_P(end))) { /* symbols are special */
+        beg = rb_sym2str(beg);
+        if (NIL_P(end)) {
+            rb_str_upto_endless_each(beg, sym_each_i, 0);
+        }
+        else {
+            rb_str_upto_each(beg, rb_sym2str(end), EXCL(range), sym_each_i, 0);
+        }
+    }
+    else {
+        VALUE tmp = rb_check_string_type(beg);
+
+        if (!NIL_P(tmp)) {
+            if (!NIL_P(end)) {
+                rb_str_upto_each(tmp, end, EXCL(range), each_i, 0);
+            }
+            else {
+                rb_str_upto_endless_each(tmp, each_i, 0);
+            }
+        }
+        else {
+            if (!discrete_object_p(beg)) {
+                rb_raise(rb_eTypeError, &quot;can&#39;t iterate from %s&quot;,
+                         rb_obj_classname(beg));
+            }
+            if (!NIL_P(end))
+                range_each_func(range, each_i, 0);
+            else
+                for (;; beg = rb_funcallv(beg, id_succ, 0, 0))
+                    rb_yield(beg);
+        }
+    }
+    return range;
+}
+            </pre> 
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+      
+        <div id="end-method" class="method-detail ">
+          <a name="method-i-end"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">end &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the object that defines the end of <code>self</code>.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">end</span>  <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">end</span> <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">end</span>   <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-begin"><code>Range#begin</code></a>, <a href="Range.html#method-i-last"><code>Range#last</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="end-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_end(VALUE range)
+{
+    return RANGE_END(range);
+}
+            </pre> 
+            </div><!-- end-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- end-method -->
+      
+        <div id="entries-method" class="method-detail ">
+          <a name="method-i-entries"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns an array containing the elements in <code>self</code>, if a finite collection; raises an exception otherwise.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>     <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>    <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+</pre>
+
+<p><a href="Range.html#method-i-entries"><code>Range#entries</code></a> is an alias for <a href="Range.html#method-i-to_a"><code>Range#to_a</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="entries-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_to_a(VALUE range)
+{
+    if (NIL_P(RANGE_END(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot convert endless range to an array&quot;);
+    }
+    return rb_call_super(0, 0);
+}
+            </pre> 
+            </div><!-- entries-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- entries-method -->
+      
+        <div id="eql-3F-method" class="method-detail ">
+          <a name="method-i-eql-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">eql?(other) &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if and only if:</p>
+<ul><li>
+<p><code>other</code> is a range.</p>
+</li><li>
+<p><code>other.begin eql? self.begin</code>.</p>
+</li><li>
+<p><code>other.end eql? self.end</code>.</p>
+</li><li>
+<p><code>other.exclude_end? == self.exclude_end?</code>.</p>
+</li></ul>
+
+<p>Otherwise returns <code>false</code>.</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)                  <span class="ruby-comment"># =&gt; true</span>
+<span class="ruby-identifier">r</span> = <span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">5</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&#39;foo&#39;</span>)                 <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>)                  <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>)                  <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">5</span>)                 <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">5</span>, <span class="ruby-keyword">true</span>)) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Note that even with the same argument, the return values of #== and <a href="Range.html#method-i-eql-3F"><code>eql?</code></a> can differ:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>) <span class="ruby-operator">==</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2.0</span>)   <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>).<span class="ruby-identifier">eql?</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2.0</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>Related: Range#==.</p>
+            
+
+            
+            <div class="method-source-code" id="eql-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_eql(VALUE range, VALUE obj)
+{
+    if (range == obj)
+        return Qtrue;
+    if (!rb_obj_is_kind_of(obj, rb_cRange))
+        return Qfalse;
+    return rb_exec_recursive_paired(recursive_eql, range, obj, obj);
+}
+            </pre> 
+            </div><!-- eql-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- eql-3F-method -->
+      
+        <div id="exclude_end-3F-method" class="method-detail ">
+          <a name="method-i-exclude_end-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">exclude_end? &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if <code>self</code> excludes its end value; <code>false</code> otherwise:</p>
+
+<pre class="ruby"><span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">5</span>).<span class="ruby-identifier">exclude_end?</span>       <span class="ruby-comment"># =&gt; false</span>
+<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">5</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">exclude_end?</span> <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">exclude_end?</span>                <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-value">2</span><span class="ruby-operator">...</span><span class="ruby-value">5</span>).<span class="ruby-identifier">exclude_end?</span>               <span class="ruby-comment"># =&gt; true</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="exclude_end-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_exclude_end_p(VALUE range)
+{
+    return RBOOL(EXCL(range));
+}
+            </pre> 
+            </div><!-- exclude_end-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exclude_end-3F-method -->
+      
+        <div id="first-method" class="method-detail ">
+          <a name="method-i-first"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">first &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">first(n) &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>With no argument, returns the first element of <code>self</code>, if it exists:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">first</span>     <span class="ruby-comment"># =&gt; 1</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">first</span> <span class="ruby-comment"># =&gt; &quot;a&quot;</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, returns the first <code>n</code> elements in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>).<span class="ruby-identifier">first</span>(<span class="ruby-value">3</span>) <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>).<span class="ruby-identifier">first</span>(<span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">first</span>(<span class="ruby-value">50</span>) <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<p>Raises an exception if there is no first element:</p>
+
+<pre class="ruby">(<span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">first</span> <span class="ruby-comment"># Raises RangeError</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="first-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_first(int argc, VALUE *argv, VALUE range)
+{
+    VALUE n, ary[2];
+
+    if (NIL_P(RANGE_BEG(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot get the first element of beginless range&quot;);
+    }
+    if (argc == 0) return RANGE_BEG(range);
+
+    rb_scan_args(argc, argv, &quot;1&quot;, &amp;n);
+    ary[0] = n;
+    ary[1] = rb_ary_new2(NUM2LONG(n));
+    rb_block_call(range, idEach, 0, 0, first_i, (VALUE)ary);
+
+    return ary[1];
+}
+            </pre> 
+            </div><!-- first-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- first-method -->
+      
+        <div id="hash-method" class="method-detail ">
+          <a name="method-i-hash"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">hash &rarr; integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the integer hash value for <code>self</code>. Two range objects <code>r0</code> and <code>r1</code> have the same hash value if and only if <code>r0.eql?(r1)</code>.</p>
+
+<p>Related: <a href="Range.html#method-i-eql-3F"><code>Range#eql?</code></a>, <a href="Object.html#method-i-hash"><code>Object#hash</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="hash-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_hash(VALUE range)
+{
+    st_index_t hash = EXCL(range);
+    VALUE v;
+
+    hash = rb_hash_start(hash);
+    v = rb_hash(RANGE_BEG(range));
+    hash = rb_hash_uint(hash, NUM2LONG(v));
+    v = rb_hash(RANGE_END(range));
+    hash = rb_hash_uint(hash, NUM2LONG(v));
+    hash = rb_hash_uint(hash, EXCL(range) &lt;&lt; 24);
+    hash = rb_hash_end(hash);
+
+    return ST2FIX(hash);
+}
+            </pre> 
+            </div><!-- hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hash-method -->
+      
+        <div id="include-3F-method" class="method-detail ">
+          <a name="method-i-include-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">include?(object) &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if <code>object</code> is an element of <code>self</code>, <code>false</code> otherwise:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">2</span>)        <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">5</span>)        <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)        <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)       <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;b&#39;</span>)  <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;e&#39;</span>)  <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;B&#39;</span>)  <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;d&#39;</span>)  <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;d&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>If begin and end are numeric, <a href="Range.html#method-i-include-3F"><code>include?</code></a> behaves like <a href="Range.html#method-i-cover-3F"><code>cover?</code></a></p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+</pre>
+
+<p>But when not numeric, the two methods may differ:</p>
+
+<pre class="ruby">(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;cc&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;cc&#39;</span>)   <span class="ruby-comment"># =&gt; true</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-cover-3F"><code>Range#cover?</code></a>.</p>
+
+<p><a href="Range.html#method-i-member-3F"><code>Range#member?</code></a> is an alias for <a href="Range.html#method-i-include-3F"><code>Range#include?</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="include-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_include(VALUE range, VALUE val)
+{
+    VALUE ret = range_include_internal(range, val, 0);
+    if (ret != Qundef) return ret;
+    return rb_call_super(1, &amp;val);
+}
+            </pre> 
+            </div><!-- include-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- include-3F-method -->
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">inspect &rarr; string</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a string representation of <code>self</code>, including <code>begin.inspect</code> and <code>end.inspect</code>:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">inspect</span>  <span class="ruby-comment"># =&gt; &quot;1..4&quot;</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">inspect</span> <span class="ruby-comment"># =&gt; &quot;1...4&quot;</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">inspect</span>   <span class="ruby-comment"># =&gt; &quot;1..&quot;</span>
+(<span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">inspect</span>   <span class="ruby-comment"># =&gt; &quot;..4&quot;</span>
+</pre>
+
+<p>Note that returns from <a href="Range.html#method-i-to_s"><code>to_s</code></a> and <a href="Range.html#method-i-inspect"><code>inspect</code></a> may differ:</p>
+
+<pre class="ruby">(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_s</span>    <span class="ruby-comment"># =&gt; &quot;a..d&quot;</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">inspect</span> <span class="ruby-comment"># =&gt; &quot;\&quot;a\&quot;..\&quot;d\&quot;&quot;</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-to_s"><code>Range#to_s</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_inspect(VALUE range)
+{
+    return rb_exec_recursive(inspect_range, range, 0);
+}
+            </pre> 
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+      
+        <div id="last-method" class="method-detail ">
+          <a name="method-i-last"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">last &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">last(n) &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>With no argument, returns the last element of <code>self</code>, if it exists:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">last</span>     <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">last</span> <span class="ruby-comment"># =&gt; &quot;d&quot;</span>
+</pre>
+
+<p>Note that <code>last</code> with no argument returns the end element of <code>self</code> even if <a href="Range.html#method-i-exclude_end-3F"><code>exclude_end?</code></a> is <code>true</code>:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">last</span>     <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">last</span> <span class="ruby-comment"># =&gt; &quot;d&quot;</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, returns the last <code>n</code> elements in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>).<span class="ruby-identifier">last</span>(<span class="ruby-value">3</span>) <span class="ruby-comment"># =&gt; [8, 9, 10]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>).<span class="ruby-identifier">last</span>(<span class="ruby-value">0</span>) <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">last</span>(<span class="ruby-value">50</span>) <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<p>Note that <code>last</code> with argument does not return the end element of <code>self</code> if <a href="Range.html#method-i-exclude_end-3F"><code>exclude_end?</code></a> it <code>true</code>:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">last</span>(<span class="ruby-value">3</span>)     <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">last</span>(<span class="ruby-value">3</span>) <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+</pre>
+
+<p>Raises an exception if there is no last element:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">last</span> <span class="ruby-comment"># Raises RangeError</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="last-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_last(int argc, VALUE *argv, VALUE range)
+{
+    VALUE b, e;
+
+    if (NIL_P(RANGE_END(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot get the last element of endless range&quot;);
+    }
+    if (argc == 0) return RANGE_END(range);
+
+    b = RANGE_BEG(range);
+    e = RANGE_END(range);
+    if (RB_INTEGER_TYPE_P(b) &amp;&amp; RB_INTEGER_TYPE_P(e) &amp;&amp;
+        RB_LIKELY(rb_method_basic_definition_p(rb_cRange, idEach))) {
+        return rb_int_range_last(argc, argv, range);
+    }
+    return rb_ary_last(argc, argv, rb_Array(range));
+}
+            </pre> 
+            </div><!-- last-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- last-method -->
+      
+        <div id="max-method" class="method-detail ">
+          <a name="method-i-max"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">max &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">max(n) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">max {|a, b| ... } &rarr; object</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">max(n) {|a, b| ... } &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the maximum value in <code>self</code>, using method <code>&lt;=&gt;</code> or a given block for comparison.</p>
+
+<p>With no argument and no block given, returns the maximum-valued element of <code>self</code>.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>     <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">max</span> <span class="ruby-comment"># =&gt; &quot;d&quot;</span>
+(<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">max</span>   <span class="ruby-comment"># =&gt; -1</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, and no block given, returns the <code>n</code> maximum-valued elements of <code>self</code> in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>)     <span class="ruby-comment"># =&gt; [4, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>) <span class="ruby-comment"># =&gt; [&quot;d&quot;, &quot;c&quot;]</span>
+(<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>)   <span class="ruby-comment"># =&gt; [-1, -2]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">50</span>)    <span class="ruby-comment"># =&gt; [4, 3, 2, 1]</span>
+</pre>
+
+<p>If a block is given, it is called:</p>
+<ul><li>
+<p>First, with the first two element of <code>self</code>.</p>
+</li><li>
+<p>Then, sequentially, with the so-far maximum value and the next element of <code>self</code>.</p>
+</li></ul>
+
+<p>To illustrate:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> [<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>]; <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span> } <span class="ruby-comment"># =&gt; 4</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+[<span class="ruby-value">3</span>, <span class="ruby-value">2</span>]
+[<span class="ruby-value">4</span>, <span class="ruby-value">3</span>]
+</pre>
+
+<p>With no argument and a block given, returns the return value of the last call to the block:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; 1</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, and a block given, returns the return values of the last <code>n</code> calls to the block in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }  <span class="ruby-comment"># =&gt; [1, 2]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">50</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<p>Returns an empty array if <code>n</code> is zero:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">0</span>)                      <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+
+<p>Returns <code>nil</code> or an empty array if:</p>
+<ul><li>
+<p>The begin value of the range is larger than the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>                         <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>)                      <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }    <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+</li><li>
+<p>The begin value of an exclusive range is equal to the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>                          <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>)                       <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>  {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }    <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">max</span>(<span class="ruby-value">2</span>)  {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+</li></ul>
+
+<p>Raises an exception if either:</p>
+<ul><li>
+<p><code>self</code> is a endless range: <code>(1..)</code>.</p>
+</li><li>
+<p>A block is given and <code>self</code> is a beginless range.</p>
+</li></ul>
+
+<p>Related: <a href="Range.html#method-i-min"><code>Range#min</code></a>, <a href="Range.html#method-i-minmax"><code>Range#minmax</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="max-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_max(int argc, VALUE *argv, VALUE range)
+{
+    VALUE e = RANGE_END(range);
+    int nm = FIXNUM_P(e) || rb_obj_is_kind_of(e, rb_cNumeric);
+
+    if (NIL_P(RANGE_END(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot get the maximum of endless range&quot;);
+    }
+
+    VALUE b = RANGE_BEG(range);
+
+    if (rb_block_given_p() || (EXCL(range) &amp;&amp; !nm) || argc) {
+        if (NIL_P(b)) {
+            rb_raise(rb_eRangeError, &quot;cannot get the maximum of beginless range with custom comparison method&quot;);
+        }
+        return rb_call_super(argc, argv);
+    }
+    else {
+        struct cmp_opt_data cmp_opt = { 0, 0 };
+        int c = NIL_P(b) ? -1 : OPTIMIZED_CMP(b, e, cmp_opt);
+
+        if (c &gt; 0)
+            return Qnil;
+        if (EXCL(range)) {
+            if (!RB_INTEGER_TYPE_P(e)) {
+                rb_raise(rb_eTypeError, &quot;cannot exclude non Integer end value&quot;);
+            }
+            if (c == 0) return Qnil;
+            if (!RB_INTEGER_TYPE_P(b)) {
+                rb_raise(rb_eTypeError, &quot;cannot exclude end value with non Integer begin value&quot;);
+            }
+            if (FIXNUM_P(e)) {
+                return LONG2NUM(FIX2LONG(e) - 1);
+            }
+            return rb_funcall(e, &#39;-&#39;, 1, INT2FIX(1));
+        }
+        return e;
+    }
+}
+            </pre> 
+            </div><!-- max-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- max-method -->
+      
+        <div id="member-3F-method" class="method-detail ">
+          <a name="method-i-member-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">include?(object) &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if <code>object</code> is an element of <code>self</code>, <code>false</code> otherwise:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">2</span>)        <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">5</span>)        <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)        <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">4</span>)       <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;b&#39;</span>)  <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;e&#39;</span>)  <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;B&#39;</span>)  <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;d&#39;</span>)  <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">...</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;d&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>If begin and end are numeric, <a href="Range.html#method-i-include-3F"><code>include?</code></a> behaves like <a href="Range.html#method-i-cover-3F"><code>cover?</code></a></p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-value">1.5</span>) <span class="ruby-comment"># =&gt; true</span>
+</pre>
+
+<p>But when not numeric, the two methods may differ:</p>
+
+<pre class="ruby">(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">&#39;cc&#39;</span>) <span class="ruby-comment"># =&gt; false</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">cover?</span>(<span class="ruby-string">&#39;cc&#39;</span>)   <span class="ruby-comment"># =&gt; true</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-cover-3F"><code>Range#cover?</code></a>.</p>
+
+<p><a href="Range.html#method-i-member-3F"><code>Range#member?</code></a> is an alias for <a href="Range.html#method-i-include-3F"><code>Range#include?</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="member-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_include(VALUE range, VALUE val)
+{
+    VALUE ret = range_include_internal(range, val, 0);
+    if (ret != Qundef) return ret;
+    return rb_call_super(1, &amp;val);
+}
+            </pre> 
+            </div><!-- member-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- member-3F-method -->
+      
+        <div id="min-method" class="method-detail ">
+          <a name="method-i-min"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">min &rarr; object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">min(n) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">min {|a, b| ... } &rarr; object</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">min(n) {|a, b| ... } &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the minimum value in <code>self</code>, using method <code>&lt;=&gt;</code> or a given block for comparison.</p>
+
+<p>With no argument and no block given, returns the minimum-valued element of <code>self</code>.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>     <span class="ruby-comment"># =&gt; 1</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">min</span> <span class="ruby-comment"># =&gt; &quot;a&quot;</span>
+(<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">min</span>   <span class="ruby-comment"># =&gt; -4</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, and no block given, returns the <code>n</code> minimum-valued elements of <code>self</code> in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>)     <span class="ruby-comment"># =&gt; [1, 2]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>) <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;]</span>
+(<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>)   <span class="ruby-comment"># =&gt; [-4, -3]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">50</span>)    <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+</pre>
+
+<p>If a block is given, it is called:</p>
+<ul><li>
+<p>First, with the first two element of <code>self</code>.</p>
+</li><li>
+<p>Then, sequentially, with the so-far minimum value and the next element of <code>self</code>.</p>
+</li></ul>
+
+<p>To illustrate:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> [<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>]; <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span> } <span class="ruby-comment"># =&gt; 1</span>
+</pre>
+
+<p>Output:</p>
+
+<pre class="ruby">[<span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+[<span class="ruby-value">3</span>, <span class="ruby-value">1</span>]
+[<span class="ruby-value">4</span>, <span class="ruby-value">1</span>]
+</pre>
+
+<p>With no argument and a block given, returns the return value of the last call to the block:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; 4</span>
+</pre>
+
+<p>With non-negative integer argument <code>n</code> given, and a block given, returns the return values of the last <code>n</code> calls to the block in an array:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }  <span class="ruby-comment"># =&gt; [4, 3]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">50</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; [4, 3, 2, 1]</span>
+</pre>
+
+<p>Returns an empty array if <code>n</code> is zero:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">0</span>)                      <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+
+<p>Returns <code>nil</code> or an empty array if:</p>
+<ul><li>
+<p>The begin value of the range is larger than the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>                         <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>)                      <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }    <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+</li><li>
+<p>The begin value of an exclusive range is equal to the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>                          <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>)                       <span class="ruby-comment"># =&gt; []</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>  {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }    <span class="ruby-comment"># =&gt; nil</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">min</span>(<span class="ruby-value">2</span>)  {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; []</span>
+</pre>
+</li></ul>
+
+<p>Raises an exception if either:</p>
+<ul><li>
+<p><code>self</code> is a beginless range: <code>(..4)</code>.</p>
+</li><li>
+<p>A block is given and <code>self</code> is an endless range.</p>
+</li></ul>
+
+<p>Related: <a href="Range.html#method-i-max"><code>Range#max</code></a>, <a href="Range.html#method-i-minmax"><code>Range#minmax</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="min-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_min(int argc, VALUE *argv, VALUE range)
+{
+    if (NIL_P(RANGE_BEG(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot get the minimum of beginless range&quot;);
+    }
+
+    if (rb_block_given_p()) {
+        if (NIL_P(RANGE_END(range))) {
+            rb_raise(rb_eRangeError, &quot;cannot get the minimum of endless range with custom comparison method&quot;);
+        }
+        return rb_call_super(argc, argv);
+    }
+    else if (argc != 0) {
+        return range_first(argc, argv, range);
+    }
+    else {
+        struct cmp_opt_data cmp_opt = { 0, 0 };
+        VALUE b = RANGE_BEG(range);
+        VALUE e = RANGE_END(range);
+        int c = NIL_P(e) ? -1 : OPTIMIZED_CMP(b, e, cmp_opt);
+
+        if (c &gt; 0 || (c == 0 &amp;&amp; EXCL(range)))
+            return Qnil;
+        return b;
+    }
+}
+            </pre> 
+            </div><!-- min-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- min-method -->
+      
+        <div id="minmax-method" class="method-detail ">
+          <a name="method-i-minmax"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">minmax &rarr; [object, object]</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">minmax {|a, b| ... } &rarr; [object, object]</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a 2-element array containing the minimum and maximum value in <code>self</code>, either according to comparison method <code>&lt;=&gt;</code> or a given block.</p>
+
+<p>With no block given, returns the minimum and maximum values, using <code>&lt;=&gt;</code> for comparison:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">minmax</span>     <span class="ruby-comment"># =&gt; [1, 4]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">minmax</span>    <span class="ruby-comment"># =&gt; [1, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">minmax</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;d&quot;]</span>
+(<span class="ruby-value">-4</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">minmax</span>   <span class="ruby-comment"># =&gt; [-4, -1]</span>
+</pre>
+
+<p>With a block given, the block must return an integer:</p>
+<ul><li>
+<p>Negative if <code>a</code> is smaller than <code>b</code>.</p>
+</li><li>
+<p>Zero if <code>a</code> and <code>b</code> are equal.</p>
+</li><li>
+<p>Positive if <code>a</code> is larger than <code>b</code>.</p>
+</li></ul>
+
+<p>The block is called <code>self.size</code> times to compare elements; returns a 2-element <a href="Array.html"><code>Array</code></a> containing the minimum and maximum values from <code>self</code>, per the block:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">minmax</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; [4, 1]</span>
+</pre>
+
+<p>Returns <code>[nil, nil]</code> if:</p>
+<ul><li>
+<p>The begin value of the range is larger than the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">minmax</span>                      <span class="ruby-comment"># =&gt; [nil, nil]</span>
+(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">minmax</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) } <span class="ruby-comment"># =&gt; [nil, nil]</span>
+</pre>
+</li><li>
+<p>The begin value of an exclusive range is equal to the end value:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">minmax</span>                          <span class="ruby-comment"># =&gt; [nil, nil]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>).<span class="ruby-identifier">minmax</span>  {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>) }    <span class="ruby-comment"># =&gt; [nil, nil]</span>
+</pre>
+</li></ul>
+
+<p>Raises an exception if <code>self</code> is a beginless or an endless range.</p>
+
+<p>Related: <a href="Range.html#method-i-min"><code>Range#min</code></a>, <a href="Range.html#method-i-max"><code>Range#max</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="minmax-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_minmax(VALUE range)
+{
+    if (rb_block_given_p()) {
+        return rb_call_super(0, NULL);
+    }
+    return rb_assoc_new(
+        rb_funcall(range, id_min, 0),
+        rb_funcall(range, id_max, 0)
+    );
+}
+            </pre> 
+            </div><!-- minmax-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- minmax-method -->
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-i-size"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size &rarr; non_negative_integer or Infinity or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the count of elements in <code>self</code> if both begin and end values are numeric; otherwise, returns <code>nil</code>:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">size</span>      <span class="ruby-comment"># =&gt; 4</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">size</span>     <span class="ruby-comment"># =&gt; 3</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">size</span>       <span class="ruby-comment"># =&gt; Infinity</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;z&#39;</span>).<span class="ruby-identifier">size</span>  <span class="ruby-comment">#=&gt; nil</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-count"><code>Range#count</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_size(VALUE range)
+{
+    VALUE b = RANGE_BEG(range), e = RANGE_END(range);
+    if (rb_obj_is_kind_of(b, rb_cNumeric)) {
+        if (rb_obj_is_kind_of(e, rb_cNumeric)) {
+            return ruby_num_interval_step_size(b, e, INT2FIX(1), EXCL(range));
+        }
+        if (NIL_P(e)) {
+            return DBL2NUM(HUGE_VAL);
+        }
+    }
+    else if (NIL_P(b)) {
+        return DBL2NUM(HUGE_VAL);
+    }
+
+    return Qnil;
+}
+            </pre> 
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+      
+        <div id="step-method" class="method-detail ">
+          <a name="method-i-step"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">step(n = 1) {|element| ... } &rarr; self</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">step(n = 1)                  &rarr; enumerator</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Iterates over the elements of <code>self</code>.</p>
+
+<p>With a block given and no argument, calls the block each element of the range; returns <code>self</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">step</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; 1..5</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [1, 2, 3, 4, 5]</span>
+<span class="ruby-identifier">a</span> = []
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;e&#39;</span>).<span class="ruby-identifier">step</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; &quot;a&quot;..&quot;e&quot;</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</span>
+</pre>
+
+<p>With a block given and a positive integer argument <code>n</code> given, calls the block with element <code>0</code>, element <code>n</code>, element <code>2n</code>, and so on:</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = []
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">step</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; 1..5</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [1, 3, 5]</span>
+<span class="ruby-identifier">a</span> = []
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;e&#39;</span>).<span class="ruby-identifier">step</span>(<span class="ruby-value">2</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element</span>) } <span class="ruby-comment"># =&gt; &quot;a&quot;..&quot;e&quot;</span>
+<span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;c&quot;, &quot;e&quot;]</span>
+</pre>
+
+<p>With no block given, returns an enumerator, which will be of class <a href="Enumerator/ArithmeticSequence.html"><code>Enumerator::ArithmeticSequence</code></a> if <code>self</code> is numeric; otherwise of class Enumerator:</p>
+
+<pre class="ruby"><span class="ruby-identifier">e</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">step</span>(<span class="ruby-value">2</span>) <span class="ruby-comment"># =&gt; ((1..5).step(2))</span>
+<span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>            <span class="ruby-comment"># =&gt; Enumerator::ArithmeticSequence</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;e&#39;</span>).<span class="ruby-identifier">step</span> <span class="ruby-comment"># =&gt; #&lt;Enumerator: ...&gt;</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-25"><code>Range#%</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="step-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_step(int argc, VALUE *argv, VALUE range)
+{
+    VALUE b, e, step, tmp;
+
+    b = RANGE_BEG(range);
+    e = RANGE_END(range);
+    step = (!rb_check_arity(argc, 0, 1) ? INT2FIX(1) : argv[0]);
+
+    if (!rb_block_given_p()) {
+        if (!rb_obj_is_kind_of(step, rb_cNumeric)) {
+            step = rb_to_int(step);
+        }
+        if (rb_equal(step, INT2FIX(0))) {
+            rb_raise(rb_eArgError, &quot;step can&#39;t be 0&quot;);
+        }
+
+        const VALUE b_num_p = rb_obj_is_kind_of(b, rb_cNumeric);
+        const VALUE e_num_p = rb_obj_is_kind_of(e, rb_cNumeric);
+        if ((b_num_p &amp;&amp; (NIL_P(e) || e_num_p)) || (NIL_P(b) &amp;&amp; e_num_p)) {
+            return rb_arith_seq_new(range, ID2SYM(rb_frame_this_func()), argc, argv,
+                    range_step_size, b, e, step, EXCL(range));
+        }
+
+        RETURN_SIZED_ENUMERATOR(range, argc, argv, range_step_size);
+    }
+
+    step = check_step_domain(step);
+    VALUE iter[2] = {INT2FIX(1), step};
+
+    if (FIXNUM_P(b) &amp;&amp; NIL_P(e) &amp;&amp; FIXNUM_P(step)) {
+        long i = FIX2LONG(b), unit = FIX2LONG(step);
+        do {
+            rb_yield(LONG2FIX(i));
+            i += unit;          /* FIXABLE+FIXABLE never overflow */
+        } while (FIXABLE(i));
+        b = LONG2NUM(i);
+
+        for (;; b = rb_big_plus(b, step))
+            rb_yield(b);
+    }
+    else if (FIXNUM_P(b) &amp;&amp; FIXNUM_P(e) &amp;&amp; FIXNUM_P(step)) { /* fixnums are special */
+        long end = FIX2LONG(e);
+        long i, unit = FIX2LONG(step);
+
+        if (!EXCL(range))
+            end += 1;
+        i = FIX2LONG(b);
+        while (i &lt; end) {
+            rb_yield(LONG2NUM(i));
+            if (i + unit &lt; i) break;
+            i += unit;
+        }
+
+    }
+    else if (SYMBOL_P(b) &amp;&amp; (NIL_P(e) || SYMBOL_P(e))) { /* symbols are special */
+        b = rb_sym2str(b);
+        if (NIL_P(e)) {
+            rb_str_upto_endless_each(b, sym_step_i, (VALUE)iter);
+        }
+        else {
+            rb_str_upto_each(b, rb_sym2str(e), EXCL(range), sym_step_i, (VALUE)iter);
+        }
+    }
+    else if (ruby_float_step(b, e, step, EXCL(range), TRUE)) {
+        /* done */
+    }
+    else if (rb_obj_is_kind_of(b, rb_cNumeric) ||
+             !NIL_P(rb_check_to_integer(b, &quot;to_int&quot;)) ||
+             !NIL_P(rb_check_to_integer(e, &quot;to_int&quot;))) {
+        ID op = EXCL(range) ? &#39;&lt;&#39; : idLE;
+        VALUE v = b;
+        int i = 0;
+
+        while (NIL_P(e) || RTEST(rb_funcall(v, op, 1, e))) {
+            rb_yield(v);
+            i++;
+            v = rb_funcall(b, &#39;+&#39;, 1, rb_funcall(INT2NUM(i), &#39;*&#39;, 1, step));
+        }
+    }
+    else {
+        tmp = rb_check_string_type(b);
+
+        if (!NIL_P(tmp)) {
+            b = tmp;
+            if (NIL_P(e)) {
+                rb_str_upto_endless_each(b, step_i, (VALUE)iter);
+            }
+            else {
+                rb_str_upto_each(b, e, EXCL(range), step_i, (VALUE)iter);
+            }
+        }
+        else {
+            if (!discrete_object_p(b)) {
+                rb_raise(rb_eTypeError, &quot;can&#39;t iterate from %s&quot;,
+                         rb_obj_classname(b));
+            }
+            range_each_func(range, step_i, (VALUE)iter);
+        }
+    }
+    return range;
+}
+            </pre> 
+            </div><!-- step-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- step-method -->
+      
+        <div id="to_a-method" class="method-detail ">
+          <a name="method-i-to_a"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_a &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns an array containing the elements in <code>self</code>, if a finite collection; raises an exception otherwise.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>     <span class="ruby-comment"># =&gt; [1, 2, 3, 4]</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span>    <span class="ruby-comment"># =&gt; [1, 2, 3]</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+</pre>
+
+<p><a href="Range.html#method-i-entries"><code>Range#entries</code></a> is an alias for <a href="Range.html#method-i-to_a"><code>Range#to_a</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="to_a-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_to_a(VALUE range)
+{
+    if (NIL_P(RANGE_END(range))) {
+        rb_raise(rb_eRangeError, &quot;cannot convert endless range to an array&quot;);
+    }
+    return rb_call_super(0, 0);
+}
+            </pre> 
+            </div><!-- to_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_a-method -->
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_s &rarr; string</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns a string representation of <code>self</code>, including <code>begin.to_s</code> and <code>end.to_s</code>:</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_s</span>  <span class="ruby-comment"># =&gt; &quot;1..4&quot;</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-comment"># =&gt; &quot;1...4&quot;</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span>).<span class="ruby-identifier">to_s</span>   <span class="ruby-comment"># =&gt; &quot;1..&quot;</span>
+(<span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">to_s</span>   <span class="ruby-comment"># =&gt; &quot;..4&quot;</span>
+</pre>
+
+<p>Note that returns from <a href="Range.html#method-i-to_s"><code>to_s</code></a> and <a href="Range.html#method-i-inspect"><code>inspect</code></a> may differ:</p>
+
+<pre class="ruby">(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">to_s</span>    <span class="ruby-comment"># =&gt; &quot;a..d&quot;</span>
+(<span class="ruby-string">&#39;a&#39;</span><span class="ruby-operator">..</span><span class="ruby-string">&#39;d&#39;</span>).<span class="ruby-identifier">inspect</span> <span class="ruby-comment"># =&gt; &quot;\&quot;a\&quot;..\&quot;d\&quot;&quot;</span>
+</pre>
+
+<p>Related: <a href="Range.html#method-i-inspect"><code>Range#inspect</code></a>.</p>
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+range_to_s(VALUE range)
+{
+    VALUE str, str2;
+
+    str = rb_obj_as_string(RANGE_BEG(range));
+    str2 = rb_obj_as_string(RANGE_END(range));
+    str = rb_str_dup(str);
+    rb_str_cat(str, &quot;...&quot;, EXCL(range) ? 3 : 2);
+    rb_str_append(str, str2);
+
+    return str;
+}
+            </pre> 
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_Range_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Range_versioned").load("/associated/3.1.2/Range.ihtml");</script> <div id='tx_Range' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Range").load("/associated/Range.ihtml");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 3.1.2</small></p> 
+  
+   <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, an erratic source of art, music, and technology.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+ 
+       <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.ihtml");
+    });
+
+    </script>
+
+
+ 
+		<script type='text/javascript'>
+
+	function loadPlus(plusdocs){
+			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
+					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
+					});
+	} 
+
+   //function loadInline(json){
+   // for (var lookFor in json) {
+    //  $(lookFor).after(json[lookFor]);
+    // }
+  // } // end loadInline
+
+
+$(document).ready(function() {
+		$.ajaxSetup({ cache: false });
+			$.get('/associated/3.1.2/plus_Range.ihtml', 
+			function(plusdocs) {
+			setTimeout(function() {
+				loadPlus(plusdocs);
+				}, 2000);
+			}
+			);
+
+
+//     $.ajax({
+//     dataType: "json",
+//      url: '/associated/3.1.2/inline_Range.js',
+//      success: function(json) {
+// 			setTimeout(function() {
+// 				loadInline(json);
+// 				}, 2000);
+// 			}
+//    });
+
+		});
+</script>
+		
+</body>
+</html>
+
+

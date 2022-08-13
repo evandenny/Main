@@ -74,7 +74,7 @@ void Guessing_Game() {
 			} else if (tries > high_score_guessgame) {
 				std::cout << "You guessed the number in " << tries << " tries!" << std::endl;
 			}
-			Sleep::seconds(4);
+			Sleep::seconds(1);
 		}
 		Sleep::milliseconds(1500);
 	} while (number != guess);

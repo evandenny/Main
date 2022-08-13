@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.42.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta name='description' content='  Class : Fiber  -   Ruby 3.1.2 ' />
+  <meta content="2022-06-09 20:39:26 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+  <title>Class: Fiber (Ruby 3.1.2) </title>
+  <link rel="stylesheet" href="css/associated.css" type="text/css" >
+  <!-- link rel="stylesheet" href=".css/obf.css"  -->
+  <link rel="stylesheet" href="css/inuit.css" >
+  <link rel="stylesheet" href="css/grid.inuit.css" >
+  <link rel="stylesheet" href="css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="css/rdoc.css" type="text/css" >
+    <link rel="stylesheet" href="css/carbon17.css" type="text/css" >
+
+
+  <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+
+   
+<script src="/js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+   <link rel="stylesheet" href="css/extra.css" type="text/css" >
+  <script  src="/js/extra.js"  ></script>
+
+
+</head>
+
+<body id="top" class="class rdocstar">
+
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+<!-- VERSION HEADER for 3.1.2 NOT FOUND -->
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  
+   <!-- carbon17 added here 2017-09-09 -->
+ 
+
+   <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>cont.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-blocking-3F">::blocking?</a></li>
+          
+          <li><a href="#method-c-current">::current</a></li>
+          
+          <li><a href="#method-c-current_scheduler">::current_scheduler</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-schedule">::schedule</a></li>
+          
+          <li><a href="#method-c-scheduler">::scheduler</a></li>
+          
+          <li><a href="#method-c-set_scheduler">::set_scheduler</a></li>
+          
+          <li><a href="#method-c-yield">::yield</a></li>
+          
+          <li><a href="#method-i-alive-3F">#alive?</a></li>
+          
+          <li><a href="#method-i-backtrace">#backtrace</a></li>
+          
+          <li><a href="#method-i-backtrace_locations">#backtrace_locations</a></li>
+          
+          <li><a href="#method-i-blocking-3F">#blocking?</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-raise">#raise</a></li>
+          
+          <li><a href="#method-i-resume">#resume</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-transfer">#transfer</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul id='files'>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/minitest-5_15_0/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/History_rdoc.html">History.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/README_rdoc.html">README.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/command_line_usage_rdoc.html">command_line_usage.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/glossary_rdoc.html">glossary.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/proto_rake_rdoc.html">proto_rake.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rakefile_rdoc.html">rakefile.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rake-13_0_6/doc/rational_rdoc.html">rational.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/context_rdoc.html">context.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/child_rdoc.html">child.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/document_rdoc.html">document.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/element_rdoc.html">element.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/node_rdoc.html">node.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/rdoc/parent_rdoc.html">parent.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/child_toc_rdoc.html">child_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/document_toc_rdoc.html">document_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/element_toc_rdoc.html">element_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/master_toc_rdoc.html">master_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/node_toc_rdoc.html">node_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_bundle/gems/rexml-3_2_5/doc/rexml/tasks/tocs/parent_toc_rdoc.html">parent_toc.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./COPYING_ja.html">COPYING.ja</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT.html">README.EXT</a></li>
+        
+          
+          <li class="file"><a href="./README_EXT_ja.html">README.EXT.ja</a></li>
+        
+          
+          <li class="file"><a href="./aclocal_m4.html">aclocal.m4</a></li>
+        
+          
+          <li class="file"><a href="./autogen_sh.html">autogen.sh</a></li>
+        
+          
+          <li class="file"><a href="./configure_ac.html">configure.ac</a></li>
+        
+          
+          <li class="file"><a href="./doc/bsearch_rdoc.html">bsearch.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/bug_triaging_rdoc.html">bug_triaging.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/case_mapping_rdoc.html">case_mapping.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/contributing_rdoc.html">contributing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/arguments/io_rdoc.html">io.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/col_sep_rdoc.html">col_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/quote_char_rdoc.html">quote_char.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/common/row_sep_rdoc.html">row_sep.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/force_quotes_rdoc.html">force_quotes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/quote_empty_rdoc.html">quote_empty.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_converters_rdoc.html">write_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_empty_value_rdoc.html">write_empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_headers_rdoc.html">write_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/generating/write_nil_value_rdoc.html">write_nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/converters_rdoc.html">converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/empty_value_rdoc.html">empty_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/field_size_limit_rdoc.html">field_size_limit.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/header_converters_rdoc.html">header_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/headers_rdoc.html">headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/liberal_parsing_rdoc.html">liberal_parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/nil_value_rdoc.html">nil_value.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/return_headers_rdoc.html">return_headers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_blanks_rdoc.html">skip_blanks.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/skip_lines_rdoc.html">skip_lines.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/strip_rdoc.html">strip.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/options/parsing/unconverted_fields_rdoc.html">unconverted_fields.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/filtering_rdoc.html">filtering.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/generating_rdoc.html">generating.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/parsing_rdoc.html">parsing.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/csv/recipes/recipes_rdoc.html">recipes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dig_methods_rdoc.html">dig_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/documentation_guide_rdoc.html">documentation_guide.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/extension_rdoc.html">extension.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/globals_rdoc.html">globals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/implicit_conversion_rdoc.html">implicit_conversion.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/keywords_rdoc.html">keywords.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/marshal_rdoc.html">marshal.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/argument_converters_rdoc.html">argument_converters.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/creates_option_rdoc.html">creates_option.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/option_params_rdoc.html">option_params.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/optparse/tutorial_rdoc.html">tutorial.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/regexp_rdoc.html">regexp.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/security_rdoc.html">security.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/signals_rdoc.html">signals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax_rdoc.html">syntax.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/comments_rdoc.html">comments.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/pattern_matching_rdoc.html">pattern_matching.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/in_rdoc.html">in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/mon-min_rdoc.html">mon-min.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/msec_rdoc.html">msec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/nsec_rdoc.html">nsec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_rdoc.html">sec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/sec_i_rdoc.html">sec_i.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/usec_rdoc.html">usec.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/year_rdoc.html">year.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./doc/time/zone_and_in_rdoc.html">zone_and_in.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./lex_c_blt.html">lex.c.blt</a></li>
+        
+          
+          <li class="file"><a href="./node_name_inc.html">node_name.inc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          
+          <li class="file"><a href="./sample/drb/README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="./ARGF.html">ARGF</a></li>
+        
+          
+          
+          <li><a href="./ArgumentError.html">ArgumentError</a></li>
+        
+          
+          
+          <li><a href="./Array.html">Array</a></li>
+        
+          
+          
+          <li><a href="./BasicObject.html">BasicObject</a></li>
+        
+          
+          
+          <li><a href="./Binding.html">Binding</a></li>
+        
+          
+          
+          <li><a href="./Class.html">Class</a></li>
+        
+          
+          
+          <li><a href="./ClosedQueueError.html">ClosedQueueError</a></li>
+        
+          
+          
+          <li><a href="./Comparable.html">Comparable</a></li>
+        
+          
+          
+          <li><a href="./Complex.html">Complex</a></li>
+        
+          
+          
+          <li><a href="./Continuation.html">Continuation</a></li>
+        
+          
+          
+          <li><a href="./Dir.html">Dir</a></li>
+        
+          
+          
+          <li><a href="./ENV.html">ENV</a></li>
+        
+          
+          
+          <li><a href="./EOFError.html">EOFError</a></li>
+        
+          
+          
+          <li><a href="./Encoding.html">Encoding</a></li>
+        
+          
+          
+          <li><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/Converter.html">Encoding::Converter</a></li>
+        
+          
+          
+          <li><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
+        
+          
+          
+          <li><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
+        
+          
+          
+          <li><a href="./EncodingError.html">EncodingError</a></li>
+        
+          
+          
+          <li><a href="./Enumerable.html">Enumerable</a></li>
+        
+          
+          
+          <li><a href="./Enumerator.html">Enumerator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/ArithmeticSequence.html">Enumerator::ArithmeticSequence</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Chain.html">Enumerator::Chain</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Generator.html">Enumerator::Generator</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Lazy.html">Enumerator::Lazy</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Producer.html">Enumerator::Producer</a></li>
+        
+          
+          
+          <li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+        
+          
+          
+          <li><a href="./Errno.html">Errno</a></li>
+        
+          
+          
+          <li><a href="./Exception.html">Exception</a></li>
+        
+          
+          
+          <li><a href="./FalseClass.html">FalseClass</a></li>
+        
+          
+          
+          <li><a href="./Fiber.html">Fiber</a></li>
+        
+          
+          
+          <li><a href="./Fiber/SchedulerInterface.html">Fiber::SchedulerInterface</a></li>
+        
+          
+          
+          <li><a href="./FiberError.html">FiberError</a></li>
+        
+          
+          
+          <li><a href="./File.html">File</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/File/Constants.html">File::File::Constants</a></li>
+        
+          
+          
+          <li><a href="./File/Stat.html">File::Stat</a></li>
+        
+          
+          
+          <li><a href="./FileTest.html">FileTest</a></li>
+        
+          
+          
+          <li><a href="./Float.html">Float</a></li>
+        
+          
+          
+          <li><a href="./FloatDomainError.html">FloatDomainError</a></li>
+        
+          
+          
+          <li><a href="./FrozenError.html">FrozenError</a></li>
+        
+          
+          
+          <li><a href="./GC.html">GC</a></li>
+        
+          
+          
+          <li><a href="./GC/Profiler.html">GC::Profiler</a></li>
+        
+          
+          
+          <li><a href="./Hash.html">Hash</a></li>
+        
+          
+          
+          <li><a href="./IO.html">IO</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer.html">IO::Buffer</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AccessError.html">IO::Buffer::AccessError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/AllocationError.html">IO::Buffer::AllocationError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/InvalidatedError.html">IO::Buffer::InvalidatedError</a></li>
+        
+          
+          
+          <li><a href="./IO/Buffer/LockedError.html">IO::Buffer::LockedError</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitReadable.html">IO::WaitReadable</a></li>
+        
+          
+          
+          <li><a href="./IO/WaitWritable.html">IO::WaitWritable</a></li>
+        
+          
+          
+          <li><a href="./IOError.html">IOError</a></li>
+        
+          
+          
+          <li><a href="./IndexError.html">IndexError</a></li>
+        
+          
+          
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          
+          
+          <li><a href="./Interrupt.html">Interrupt</a></li>
+        
+          
+          
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="./KeyError.html">KeyError</a></li>
+        
+          
+          
+          <li><a href="./LoadError.html">LoadError</a></li>
+        
+          
+          
+          <li><a href="./LocalJumpError.html">LocalJumpError</a></li>
+        
+          
+          
+          <li><a href="./Marshal.html">Marshal</a></li>
+        
+          
+          
+          <li><a href="./MatchData.html">MatchData</a></li>
+        
+          
+          
+          <li><a href="./Math.html">Math</a></li>
+        
+          
+          
+          <li><a href="./Math/DomainError.html">Math::DomainError</a></li>
+        
+          
+          
+          <li><a href="./Method.html">Method</a></li>
+        
+          
+          
+          <li><a href="./Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="./NameError.html">NameError</a></li>
+        
+          
+          
+          <li><a href="./NilClass.html">NilClass</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternError.html">NoMatchingPatternError</a></li>
+        
+          
+          
+          <li><a href="./NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></li>
+        
+          
+          
+          <li><a href="./NoMemoryError.html">NoMemoryError</a></li>
+        
+          
+          
+          <li><a href="./NoMethodError.html">NoMethodError</a></li>
+        
+          
+          
+          <li><a href="./NotImplementedError.html">NotImplementedError</a></li>
+        
+          
+          
+          <li><a href="./Numeric.html">Numeric</a></li>
+        
+          
+          
+          <li><a href="./Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+        
+          
+          
+          <li><a href="./ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
+        
+          
+          
+          <li><a href="./Pool.html">Pool</a></li>
+        
+          
+          
+          <li><a href="./Proc.html">Proc</a></li>
+        
+          
+          
+          <li><a href="./Process.html">Process</a></li>
+        
+          
+          
+          <li><a href="./Process/GID.html">Process::GID</a></li>
+        
+          
+          
+          <li><a href="./Process/Status.html">Process::Status</a></li>
+        
+          
+          
+          <li><a href="./Process/Sys.html">Process::Sys</a></li>
+        
+          
+          
+          <li><a href="./Process/UID.html">Process::UID</a></li>
+        
+          
+          
+          <li><a href="./Ractor.html">Ractor</a></li>
+        
+          
+          
+          <li><a href="./Ractor/ClosedError.html">Ractor::ClosedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/Error.html">Ractor::Error</a></li>
+        
+          
+          
+          <li><a href="./Ractor/IsolationError.html">Ractor::IsolationError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedError.html">Ractor::MovedError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/MovedObject.html">Ractor::MovedObject</a></li>
+        
+          
+          
+          <li><a href="./Ractor/RemoteError.html">Ractor::RemoteError</a></li>
+        
+          
+          
+          <li><a href="./Ractor/UnsafeError.html">Ractor::UnsafeError</a></li>
+        
+          
+          
+          <li><a href="./Random.html">Random</a></li>
+        
+          
+          
+          <li><a href="./Random/Formatter.html">Random::Formatter</a></li>
+        
+          
+          
+          <li><a href="./Range.html">Range</a></li>
+        
+          
+          
+          <li><a href="./RangeError.html">RangeError</a></li>
+        
+          
+          
+          <li><a href="./Rational.html">Rational</a></li>
+        
+          
+          
+          <li><a href="./Refinement.html">Refinement</a></li>
+        
+          
+          
+          <li><a href="./Regexp.html">Regexp</a></li>
+        
+          
+          
+          <li><a href="./RegexpError.html">RegexpError</a></li>
+        
+          
+          
+          <li><a href="./Ripper.html">Ripper</a></li>
+        
+          
+          
+          <li><a href="./RubyVM.html">RubyVM</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree.html">RubyVM::AbstractSyntaxTree</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/AbstractSyntaxTree/Node.html">RubyVM::AbstractSyntaxTree::Node</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/MJIT.html">RubyVM::MJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT.html">RubyVM::YJIT</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Block.html">RubyVM::YJIT::Block</a></li>
+        
+          
+          
+          <li><a href="./RubyVM/YJIT/Disasm.html">RubyVM::YJIT::Disasm</a></li>
+        
+          
+          
+          <li><a href="./RuntimeError.html">RuntimeError</a></li>
+        
+          
+          
+          <li><a href="./ScriptError.html">ScriptError</a></li>
+        
+          
+          
+          <li><a href="./SecurityError.html">SecurityError</a></li>
+        
+          
+          
+          <li><a href="./Signal.html">Signal</a></li>
+        
+          
+          
+          <li><a href="./SignalException.html">SignalException</a></li>
+        
+          
+          
+          <li><a href="./StandardError.html">StandardError</a></li>
+        
+          
+          
+          <li><a href="./StopIteration.html">StopIteration</a></li>
+        
+          
+          
+          <li><a href="./String.html">String</a></li>
+        
+          
+          
+          <li><a href="./Struct.html">Struct</a></li>
+        
+          
+          
+          <li><a href="./Symbol.html">Symbol</a></li>
+        
+          
+          
+          <li><a href="./SyntaxError.html">SyntaxError</a></li>
+        
+          
+          
+          <li><a href="./SystemCallError.html">SystemCallError</a></li>
+        
+          
+          
+          <li><a href="./SystemExit.html">SystemExit</a></li>
+        
+          
+          
+          <li><a href="./SystemStackError.html">SystemStackError</a></li>
+        
+          
+          
+          <li><a href="./Thread.html">Thread</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace.html">Thread::Backtrace</a></li>
+        
+          
+          
+          <li><a href="./Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
+        
+          
+          
+          <li><a href="./Thread/ConditionVariable.html">Thread::ConditionVariable</a></li>
+        
+          
+          
+          <li><a href="./Thread/Mutex.html">Thread::Mutex</a></li>
+        
+          
+          
+          <li><a href="./Thread/Queue.html">Thread::Queue</a></li>
+        
+          
+          
+          <li><a href="./Thread/SizedQueue.html">Thread::SizedQueue</a></li>
+        
+          
+          
+          <li><a href="./ThreadError.html">ThreadError</a></li>
+        
+          
+          
+          <li><a href="./ThreadGroup.html">ThreadGroup</a></li>
+        
+          
+          
+          <li><a href="./Time.html">Time</a></li>
+        
+          
+          
+          <li><a href="./TracePoint.html">TracePoint</a></li>
+        
+          
+          
+          <li><a href="./TrueClass.html">TrueClass</a></li>
+        
+          
+          
+          <li><a href="./TypeError.html">TypeError</a></li>
+        
+          
+          
+          <li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+        
+          
+          
+          <li><a href="./UncaughtThrowError.html">UncaughtThrowError</a></li>
+        
+          
+          
+          <li><a href="./UnicodeNormalize.html">UnicodeNormalize</a></li>
+        
+          
+          
+          <li><a href="./Warning.html">Warning</a></li>
+        
+          
+          
+          <li><a href="./ZeroDivisionError.html">ZeroDivisionError</a></li>
+        
+          
+          
+          <li><a href="./fatal.html">fatal</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="class">Fiber</h1>
+
+    <div id="description" class="description">
+      
+<p>Fibers are primitives for implementing light weight cooperative concurrency in Ruby. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM.</p>
+
+<p>As opposed to other stackless light weight concurrency models, each fiber comes with a stack.  This enables the fiber to be paused from deeply nested function calls within the fiber block.  See the ruby(1) manpage to configure the size of the fiber stack(s).</p>
+
+<p>When a fiber is created it will not run automatically. Rather it must be explicitly asked to run using the <a href="Fiber.html#method-i-resume"><code>Fiber#resume</code></a> method. The code running inside the fiber can give up control by calling <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a> in which case it yields control back to caller (the caller of the <a href="Fiber.html#method-i-resume"><code>Fiber#resume</code></a>).</p>
+
+<p>Upon yielding or termination the <a href="Fiber.html"><code>Fiber</code></a> returns the value of the last executed expression</p>
+
+<p>For instance:</p>
+
+<pre class="ruby"><span class="ruby-identifier">fiber</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-value">1</span>
+  <span class="ruby-value">2</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span>
+</pre>
+
+<p><em>produces</em></p>
+
+<pre>1
+2
+FiberError: dead fiber called</pre>
+
+<p>The <a href="Fiber.html#method-i-resume"><code>Fiber#resume</code></a> method accepts an arbitrary number of parameters, if it is the first call to <a href="Fiber.html#method-i-resume"><code>resume</code></a> then they will be passed as block arguments. Otherwise they will be the return value of the call to <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a></p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">fiber</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">first</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">second</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-identifier">first</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span> <span class="ruby-value">10</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span> <span class="ruby-value">1_000_000</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">fiber</span>.<span class="ruby-identifier">resume</span> <span class="ruby-string">&quot;The fiber will be dead before I can cause trouble&quot;</span>
+</pre>
+
+<p><em>produces</em></p>
+
+<pre>12
+1000000
+FiberError: dead fiber called</pre>
+
+<h2 id="class-Fiber-label-Non-blocking+Fibers">Non-blocking Fibers<span><a href="#class-Fiber-label-Non-blocking+Fibers">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>The concept of <em>non-blocking fiber</em> was introduced in Ruby 3.0. A non-blocking fiber, when reaching a operation that would normally block the fiber (like <code>sleep</code>, or wait for another process or I/O) will yield control to other fibers and allow the <em>scheduler</em> to handle blocking and waking up (resuming) this fiber when it can proceed.</p>
+
+<p>For a <a href="Fiber.html"><code>Fiber</code></a> to behave as non-blocking, it need to be created in <a href="Fiber.html#method-c-new"><code>Fiber.new</code></a> with <code>blocking: false</code> (which is the default), and <a href="Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> should be set with <a href="Fiber.html#method-c-set_scheduler"><code>Fiber.set_scheduler</code></a>. If <a href="Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> is not set in the current thread, blocking and non-blocking fibers&#39; behavior is identical.</p>
+
+<p>Ruby doesn&#39;t provide a scheduler class: it is expected to be implemented by the user and correspond to <a href="Fiber/SchedulerInterface.html"><code>Fiber::SchedulerInterface</code></a>.</p>
+
+<p>There is also <a href="Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a> method, which is expected to immediately perform the given block in a non-blocking manner. Its actual implementation is up to the scheduler.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="blocking-3F-method" class="method-detail ">
+          <a name="method-c-blocking-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">blocking? &rarr; false or 1</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>false</code> if the current fiber is non-blocking. <a href="Fiber.html"><code>Fiber</code></a> is non-blocking if it was created via passing <code>blocking: false</code> to <a href="Fiber.html#method-c-new"><code>Fiber.new</code></a>, or via <a href="Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a>.</p>
+
+<p>If the current <a href="Fiber.html"><code>Fiber</code></a> is blocking, the method returns 1. Future developments may allow for situations where larger integers could be returned.</p>
+
+<p>Note that, even if the method returns <code>false</code>, <a href="Fiber.html"><code>Fiber</code></a> behaves differently only if <a href="Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> is set in the current thread.</p>
+
+<p>See the “Non-blocking fibers” section in class docs for details.</p>
+            
+
+            
+            <div class="method-source-code" id="blocking-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_s_blocking_p(VALUE klass)
+{
+    rb_thread_t *thread = GET_THREAD();
+    unsigned blocking = thread-&gt;blocking;
+
+    if (blocking == 0)
+        return Qfalse;
+
+    return INT2NUM(blocking);
+}
+            </pre> 
+            </div><!-- blocking-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blocking-3F-method -->
+      
+        <div id="current-method" class="method-detail ">
+          <a name="method-c-current"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">current &rarr; fiber</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the current fiber. If you are not running in the context of a fiber this method will return the root fiber.</p>
+            
+
+            
+            <div class="method-source-code" id="current-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_s_current(VALUE klass)
+{
+    return rb_fiber_current();
+}
+            </pre> 
+            </div><!-- current-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- current-method -->
+      
+        <div id="current_scheduler-method" class="method-detail ">
+          <a name="method-c-current_scheduler"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">current_scheduler &rarr; obj or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the <a href="Fiber.html"><code>Fiber</code></a> scheduler, that was last set for the current thread with <a href="Fiber.html#method-c-set_scheduler"><code>Fiber.set_scheduler</code></a> if and only if the current fiber is non-blocking.</p>
+            
+
+            
+            <div class="method-source-code" id="current_scheduler-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_current_scheduler(VALUE klass)
+{
+    return rb_fiber_scheduler_current();
+}
+            </pre> 
+            </div><!-- current_scheduler-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- current_scheduler-method -->
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(blocking: false) { |*args| ... } &rarr; fiber</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Creates new <a href="Fiber.html"><code>Fiber</code></a>. Initially, the fiber is not running and can be resumed with <a href="Fiber.html#method-i-resume"><code>resume</code></a>. Arguments to the first <a href="Fiber.html#method-i-resume"><code>resume</code></a> call will be passed to the block:</p>
+
+<pre class="ruby"><span class="ruby-identifier">f</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">initial</span><span class="ruby-operator">|</span>
+   <span class="ruby-identifier">current</span> = <span class="ruby-identifier">initial</span>
+   <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;current: #{current.inspect}&quot;</span>
+     <span class="ruby-identifier">current</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>(<span class="ruby-value">100</span>)     <span class="ruby-comment"># prints: current: 100</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>) <span class="ruby-comment"># prints: current: [1, 2, 3]</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>          <span class="ruby-comment"># prints: current: nil</span>
+<span class="ruby-comment"># ... and so on ...</span>
+</pre>
+
+<p>If <code>blocking: false</code> is passed to <code>Fiber.new</code>, <em>and</em> current thread has a <a href="Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> defined, the <a href="Fiber.html"><code>Fiber</code></a> becomes non-blocking (see “Non-blocking Fibers” section in class docs).</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_initialize(int argc, VALUE* argv, VALUE self)
+{
+    return rb_fiber_initialize_kw(argc, argv, self, rb_keyword_given_p());
+}
+            </pre> 
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+      
+        <div id="schedule-method" class="method-detail ">
+          <a name="method-c-schedule"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">schedule { |*args| ... } &rarr; fiber</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>The method is <em>expected</em> to immediately run the provided block of code in a separate non-blocking fiber.</p>
+
+<pre class="ruby"><span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Go to sleep!&quot;</span>
+
+<span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">set_scheduler</span>(<span class="ruby-constant">MyScheduler</span>.<span class="ruby-identifier">new</span>)
+
+<span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">schedule</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Going to sleep&quot;</span>
+  <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;I slept well&quot;</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Wakey-wakey, sleepyhead&quot;</span>
+</pre>
+
+<p>Assuming MyScheduler is properly implemented, this program will produce:</p>
+
+<pre>Go to sleep!
+Going to sleep
+Wakey-wakey, sleepyhead
+...1 sec pause here...
+I slept well</pre>
+
+<p>…e.g. on the first blocking operation inside the <a href="Fiber.html"><code>Fiber</code></a> (<code>sleep(1)</code>), the control is yielded to the outside code (main fiber), and <em>at the end of that execution</em>, the scheduler takes care of properly resuming all the blocked fibers.</p>
+
+<p>Note that the behavior described above is how the method is <em>expected</em> to behave, actual behavior is up to the current scheduler&#39;s implementation of <a href="Fiber/SchedulerInterface.html#method-i-fiber"><code>Fiber::SchedulerInterface#fiber</code></a> method. Ruby doesn&#39;t enforce this method to behave in any particular way.</p>
+
+<p>If the scheduler is not set, the method raises <code>RuntimeError (No scheduler is available!)</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="schedule-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_s_schedule(int argc, VALUE *argv, VALUE obj)
+{
+    return rb_fiber_s_schedule_kw(argc, argv, rb_keyword_given_p());
+}
+            </pre> 
+            </div><!-- schedule-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- schedule-method -->
+      
+        <div id="scheduler-method" class="method-detail ">
+          <a name="method-c-scheduler"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">scheduler &rarr; obj or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <pre>Returns the Fiber scheduler, that was last set for the current thread with Fiber.set_scheduler.
+Returns +nil+ if no scheduler is set (which is the default), and non-blocking fibers&#39;</pre>
+
+<p>#  behavior is the same as blocking.</p>
+
+<pre>(see &quot;Non-blocking fibers&quot; section in class docs for details about the scheduler concept).</pre>
+            
+
+            
+            <div class="method-source-code" id="scheduler-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_s_scheduler(VALUE klass)
+{
+    return rb_fiber_scheduler_get();
+}
+            </pre> 
+            </div><!-- scheduler-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scheduler-method -->
+      
+        <div id="set_scheduler-method" class="method-detail ">
+          <a name="method-c-set_scheduler"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">set_scheduler(scheduler) &rarr; scheduler</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Sets the <a href="Fiber.html"><code>Fiber</code></a> scheduler for the current thread. If the scheduler is set, non-blocking fibers (created by <a href="Fiber.html#method-c-new"><code>Fiber.new</code></a> with <code>blocking: false</code>, or by <a href="Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a>) call that scheduler&#39;s hook methods on potentially blocking operations, and the current thread will call scheduler&#39;s <code>close</code> method on finalization (allowing the scheduler to properly manage all non-finished fibers).</p>
+
+<p><code>scheduler</code> can be an object of any class corresponding to <a href="Fiber/SchedulerInterface.html"><code>Fiber::SchedulerInterface</code></a>. Its implementation is up to the user.</p>
+
+<p>See also the “Non-blocking fibers” section in class docs.</p>
+            
+
+            
+            <div class="method-source-code" id="set_scheduler-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_set_scheduler(VALUE klass, VALUE scheduler)
+{
+    return rb_fiber_scheduler_set(scheduler);
+}
+            </pre> 
+            </div><!-- set_scheduler-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_scheduler-method -->
+      
+        <div id="yield-method" class="method-detail ">
+          <a name="method-c-yield"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">yield(args, ...) &rarr; obj</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Yields control back to the context that resumed the fiber, passing along any arguments that were passed to it. The fiber will resume processing at this point when <a href="Fiber.html#method-i-resume"><code>resume</code></a> is called next. Any arguments passed to the next <a href="Fiber.html#method-i-resume"><code>resume</code></a> will be the value that this <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a> expression evaluates to.</p>
+            
+
+            
+            <div class="method-source-code" id="yield-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_s_yield(int argc, VALUE *argv, VALUE klass)
+{
+    return rb_fiber_yield_kw(argc, argv, rb_keyword_given_p());
+}
+            </pre> 
+            </div><!-- yield-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- yield-method -->
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="alive-3F-method" class="method-detail ">
+          <a name="method-i-alive-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">alive? &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns true if the fiber can still be resumed (or transferred to). After finishing execution of the fiber block this method will always return <code>false</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="alive-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_fiber_alive_p(VALUE fiber_value)
+{
+    return FIBER_TERMINATED_P(fiber_ptr(fiber_value)) ? Qfalse : Qtrue;
+}
+            </pre> 
+            </div><!-- alive-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alive-3F-method -->
+      
+        <div id="backtrace-method" class="method-detail ">
+          <a name="method-i-backtrace"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace(start) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace(start, count) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace(start..end) &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns the current execution stack of the fiber. <code>start</code>, <code>count</code> and <code>end</code> allow to select only parts of the backtrace.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">level3</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">level2</span>
+  <span class="ruby-identifier">level3</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">level1</span>
+  <span class="ruby-identifier">level2</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">f</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> { <span class="ruby-identifier">level1</span> }
+
+<span class="ruby-comment"># It is empty before the fiber started</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>
+<span class="ruby-comment">#=&gt; []</span>
+
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>
+
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>
+<span class="ruby-comment">#=&gt; [&quot;test.rb:2:in `yield&#39;&quot;, &quot;test.rb:2:in `level3&#39;&quot;, &quot;test.rb:6:in `level2&#39;&quot;, &quot;test.rb:10:in `level1&#39;&quot;, &quot;test.rb:13:in `block in &lt;main&gt;&#39;&quot;]</span>
+<span class="ruby-identifier">p</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>(<span class="ruby-value">1</span>) <span class="ruby-comment"># start from the item 1</span>
+<span class="ruby-comment">#=&gt; [&quot;test.rb:2:in `level3&#39;&quot;, &quot;test.rb:6:in `level2&#39;&quot;, &quot;test.rb:10:in `level1&#39;&quot;, &quot;test.rb:13:in `block in &lt;main&gt;&#39;&quot;]</span>
+<span class="ruby-identifier">p</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>(<span class="ruby-value">2</span>, <span class="ruby-value">2</span>) <span class="ruby-comment"># start from item 2, take 2</span>
+<span class="ruby-comment">#=&gt; [&quot;test.rb:6:in `level2&#39;&quot;, &quot;test.rb:10:in `level1&#39;&quot;]</span>
+<span class="ruby-identifier">p</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>) <span class="ruby-comment"># take items from 1 to 3</span>
+<span class="ruby-comment">#=&gt; [&quot;test.rb:2:in `level3&#39;&quot;, &quot;test.rb:6:in `level2&#39;&quot;, &quot;test.rb:10:in `level1&#39;&quot;]</span>
+
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>
+
+<span class="ruby-comment"># It is nil after the fiber is finished</span>
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace</span>
+<span class="ruby-comment">#=&gt; nil</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="backtrace-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_backtrace(int argc, VALUE *argv, VALUE fiber)
+{
+    return rb_vm_backtrace(argc, argv, &amp;fiber_ptr(fiber)-&gt;cont.saved_ec);
+}
+            </pre> 
+            </div><!-- backtrace-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- backtrace-method -->
+      
+        <div id="backtrace_locations-method" class="method-detail ">
+          <a name="method-i-backtrace_locations"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace_locations &rarr; array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace_locations(start) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace_locations(start, count) &rarr; array</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">backtrace_locations(start..end) &rarr; array</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Like <a href="Fiber.html#method-i-backtrace"><code>backtrace</code></a>, but returns each line of the execution stack as a <a href="Thread/Backtrace/Location.html"><code>Thread::Backtrace::Location</code></a>. Accepts the same arguments as <a href="Fiber.html#method-i-backtrace"><code>backtrace</code></a>.</p>
+
+<pre class="ruby"><span class="ruby-identifier">f</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> { <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> }
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">resume</span>
+<span class="ruby-identifier">loc</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">backtrace_locations</span>.<span class="ruby-identifier">first</span>
+<span class="ruby-identifier">loc</span>.<span class="ruby-identifier">label</span>  <span class="ruby-comment">#=&gt; &quot;yield&quot;</span>
+<span class="ruby-identifier">loc</span>.<span class="ruby-identifier">path</span>   <span class="ruby-comment">#=&gt; &quot;test.rb&quot;</span>
+<span class="ruby-identifier">loc</span>.<span class="ruby-identifier">lineno</span> <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+            
+
+            
+            <div class="method-source-code" id="backtrace_locations-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_backtrace_locations(int argc, VALUE *argv, VALUE fiber)
+{
+    return rb_vm_backtrace_locations(argc, argv, &amp;fiber_ptr(fiber)-&gt;cont.saved_ec);
+}
+            </pre> 
+            </div><!-- backtrace_locations-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- backtrace_locations-method -->
+      
+        <div id="blocking-3F-method" class="method-detail ">
+          <a name="method-i-blocking-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">blocking? &rarr; true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Returns <code>true</code> if <code>fiber</code> is blocking and <code>false</code> otherwise. <a href="Fiber.html"><code>Fiber</code></a> is non-blocking if it was created via passing <code>blocking: false</code> to <a href="Fiber.html#method-c-new"><code>Fiber.new</code></a>, or via <a href="Fiber.html#method-c-schedule"><code>Fiber.schedule</code></a>.</p>
+
+<p>Note that, even if the method returns <code>false</code>, the fiber behaves differently only if <a href="Fiber.html#method-c-scheduler"><code>Fiber.scheduler</code></a> is set in the current thread.</p>
+
+<p>See the “Non-blocking fibers” section in class docs for details.</p>
+            
+
+            
+            <div class="method-source-code" id="blocking-3F-source">
+              <pre> <!-- method.markup_code 290 -->
+               VALUE
+rb_fiber_blocking_p(VALUE fiber)
+{
+    return RBOOL(fiber_ptr(fiber)-&gt;blocking != 0);
+}
+            </pre> 
+            </div><!-- blocking-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blocking-3F-method -->
+      
+        <div id="inspect-method" class="method-detail method-alias">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Fiber.html#method-i-to_s">to_s</a>
+          </div>
+          
+        </div><!-- inspect-method -->
+      
+        <div id="raise-method" class="method-detail ">
+          <a name="method-i-raise"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">raise                                 &rarr; obj</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">raise(string)                         &rarr; obj</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">raise(exception [, string [, array]]) &rarr; obj</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Raises an exception in the fiber at the point at which the last <code>Fiber.yield</code> was called. If the fiber has not been started or has already run to completion, raises <code>FiberError</code>. If the fiber is yielding, it is resumed. If it is transferring, it is transferred into. But if it is resuming, raises <code>FiberError</code>.</p>
+
+<p>With no arguments, raises a <code>RuntimeError</code>. With a single <code>String</code> argument, raises a <code>RuntimeError</code> with the string as a message.  Otherwise, the first parameter should be the name of an <code>Exception</code> class (or an object that returns an <code>Exception</code> object when sent an <code>exception</code> message). The optional second parameter sets the message associated with the exception, and the third parameter is an array of callback information. Exceptions are caught by the <code>rescue</code> clause of <code>begin...end</code> blocks.</p>
+            
+
+            
+            <div class="method-source-code" id="raise-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_m_raise(int argc, VALUE *argv, VALUE self)
+{
+    return rb_fiber_raise(self, argc, argv);
+}
+            </pre> 
+            </div><!-- raise-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- raise-method -->
+      
+        <div id="resume-method" class="method-detail ">
+          <a name="method-i-resume"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">resume(args, ...) &rarr; obj</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Resumes the fiber from the point at which the last <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a> was called, or starts running it if it is the first call to <a href="Fiber.html#method-i-resume"><code>resume</code></a>. Arguments passed to resume will be the value of the <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a> expression or will be passed as block parameters to the fiber&#39;s block if this is the first <a href="Fiber.html#method-i-resume"><code>resume</code></a>.</p>
+
+<p>Alternatively, when resume is called it evaluates to the arguments passed to the next <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a> statement inside the fiber&#39;s block or to the block value if it runs to completion without any <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a></p>
+            
+
+            
+            <div class="method-source-code" id="resume-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_m_resume(int argc, VALUE *argv, VALUE fiber)
+{
+    return rb_fiber_resume_kw(fiber, argc, argv, rb_keyword_given_p());
+}
+            </pre> 
+            </div><!-- resume-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resume-method -->
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+fiber_to_s(VALUE fiber_value)
+{
+    const rb_fiber_t *fiber = fiber_ptr(fiber_value);
+    const rb_proc_t *proc;
+    char status_info[0x20];
+
+    if (fiber-&gt;resuming_fiber) {
+        snprintf(status_info, 0x20, &quot; (%s by resuming)&quot;, fiber_status_name(fiber-&gt;status));
+    }
+    else {
+        snprintf(status_info, 0x20, &quot; (%s)&quot;, fiber_status_name(fiber-&gt;status));
+    }
+
+    if (!rb_obj_is_proc(fiber-&gt;first_proc)) {
+        VALUE str = rb_any_to_s(fiber_value);
+        strlcat(status_info, &quot;&gt;&quot;, sizeof(status_info));
+        rb_str_set_len(str, RSTRING_LEN(str)-1);
+        rb_str_cat_cstr(str, status_info);
+        return str;
+    }
+    GetProcPtr(fiber-&gt;first_proc, proc);
+    return rb_block_to_s(fiber_value, &amp;proc-&gt;block, status_info);
+}
+            </pre> 
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Fiber.html#method-i-inspect">inspect</a>
+          </div>
+          
+
+          
+        </div><!-- to_s-method -->
+      
+        <div id="transfer-method" class="method-detail ">
+          <a name="method-i-transfer"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">transfer(args, ...) &rarr; obj</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+          <div>
+  
+            
+            <p>Transfer control to another fiber, resuming it from where it last stopped or starting it if it was not resumed before. The calling fiber will be suspended much like in a call to <a href="Fiber.html#method-c-yield"><code>Fiber.yield</code></a>.</p>
+
+<p>The fiber which receives the transfer call treats it much like a resume call. Arguments passed to transfer are treated like those passed to resume.</p>
+
+<p>The two style of control passing to and from fiber (one is <a href="Fiber.html#method-i-resume"><code>resume</code></a> and <a href="Fiber.html#method-c-yield"><code>Fiber::yield</code></a>, another is <a href="Fiber.html#method-i-transfer"><code>transfer</code></a> to and from fiber) can&#39;t be freely mixed.</p>
+<ul><li>
+<p>If the Fiber&#39;s lifecycle had started with transfer, it will never be able to yield or be resumed control passing, only finish or transfer back. (It still can resume other fibers that are allowed to be resumed.)</p>
+</li><li>
+<p>If the Fiber&#39;s lifecycle had started with resume, it can yield or transfer to another <a href="Fiber.html"><code>Fiber</code></a>, but can receive control back only the way compatible with the way it was given away: if it had transferred, it only can be transferred back, and if it had yielded, it only can be resumed back. After that, it again can transfer or yield.</p>
+</li></ul>
+
+<p>If those rules are broken <a href="FiberError.html"><code>FiberError</code></a> is raised.</p>
+
+<p>For an individual <a href="Fiber.html"><code>Fiber</code></a> design, yield/resume is easier to use (the <a href="Fiber.html"><code>Fiber</code></a> just gives away control, it doesn&#39;t need to think about who the control is given to), while transfer is more flexible for complex cases, allowing to build arbitrary graphs of Fibers dependent on each other.</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">manager</span> = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># For local var to be visible inside worker block</span>
+
+<span class="ruby-comment"># This fiber would be started with transfer</span>
+<span class="ruby-comment"># It can&#39;t yield, and can&#39;t be resumed</span>
+<span class="ruby-identifier">worker</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">work</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Worker: starts&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Worker: Performed #{work.inspect}, transferring back&quot;</span>
+  <span class="ruby-comment"># Fiber.yield     # this would raise FiberError: attempt to yield on a not resumed fiber</span>
+  <span class="ruby-comment"># manager.resume  # this would raise FiberError: attempt to resume a resumed fiber (double resume)</span>
+  <span class="ruby-identifier">manager</span>.<span class="ruby-identifier">transfer</span>(<span class="ruby-identifier">work</span>.<span class="ruby-identifier">capitalize</span>)
+}
+
+<span class="ruby-comment"># This fiber would be started with resume</span>
+<span class="ruby-comment"># It can yield or transfer, and can be transferred</span>
+<span class="ruby-comment"># back or resumed</span>
+<span class="ruby-identifier">manager</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> {
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Manager: starts&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Manager: transferring &#39;something&#39; to worker&quot;</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">worker</span>.<span class="ruby-identifier">transfer</span>(<span class="ruby-string">&#39;something&#39;</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Manager: worker returned #{result.inspect}&quot;</span>
+  <span class="ruby-comment"># worker.resume    # this would raise FiberError: attempt to resume a transferring fiber</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span>        <span class="ruby-comment"># this is OK, the fiber transferred from and to, now it can yield</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Manager: finished&quot;</span>
+}
+
+<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Starting the manager&quot;</span>
+<span class="ruby-identifier">manager</span>.<span class="ruby-identifier">resume</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Resuming the manager&quot;</span>
+<span class="ruby-comment"># manager.transfer  # this would raise FiberError: attempt to transfer to a yielding fiber</span>
+<span class="ruby-identifier">manager</span>.<span class="ruby-identifier">resume</span>
+</pre>
+
+<p><em>produces</em></p>
+
+<pre>Starting the manager
+Manager: starts
+Manager: transferring &#39;something&#39; to worker
+Worker: starts
+Worker: Performed &quot;something&quot;, transferring back
+Manager: worker returned &quot;Something&quot;
+Resuming the manager
+Manager: finished</pre>
+            
+
+            
+            <div class="method-source-code" id="transfer-source">
+              <pre> <!-- method.markup_code 290 -->
+               static VALUE
+rb_fiber_m_transfer(int argc, VALUE *argv, VALUE self)
+{
+    return rb_fiber_transfer_kw(self, argc, argv, rb_keyword_given_p());
+}
+            </pre> 
+            </div><!-- transfer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- transfer-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_Fiber_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Fiber_versioned").load("/associated/3.1.2/Fiber.ihtml");</script> <div id='tx_Fiber' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Fiber").load("/associated/Fiber.ihtml");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 3.1.2</small></p> 
+  
+   <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, an erratic source of art, music, and technology.  <div class='oio-inline'><ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script></div></p>
+ 
+       <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.ihtml");
+    });
+
+    </script>
+
+
+ 
+		<script type='text/javascript'>
+
+	function loadPlus(plusdocs){
+			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
+					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
+					});
+	} 
+
+   //function loadInline(json){
+   // for (var lookFor in json) {
+    //  $(lookFor).after(json[lookFor]);
+    // }
+  // } // end loadInline
+
+
+$(document).ready(function() {
+		$.ajaxSetup({ cache: false });
+			$.get('/associated/3.1.2/plus_Fiber.ihtml', 
+			function(plusdocs) {
+			setTimeout(function() {
+				loadPlus(plusdocs);
+				}, 2000);
+			}
+			);
+
+
+//     $.ajax({
+//     dataType: "json",
+//      url: '/associated/3.1.2/inline_Fiber.js',
+//      success: function(json) {
+// 			setTimeout(function() {
+// 				loadInline(json);
+// 				}, 2000);
+// 			}
+//    });
+
+		});
+</script>
+		
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+require 'tsort'
+
+
+
+def class menu
+
+	def structure()
+		print "_____"
+	end
+
+	alias struct structure
+	
+	def newStruct(struct)
+		for item in struct
+			puts iostream
+
+end
+
+menu.struct

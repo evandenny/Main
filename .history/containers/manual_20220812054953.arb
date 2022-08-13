@@ -1,0 +1,16 @@
+def class sample
+	def run
+		#...
+	end
+end
+
+def sayGoodnight(name)
+	puts "Goodnight, #{name}"
+end
+
+sayGoodnight("Evan")
+
+a = [ 1, 'cat', 3.14159 ]
+a[2] = nil
+
+puts
