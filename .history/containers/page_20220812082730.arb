@@ -1,7 +1,0 @@
-require 'tsort'
-
-
-class menu
-	alias struct structure
-	def structure()
-		print "_____"

@@ -1,5 +1,0 @@
-require 'tsort'
-
-class menu
-	alias struct structure
-	def structure

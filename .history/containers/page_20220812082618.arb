@@ -1,5 +1,0 @@
-require 'tsort'
-
-class menu
-	
-	def structure

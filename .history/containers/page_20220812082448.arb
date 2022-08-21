@@ -1,3 +1,0 @@
-require 'tsort'
-
-thr = Thread.new { puts ""}

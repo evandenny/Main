@@ -1,5 +1,0 @@
-require 'tsort'
-
-thr = Thread.new { puts "Thread 1" }
-
-thr.join
