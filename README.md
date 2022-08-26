@@ -4,11 +4,11 @@ In the directory CALEB_CURRY, I've started assembling an app called App.cpp.
 
     []# Languages: C++, C, Ruby, JavaScript, HTML, CSS
     []# Programs: Guessing_Game
-              MDY ***Bugs***
+              MDY                ***Bugs***
               Hangman
-              ArrayTutorial **To be replaced with 'mdy'**
-              TicTacToe *Work in progress*
-    []# Path: /workspace/CALEB_CURRY/App.cpp
+              ArrayTutorial   **To be replaced with 'mdy'**
+              TicTacToe         *Work in progress*
+    []# Path: /workspace/AppCPP/App.cpp
 
 # Guessing_Game
 Simple number guessing game inspired from Caleb Curry's
