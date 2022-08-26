@@ -2,29 +2,45 @@
 In the directory CALEB_CURRY, I've started assembling an app called App.cpp.
 *Executable 'App'
 
-    []# Languages: C++, JS, Python, HTML, CSS
+    []# Languages: C++, C, Ruby, JavaScript, HTML, CSS
     []# Programs: Guessing_Game
-                  mdy
-                  hangman
+              MDY ***Bugs***
+              Hangman
+              ArrayTutorial **To be replaced with 'mdy'**
+              TicTacToe *Work in progress*
     []# Path: /workspace/CALEB_CURRY/App.cpp
 
 # Guessing_Game
 Simple number guessing game inspired from Caleb Curry's
 C++ tutorial. With my own flavor added!
 
-# mdy
+# MDY
 An application for finding out how many days away 
 a certain date is from the current day. And the Day
 of the Week! It only works forward currently and isn't
 implemented in App.cpp yet. Needs debugging and 
 re-engineering certain features.
 
-# hangman
+# Hangman
 My most recent program! And my proudest work so far.
 It's my second program that I developed completely from
 scratch with no outside help. I'm sure I could cut down
 on some code and make it prettier, but I think I've created
 a pretty good version of hangman for Linux terminal!
+
+# ArrayTutorial
+A simple tutorial about how arrays work in C++. Deprecated.
+TO BE REPLACED WITH TOOLS.
+
+#TicTacToe
+A game of Tic-Tac-Toe. Final program will have two modes,
+Versus-Computer and Versus-Human. In Versus-Computer mode,
+the player can choose a difficult from Easy to Impossible.
+In Versus-Human mode you can play against another person.
+Both versions contain a coin flip in the beginning to 
+decide who will go first. X always goes first. The AI for
+the Computer mode will test my ability to create and play
+test artificial intelligence of my own design. Hopefully...
 
 # App.cpp
 This App.cpp file is the main file for my program.
